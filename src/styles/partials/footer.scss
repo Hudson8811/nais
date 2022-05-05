@@ -37,10 +37,10 @@
 	}
 
 	&__container-small {
-		width: 840px;
+		width: 100%;
+		padding-right: vw(120);
 
 		@include max(lg) {
-			width: 100%;
 			padding-right: 15px;
 		}
 
@@ -128,9 +128,12 @@
 					}
 
 					&:nth-child(3) {
+						display: flex;
+						justify-content: flex-end;
 						width: 23%;
 
 						@include max(md) {
+							justify-content: center;
 							width: 100%;
 							order: 1;
 							margin-top: 20px;
