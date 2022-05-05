@@ -1,0 +1,84 @@
+html {
+}
+
+body {
+	font-size: 16px;
+	font-weight: 400;
+	font-family: $mainFont;
+	color: $textMainColor;
+	background-color: $black-15;
+}
+
+a {
+	text-decoration: none;
+	color: $textMainColor;
+}
+
+ul,
+ol,
+nav {
+	list-style: none;
+	padding: 0;
+}
+
+input,
+button {
+	-webkit-appearance: none;
+}
+
+input,
+button,
+select,
+textarea {
+	font: inherit;
+	background-color: transparent;
+	border: 0;
+	border-radius: 0;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+input,
+textarea {
+	&::placeholder {
+		font-family: $mainFont;
+	}
+
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
+
+.container {
+	max-width: 100%;
+	margin: 0 vw(105) 0 vw(363);
+
+	@include max(md) {
+		padding: 0 15px;
+		margin: 0;
+	}
+
+	&--small {
+		width: 833px;
+		margin: 0;
+		padding: 0;
+
+		@include min(xxl) {
+			width: 100%;
+			padding-right: vw(105);
+		}
+
+		@include max(lg) {
+			padding-right: 15px;
+		}
+
+		@include max(md) {
+			padding-right: 0;
+		}
+	}
+}
+
+.body-scroll-lock {
+	overflow: hidden;
+}

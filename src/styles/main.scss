@@ -1,0 +1,34 @@
+/* base */
+@import "base/var";
+@import "base/reset";
+@import "base/fonts";
+@import "base/animations";
+
+/* mixin */
+@import "base/mixin";
+
+/* libs */
+@import "./../../node_modules/swiper/swiper";
+@import "libs/select2.min.css";
+
+
+/* main */
+@import "partials/main";
+
+/* components */
+@import "partials/button";
+@import "partials/menu";
+@import "partials/socials";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/breadcrumbs";
+@import "partials/title-block";
+@import "partials/slider-nav";
+
+
+/* blocks */
+@import "blocks/first-screen";
+@import "blocks/products-item";
+@import "blocks/products";
+@import "blocks/clients";
+@import "blocks/map";

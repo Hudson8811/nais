@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Главная'
+		};
+
+block main
+	include ../blocks/first-screen.pug
+	include ../blocks/products.pug
+	include ../blocks/clients.pug
+	include ../blocks/map.pug

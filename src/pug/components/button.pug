@@ -1,0 +1,14 @@
+mixin button(text, className, href, svgName, w, h)
+	if href
+		a.button(href=href, class=className)&attributes(attributes)
+			if text
+				span!= text
+			if svgName
+				+icon(svgName)(width=w, height=h)
+	else
+		button.button(class=className)&attributes(attributes)
+			if text
+				span!= text
+			if svgName
+				+icon(svgName)(width=w, height=h)
+

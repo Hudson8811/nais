@@ -1,0 +1,13 @@
+header.header
+	a.header__logo(href='/')
+		+icon('logo')(width='52', height='88')
+	.container.header__container
+		include ../partials/menu.pug
+		a.header__login(href='#')
+			+icon('chevron-right')(width='13', height='20')
+			span Войти
+		.header__theme
+			button.header__theme-switcher.active
+				+icon('theme-dark')(width='22', height='24')
+			button.header__theme-switcher
+				+icon('theme-light')(width='29', height='28')

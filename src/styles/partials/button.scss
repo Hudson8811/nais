@@ -1,0 +1,54 @@
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 11.5px 34px;
+	background-color: $green;
+	border-radius: 200px;
+	font-size: 16px;
+	font-weight: 500;
+	color: $white;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	@include max(md) {
+		padding: 10px 34px;
+	}
+
+	span {
+		position: relative;
+	}
+
+	svg {
+		fill: $white;
+		margin-left: 10px;
+		position: relative;
+		transition: fill 0.3s ease, stroke 0.3s ease;
+	}
+
+	&--bordered {
+		position: relative;
+		padding: 20px 46px;
+		background-color: transparent;
+		border: 1px solid rgba($white, 0.13);
+
+		&::before {
+			content: '';
+			display: block;
+			width: 87%;
+			height: 67%;
+			border-radius: 200px;
+			background-color: $green;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&--square {
+		width: 100%;
+		padding: 42px 20px;
+		border-radius: 0;
+	}
+}

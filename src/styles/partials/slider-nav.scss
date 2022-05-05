@@ -1,0 +1,79 @@
+.slider-nav {
+	$parent: &;
+
+	display: flex;
+	align-items: center;
+
+	&__button {
+		width: 56px;
+		height: 56px;
+		padding: 0;
+		background-color: transparent;
+		border: 1px solid rgba($green, 0.32);
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 80%;
+			height: 80%;
+			background-color: $green;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		svg {
+			stroke: $textMainColor;
+			stroke-width: 3px;
+			margin-left: 0;
+			position: relative;
+		}
+
+		&--disabled {
+			border-color: rgba($green, 0.16);
+			border-radius: 50%;
+			cursor: default;
+
+			&::before {
+				display: none;
+			}
+
+			svg {
+				stroke: rgba($textMainColor, 0.32);
+			}
+		}
+	}
+
+	&__pagi {
+		display: flex;
+		align-items: center;
+		padding: 0 33px;
+	}
+
+	&__pagi-item {
+		display: inline-block;
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background-color: $gray-c9;
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		@include hover {
+			background-color: $green;
+		}
+
+		+ #{$parent}__pagi-item {
+			margin-left: 4px;
+		}
+	}
+
+	&__pagi-item-active {
+		width: 9px;
+		height: 9px;
+		background-color: $green;
+		cursor: default;
+	}
+}

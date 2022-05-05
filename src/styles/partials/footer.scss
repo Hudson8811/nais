@@ -1,0 +1,262 @@
+.footer {
+	$parent: &;
+
+	margin-bottom: 65px;
+	padding-left: vw(363);
+
+	@include max(md) {
+		margin-bottom: 0;
+		padding-bottom: 90px;
+		padding-left: 0;
+	}
+
+	&__block {
+		border-left: 1px solid rgba($green-lemon, 0.12);
+		border-top: 1px solid rgba($green-lemon, 0.12);
+
+		@include max(md) {
+			padding: 0 15px;
+			border-top: 0;
+		}
+
+		&:first-child {
+			padding-top: 73px;
+
+			@include max(md) {
+				padding-top: 72px;
+			}
+		}
+
+		&:nth-child(2) {
+			margin-top: 66px;
+
+			@include max(md) {
+				margin-top: 56px;
+			}
+		}
+	}
+
+	&__container-small {
+		width: 840px;
+
+		@include max(lg) {
+			width: 100%;
+			padding-right: 15px;
+		}
+
+		@include max(md) {
+			width: 100%;
+			padding-right: 0;
+		}
+	}
+
+	&__row,
+	&__mark {
+		display: flex;
+		align-items: center;
+	}
+
+	&__row {
+		@include max(md) {
+			flex-wrap: wrap;
+		}
+
+		#{$parent} {
+			&__col {
+				&:not(:last-child) {
+					padding-right: 10px;
+				}
+
+				&:first-child {
+					width: 42%;
+
+					@include max(md) {
+						width: 80%;
+					}
+				}
+
+				&:nth-child(2) {
+					width: 41%;
+
+					@include max(md) {
+						width: 17%;
+						order: 1;
+					}
+				}
+
+				&:nth-child(3) {
+					width: 17%;
+					text-align: right;
+
+					@include max(md) {
+						width: auto;
+						margin-left: auto;
+					}
+				}
+			}
+		}
+
+		&--bottom {
+			margin-top: 72px;
+
+			@include max(md) {
+				margin-top: 18px;
+			}
+
+			#{$parent} {
+				&__col {
+					+ #{$parent}__col {
+						@include max(md) {
+							margin-top: 30px;
+						}
+					}
+
+					&:first-child {
+						width: 42%;
+
+						@include max(md) {
+							width: 80%;
+						}
+					}
+
+					&:nth-child(2) {
+						width: 35%;
+
+						@include max(md) {
+							width: 80%;
+						}
+					}
+
+					&:nth-child(3) {
+						width: 23%;
+
+						@include max(md) {
+							width: 100%;
+							order: 1;
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__mark {
+		font-size: 14px;
+		line-height: 16px;
+		color: rgba($textMainColor, 0.32);
+
+		+ #{$parent}__mark {
+			margin-top: 34px;
+		}
+
+		span {
+			margin-left: 21px;
+		}
+
+		&--desk {
+			@include max(md) {
+				display: none;
+			}
+		}
+
+		&--mob {
+			display: none;
+
+			@include max(md) {
+				display: flex;
+			}
+		}
+	}
+
+	&__mark-icon {
+		min-width: 55px;
+
+		@include max(md) {
+			max-width: 55px;
+		}
+	}
+
+	&__up {
+		width: 72px;
+		height: 72px;
+		padding: 5px;
+		border-color: $green;
+
+		@include max(xs) {
+			width: 45px;
+			height: 45px;
+		}
+
+		&::before {
+			width: 77%;
+			height: 77%;
+		}
+
+		svg {
+			stroke: $white;
+			stroke-width: 3px;
+			margin-left: 0;
+
+			@include max(xs) {
+				transform: scale(0.8);
+			}
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 12px;
+		line-height: 14px;
+		color: rgba($textMainColor, 0.32);
+		position: relative;
+		padding-top: 44px;
+
+		@include max(md) {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 32px 15px 0;
+			margin: 0 -15px;
+			border-top: 1px solid rgba($green-lemon, 0.12);
+		}
+
+		a {
+			font-size: 12px;
+			line-height: 14px;
+			color: rgba($textMainColor, 0.32);
+			text-decoration: underline;
+
+			@include hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__policy {
+		@include max(md) {
+			margin-top: 32px;
+		}
+	}
+
+	&__developer {
+		display: flex;
+		align-items: center;
+
+		@include max(md) {
+			margin-top: 32px;
+		}
+
+		svg {
+			fill: $textMainColor;
+			margin-left: 7px;
+		}
+	}
+
+	ul.footer__socials {
+		@include max(md) {
+			margin-top: 23px;
+		}
+	}
+}

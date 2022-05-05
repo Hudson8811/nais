@@ -1,0 +1,69 @@
+.header {
+	$parent: &;
+
+	background-color: $dunkl;
+	padding: 57px 0;
+	position: relative;
+
+	@include max(md) {
+		display: none;
+	}
+
+	&__container,
+	&__login,
+	&__theme,
+	&__theme-switcher {
+		display: flex;
+		align-items: center;
+	}
+
+	&__container {
+		padding-right: 18px;
+	}
+
+	&__logo {
+		padding: 15px 0;
+		margin-right: auto;
+		position: absolute;
+		top: 50%;
+		left: 127px;
+		transform: translateY(-50%);
+
+		svg {
+			fill: $white;
+		}
+	}
+
+	&__login {
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 700;
+		margin-left: auto;
+
+		svg {
+			stroke: $textMainColor;
+			stroke-width: 3px;
+			margin-right: 8px;
+		}
+	}
+
+	&__theme {
+		margin-left: 55px;
+	}
+
+	&__theme-switcher {
+		opacity: 0.32;
+
+		+ #{$parent}__theme-switcher {
+			margin-left: 13px;
+		}
+
+		svg {
+			fill: $textMainColor;
+		}
+
+		&.active {
+			opacity: 1;
+		}
+	}
+}

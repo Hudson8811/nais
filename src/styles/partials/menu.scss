@@ -1,0 +1,32 @@
+.menu {
+	$parent: &;
+
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: 10px;
+
+	&__link {
+		display: flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		margin: 10px 0;
+
+		&:not(#{$parent}__link--expand):not(:last-child) {
+			margin-right: 60px;
+		}
+
+		a {
+			font-size: 16px;
+			line-height: 18px;
+		}
+
+		svg {
+			fill: $textMainColor;
+			margin-left: 8px;
+		}
+
+		&--expand {
+			margin-right: 36px;
+		}
+	}
+}

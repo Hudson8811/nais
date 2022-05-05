@@ -1,0 +1,40 @@
+section.products
+	.container.products__container
+		+title-block('Продукты', 'products__title')
+		.products-item.products__item
+			.container.container--small
+				.products-item__top
+					.products-item__icon
+						+icon('train')(width='38', height='24')
+					+button('Подробнее', 'button--bordered products-item__more', '#')
+				.products-item__wrapper
+					.products-item__title Вагонные <br> весы
+			.products-item__bg-text
+				span Вагонные весы
+			.products-item__image
+				img(src='images/products/1.png', srcset='images/products/1@2x.png 2x', alt='')
+		.products-item.products__item.products__item--2
+			.container.container--small
+				.products-item__top
+					.products-item__icon
+						+icon('truck')(width='42', height='29')
+					+button('Подробнее', 'button--bordered products-item__more', '#')
+				.products-item__wrapper
+					.products-item__title Автомобильные <br> весы
+			.products-item__bg-text
+				span Автомобильные весы
+			.products-item__image
+				img(src='images/products/2.png', srcset='images/products/2@2x.png 2x', alt='')
+		.products-item.products__item.products__item--3
+			.container.container--small
+				.products-item__top
+					.products-item__icon
+						+icon('cow')(width='42', height='32')
+					+button('Подробнее', 'button--bordered products-item__more', '#')
+				.products-item__wrapper
+					.products-item__title Ветеринарные станки для крупного рогатого скота
+					.products-item__image
+						img(src='images/products/3.png', srcset='images/products/3@2x.png 2x', alt='')
+			.products-item__bg-text
+				span Ветеринарные
+		+button('Все продукты', 'button--square products__all', '#', 'elephant', '25', '16')

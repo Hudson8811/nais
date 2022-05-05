@@ -1,0 +1,9 @@
+nav.menu
+	each item in MENU
+		if item.sub
+			li.menu__link.menu__link--expand
+				a(href=item.url)= item.text
+				+icon('chevron-down')(width='17', height='11')
+		else
+			li.menu__link
+				a(href=item.url)= item.text

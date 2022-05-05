@@ -1,0 +1,67 @@
+footer.footer
+	.footer__container
+		.footer__block
+			.footer__container-small
+				.footer__row
+					.footer__col
+						.footer__mark
+							.footer__mark-icon
+								img(src='images/footer/rst.png', alt='')
+							span Аккредитация в области <br> обеспечения единства измерений
+					.footer__col
+						.footer__mark.footer__mark--desk
+							.footer__mark-icon
+								img(src='images/footer/gosreestr.png', alt='')
+							span Весы внесены в государственный реестр средств измерения под №47527–11
+					.footer__col
+						+button('', 'button--bordered footer__up', '#', 'chevron-up', '24', '14')
+				.footer__row.footer__row--bottom
+					.footer__col
+						.footer__mark
+							.footer__mark-icon
+								img(src='images/footer/builder.png', alt='')
+							span Член СРО «Объединение <br> строителей Южного и <br> Северо-Кавказского округов»
+					.footer__col
+						.footer__mark
+							.footer__mark-icon
+								img(src='images/footer/technics.png', alt='')
+							span Член «Международной <br> Ассоциации производителей <br> весоизмерительной техники»
+						.footer__mark.footer__mark--mob
+							.footer__mark-icon
+								img(src='images/footer/gosreestr.png', alt='')
+							span Весы внесены в государственный реестр средств измерения под №47527–11
+					.footer__col
+						+socials([
+							{
+								href: '#',
+								icon: 'insta',
+								w: '29',
+								h: '29'
+							},
+							{
+								href: '#',
+								icon: 'fb',
+								w: '29',
+								h: '29'
+							},
+							{
+								href: '#',
+								icon: 'insta',
+								w: '29',
+								h: '29'
+							},
+							{
+								href: '#',
+								icon: 'insta',
+								w: '29',
+								h: '29'
+							}
+						], 'footer__socials')
+		.footer__block
+			.footer__container-small
+				.footer__bottom
+					.footer__copyrights © 1998-2021 ООО НАИС - производство и продажа весов.
+					a.footer__policy(href='#', target='_blank') Политика конфиденциальности
+					.footer__developer
+						a(href='#', target='_blank') Developed by
+						+icon('bofer')(width='38', height='12')
