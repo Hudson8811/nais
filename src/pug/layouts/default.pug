@@ -15,14 +15,16 @@ html(lang="ru")
 		title= `${page.title}`
 
 	body
+		include ../blocks/preloader.pug
+
 		block header
-			include ../partials/_header
+			include ../partials/_header.pug
 
 		main.main
 			block main
 
 		block footer
-			include ../partials/_footer
+			include ../partials/_footer.pug
 
 		block modals
 

@@ -1,4 +1,8 @@
 .map {
+	position: relative;
+	z-index: 1;
+	background-color: $black-15;
+
 	&__container {
 		padding-top: 143px;
 		padding-bottom: 109px;

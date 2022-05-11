@@ -6,6 +6,7 @@
 //= ./libs/gsap.min.js
 //= ./libs/ScrollTrigger.min.js
 //= ./libs/markerclusterer.js
+//= ./libs/jquery.easy_number_animate.min.js
 
 
 //= ./partials/main.js

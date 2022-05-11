@@ -9,3 +9,31 @@
 		opacity: 0;
 	}
 }
+
+@keyframes rail-move-in {
+	0% {
+		transform: translate(-185px, -95px);
+	}
+
+	70% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-20px, -10px);
+	}
+}
+
+@keyframes rail-move-out {
+	0% {
+		transform: translate(-20px, -10px);
+	}
+
+	30% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-185px, -95px);
+	}
+}

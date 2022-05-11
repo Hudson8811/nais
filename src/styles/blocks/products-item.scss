@@ -50,6 +50,7 @@
 	&__image {
 		margin-left: vw(-363);
 		margin-top: 46px;
+		pointer-events: none;
 
 		@include min(xxl) {
 			margin-left: 0;
@@ -71,7 +72,7 @@
 	}
 
 	&__bg-text {
-		width: calc(100% + 17px);
+		width: 100%;
 		font-size: 222px;
 		line-height: 255px;
 		font-weight: 700;
@@ -81,6 +82,11 @@
 		left: 0;
 		top: 60px;
 		overflow: hidden;
-		margin-left: -17px;
+		pointer-events: none;
+
+		span {
+			position: relative;
+			left: 0;
+		}
 	}
 }

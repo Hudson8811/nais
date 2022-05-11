@@ -4,6 +4,7 @@
 	background-color: $dunkl;
 	padding: 57px 0;
 	position: relative;
+	z-index: 100;
 
 	@include max(md) {
 		display: none;
@@ -27,6 +28,7 @@
 		position: absolute;
 		top: 50%;
 		left: 127px;
+		z-index: 1;
 		transform: translateY(-50%);
 
 		svg {
@@ -38,21 +40,36 @@
 		font-size: 16px;
 		line-height: 18px;
 		font-weight: 700;
+		position: relative;
+		z-index: 1;
 		margin-left: auto;
+		transition: color 0.3s ease;
+
+		@include hover {
+			color: $green-lemon;
+
+			svg {
+				stroke: $green-lemon;
+			}
+		}
 
 		svg {
 			stroke: $textMainColor;
 			stroke-width: 3px;
 			margin-right: 8px;
+			transition: stroke 0.3s ease;
 		}
 	}
 
 	&__theme {
 		margin-left: 55px;
+		position: relative;
+		z-index: 1;
 	}
 
 	&__theme-switcher {
 		opacity: 0.32;
+		cursor: pointer;
 
 		+ #{$parent}__theme-switcher {
 			margin-left: 13px;

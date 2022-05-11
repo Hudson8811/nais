@@ -3,6 +3,9 @@
 
 	margin-bottom: 65px;
 	padding-left: vw(363);
+	background-color: $black-15;
+	position: relative;
+	z-index: 100;
 
 	@include max(md) {
 		margin-bottom: 0;

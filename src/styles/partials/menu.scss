@@ -11,22 +11,80 @@
 		flex-wrap: nowrap;
 		margin: 10px 0;
 
+		@include hover {
+			> a {
+				color: $green-lemon;
+			}
+
+			> svg {
+				fill: $green-lemon;
+				transform: rotate(180deg);
+			}
+
+			#{$parent} {
+				&__inner {
+					opacity: 1;
+					pointer-events: auto;
+				}
+			}
+		}
+
 		&:not(#{$parent}__link--expand):not(:last-child) {
 			margin-right: 60px;
 		}
 
-		a {
+		> a {
 			font-size: 16px;
 			line-height: 18px;
+			transition: color 0.3s ease;
 		}
 
-		svg {
+		> svg {
 			fill: $textMainColor;
 			margin-left: 8px;
+			transition: fill 0.3s ease, transform 0.3s ease;
 		}
 
 		&--expand {
 			margin-right: 36px;
+		}
+	}
+
+	&__inner {
+		width: 100%;
+		padding-top: 22px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $dunkl;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease;
+
+		ul {
+			max-width: 710px;
+			margin-top: 0;
+
+			li {
+				display: inline-block;
+				margin-bottom: 13px;
+
+				&:not(:last-child) {
+					margin-right: 22px;
+				}
+
+				a {
+					font-size: 16px;
+					line-height: 18px;
+					color: rgba($white, 0.64);
+					transition: color 0.3s ease;
+
+					@include hover {
+						color: $orange;
+						text-decoration: underline;
+					}
+				}
+			}
 		}
 	}
 }

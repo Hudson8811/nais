@@ -4,6 +4,12 @@ nav.menu
 			li.menu__link.menu__link--expand
 				a(href=item.url)= item.text
 				+icon('chevron-down')(width='17', height='11')
+				.menu__inner
+					.container
+						ul
+							each subItem in item.sub
+								li
+									a(href=subItem.url)= subItem.text
 		else
 			li.menu__link
 				a(href=item.url)= item.text

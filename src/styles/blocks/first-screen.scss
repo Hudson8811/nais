@@ -2,12 +2,14 @@
 	$parent: &;
 
 	position: relative;
+	overflow: hidden;
 
 	@include max(md) {
 		padding: 120px 0 87px;
 	}
 
 	&__dynamic {
+		display: none;
 		margin-left: vw(-363);
 
 		@include max(lg) {
@@ -25,10 +27,33 @@
 		position: relative;
 		z-index: 2;
 		top: 25px;
+		transform: translate(-185px, -95px);
+		animation-direction: reverse;
+		transition: transform 0.7s linear;
 
 		@include max(lg) {
 			width: 250px;
 			margin-top: -125px;
+		}
+
+		@include max(md) {
+			transform: translate(-20px, -10px);
+		}
+
+		&.start {
+			transform: translate(-450px,-170px);
+
+			@include max(md) {
+				transform: translate(-185px, -95px);
+			}
+		}
+
+		&.moved-in {
+			animation: rail-move-in 1.3s ease-out forwards;
+		}
+
+		&.moved-out {
+			animation: rail-move-out 1.3s ease-in forwards;
 		}
 	}
 
@@ -62,12 +87,30 @@
 			right: -25px;
 		}
 
+		&.active {
+			&::before,
+			&::after {
+				background-color: $orange;
+			}
+
+			p {
+				&:first-child {
+					color: rgba($textMainColor, 0.15);
+				}
+
+				&:last-child {
+					color: $white;
+				}
+			}
+		}
+
 		&::before,
 		&::after {
 			content: '';
 			display: block;
 			position: absolute;
 			background-color: rgba($green-lemon, 0.32);
+			transition: background-color 0.5s ease;
 		}
 
 		&::before {
@@ -101,6 +144,8 @@
 			line-height: 32px;
 			font-weight: 300;
 			color: rgba($textMainColor, 0.32);
+			position: relative;
+			transition: color 0.5s ease, opacity 0.5s ease;
 
 			&:first-child {
 				font-size: 44px;
@@ -113,8 +158,9 @@
 	}
 
 	&__bg {
-		width: vw(105);
-		height: 100%;
+		display: flex;
+		flex-direction: column;
+		width: vw(107);
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -123,10 +169,24 @@
 			display: none;
 		}
 
-		img {
+		svg {
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			position: relative;
+
+			&:not(:first-child) {
+				top: -16px;
+				clip-path: polygon(0 16px, 100% 16px, 100% 100%, 0 100%);
+			}
+
+			rect {
+				transition: all 0.3s ease;
+
+				@include hover {
+					fill: $orange;
+					opacity: 1;
+				}
+			}
 		}
 	}
 
@@ -333,19 +393,29 @@
 		border-radius: 50%;
 		background-color: $green;
 		position: relative;
+		transition: background-color 0.3s ease;
+
+		@include hover {
+			background-color: $green-hover;
+
+			&::before {
+				width: 125%;
+				height: 125%;
+			}
+		}
 
 		&::before {
 			content: '';
 			display: block;
-			width: 90%;
-			height: 90%;
+			width: 115%;
+			height: 115%;
 			border-radius: 50%;
 			border: 2px solid rgba($green, 0.32);
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			animation: pulse 2s ease-out infinite;
+			transition: all 0.3s ease;
 		}
 
 		svg {

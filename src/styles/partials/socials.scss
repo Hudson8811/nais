@@ -13,6 +13,12 @@
 		height: 30px;
 		margin: 8px 0;
 
+		@include hover {
+			svg {
+				fill: $white;
+			}
+		}
+
 		&:not(:last-child) {
 			margin-right: 24px;
 
@@ -23,6 +29,7 @@
 
 		svg {
 			fill: rgba($white, 0.32);
+			transition: fill 0.3s ease;
 		}
 	}
 }
