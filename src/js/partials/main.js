@@ -47,10 +47,6 @@ $(document).ready(function () {
 		if (window.matchMedia('(min-width: 1080px)').matches) {
 			firstAnimation.hover(
 				function () {
-					if (isAnimating) {
-						return false;
-					}
-
 					var that = $(this);
 					var img = that.find('.first-screen__animate');
 					var counter = that.find('.first-screen__counter');
@@ -63,12 +59,6 @@ $(document).ready(function () {
 						start_value: 0,
 						end_value: digit.hasClass('val24') ? 24 : 9,
 						duration: 1000
-					});
-					isAnimating = true;
-
-					$(this).find('.first-screen__animate').on('animationend', function () {
-						$(this).find('.first-screen__animate').off('animationend');
-						isAnimating = false;
 					});
 				},
 				function () {
@@ -84,11 +74,6 @@ $(document).ready(function () {
 						start_value: digit.hasClass('val24') ? 24 : 9,
 						end_value: 0,
 						duration: 1000
-					});
-
-					$(this).find('.first-screen__animate').on('animationend', function () {
-						$(this).find('.first-screen__animate').off('animationend');
-						isAnimating = false;
 					});
 				}
 			);
