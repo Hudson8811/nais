@@ -4,14 +4,18 @@
 	background-color: $dunkl;
 	position: relative;
 
-	&__bg {
-		display: flex;
-		flex-direction: column;
+	&__bg-outer {
 		width: vw(105);
+		height: calc(100% + 205px);
 		position: absolute;
 		top: -205px;
 		right: 0;
 		overflow: hidden;
+	}
+
+	&__bg {
+		display: flex;
+		flex-direction: column;
 
 		@include max(md) {
 			display: none;
