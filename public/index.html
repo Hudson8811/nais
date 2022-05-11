@@ -314,11 +314,20 @@
         <div class="container first-screen__container">
           <div class="first-screen__wrapper">
             <div class="first-screen__col first-screen__col--animate">
-              <div class="first-screen__dynamic">
-                <div class="first-screen__animate start"><img src="images/wagon-1.png" alt=""></div>
+              <div class="first-screen__dynamic start" data-tab="0" style="display: block">
+                <div class="first-screen__animate"><img src="images/wagon-1.png" alt=""></div>
                 <div class="first-screen__rails"><img src="images/wagon-2.png" alt="">
                   <div class="first-screen__counter">
                     <p><span><span class="js-digit">0</span>0,00</span></p>
+                    <p>Тонн</p>
+                  </div>
+                </div>
+              </div>
+              <div class="first-screen__dynamic first-screen__dynamic--2 start" data-tab="1">
+                <div class="first-screen__animate"><img src="images/wagon-4.png" alt=""></div>
+                <div class="first-screen__rails"><img src="images/wagon-3.png" alt="">
+                  <div class="first-screen__counter">
+                    <p><span><span class="js-digit val24">0</span>,00</span></p>
                     <p>Тонн</p>
                   </div>
                 </div>
@@ -328,28 +337,25 @@
               <h1 class="first-screen__title">Надежные весы для точных измерений</h1>
               <div class="first-screen__subtitle">Вы с нами, потому что согласны только на лучшее!</div>
               <div class="first-screen__type">
-                <div class="first-screen__type-item">
+                <div class="first-screen__type-item active">
                   <p>01</p>
                   <p>Вагонные весы</p>
                 </div>
-                <div class="first-screen__type-item active">
+                <div class="first-screen__type-item">
                   <p>02</p>
                   <p>Автомобильные весы</p>
                 </div>
               </div>
-              <div class="first-screen__connect">
-                <div class="first-screen__digits">Мы в цифрах
+              <div class="first-screen__connect"><a class="first-screen__digits anchor" href="#propertyes">Мы в цифрах
                   <svg width="17" height="11">
                     <use xlink:href="./images/sprite.svg#chevron-down"></use>
-                  </svg>
-                </div><a class="first-screen__call-me" href="#">
+                  </svg></a><a class="first-screen__call-me" href="#">
                   <svg width="27" height="27">
                     <use xlink:href="./images/sprite.svg#phone"></use>
-                  </svg></a>
-              </div>
+                  </svg></a></div>
             </div>
           </div>
-          <div class="first-screen__wrapper first-screen__wrapper--bottom">
+          <div class="first-screen__wrapper first-screen__wrapper--bottom" id="propertyes">
             <div class="first-screen__col">
               <div class="first-screen__property">
                 <p>23</p>

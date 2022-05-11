@@ -2,7 +2,6 @@
 	$parent: &;
 
 	position: relative;
-	overflow: hidden;
 
 	@include max(md) {
 		padding: 120px 0 87px;
@@ -21,6 +20,37 @@
 			max-width: 86%;
 			margin-left: -15px;
 		}
+
+		&.start {
+			#{$parent}__animate {
+				transform: translate(-450px,-170px);
+
+				@include max(md) {
+					transform: translate(-185px, -95px);
+				}
+			}
+		}
+
+		&--2 {
+			#{$parent} {
+				&__rails {
+					margin-top: -142px;
+
+					@include max(lg) {
+						margin-top: -98px;
+					}
+				}
+
+				&__counter {
+					bottom: 60%;
+					right: 9px;
+
+					@include max(lg) {
+						right: -9px;
+					}
+				}
+			}
+		}
 	}
 
 	&__animate {
@@ -38,14 +68,6 @@
 
 		@include max(md) {
 			transform: translate(-20px, -10px);
-		}
-
-		&.start {
-			transform: translate(-450px,-170px);
-
-			@include max(md) {
-				transform: translate(-185px, -95px);
-			}
 		}
 
 		&.moved-in {
@@ -95,11 +117,11 @@
 
 			p {
 				&:first-child {
-					color: rgba($textMainColor, 0.15);
+					color: $white;
 				}
 
 				&:last-child {
-					color: $white;
+					color: $orange;
 				}
 			}
 		}
@@ -318,6 +340,12 @@
 
 	&__type-item {
 		color: rgba($white, 0.32);
+		transition: color 0.3s ease;
+		cursor: pointer;
+
+		@include hover {
+			color: $white;
+		}
 
 		+ #{$parent}__type-item {
 			margin-left: 73px;
@@ -377,10 +405,20 @@
 		line-height: 39px;
 		font-weight: 500;
 		color: rgba($white, 0.64);
+		transition: color 0.3s ease;
+
+		@include hover {
+			color: $green-lemon;
+
+			svg {
+				fill: $green-lemon;
+			}
+		}
 
 		svg {
 			fill: rgba($textMainColor, 0.64);
 			margin-left: 12px;
+			transition: fill 0.3s ease;
 		}
 	}
 

@@ -13,3 +13,4 @@
 //= ./partials/swiper-init.js
 //= ./partials/swiper-mobile.js
 //= ./partials/map.js
+//= ./partials/anchor.js
