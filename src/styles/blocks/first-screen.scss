@@ -21,6 +21,10 @@
 			margin-left: -15px;
 		}
 
+		@include max(xs) {
+			margin-left: -80px;
+		}
+
 		&.start {
 			#{$parent}__animate {
 				transform: translate(-450px,-170px);
@@ -59,7 +63,6 @@
 		top: 25px;
 		transform: translate(-185px, -95px);
 		animation-direction: reverse;
-		transition: transform 0.7s linear;
 
 		@include max(lg) {
 			width: 250px;
@@ -68,14 +71,6 @@
 
 		@include max(md) {
 			transform: translate(-20px, -10px);
-		}
-
-		&.moved-in {
-			animation: rail-move-in 1.3s ease-out forwards;
-		}
-
-		&.moved-out {
-			animation: rail-move-out 1.3s ease-in forwards;
 		}
 	}
 
@@ -96,6 +91,7 @@
 	}
 
 	&__counter {
+		min-width: 112px;
 		position: absolute;
 		bottom: 68%;
 		right: -24px;

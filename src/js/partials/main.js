@@ -41,42 +41,70 @@ $(document).ready(function () {
 	/**
 	 * Анимация первого блока
 	 */
-	var isAnimating = false;
+	function numberWithCommas(n) {
+		return n.replace('.', ',');
+	}
+
+	function animCounter(el, start, end, withCommas) {
+		var value = {
+			val: end
+		}
+
+		gsap.from(value, {
+			duration: 1.6,
+			ease: 'circ.out',
+			val: start,
+			roundProps: 'val',
+			onUpdate: function () {
+				if (withCommas) {
+					el.text(numberWithCommas(value.val.toFixed(2)));
+				} else {
+					el.text(value.val);
+				}
+			}
+		});
+	}
 
 	if (firstAnimation && firstAnimation.length > 0) {
 		if (window.matchMedia('(min-width: 1080px)').matches) {
-			firstAnimation.hover(
-				function () {
-					var that = $(this);
-					var img = that.find('.first-screen__animate');
-					var counter = that.find('.first-screen__counter');
-					var digit = that.find('.js-digit');
+			const tl = gsap.timeline();
+			let hover = tl
+				.fromTo($('.first-screen__animate'), 0.8, {x: -185, y: -95}, {x: 0, y: 0, ease: 'power1.out'})
+				.fromTo($('.first-screen__animate'), 0.6, {x: 0, y: 0}, {x: -20, y: -10, ease: 'none'}, 0.8);
 
-					img.removeClass('moved-out');
-					img.addClass('moved-in');
-					counter.addClass('active');
-					digit.easy_number_animate({
-						start_value: 0,
-						end_value: digit.hasClass('val24') ? 24 : 9,
-						duration: 1000
-					});
-				},
-				function () {
-					var that = $(this);
-					var img = that.find('.first-screen__animate');
-					var counter = that.find('.first-screen__counter');
-					var digit = that.find('.js-digit');
+			hover.pause();
 
-					img.removeClass('moved-in');
-					img.addClass('moved-out');
-					counter.removeClass('active');
-					digit.easy_number_animate({
-						start_value: digit.hasClass('val24') ? 24 : 9,
-						end_value: 0,
-						duration: 1000
-					});
+			firstAnimation.on('mouseenter', function () {
+				var that = $(this);
+				var counter = that.find('.first-screen__counter');
+				var digit = that.find('.js-digit');
+
+				hover.play();
+
+				counter.addClass('active');
+
+				if (digit.hasClass('val24')) {
+					animCounter(digit, 0, 24, true);
+				} else {
+					animCounter(digit, 0, 90, true);
 				}
-			);
+			});
+
+			firstAnimation.on('mouseleave', function () {
+				var that = $(this);
+				var counter = that.find('.first-screen__counter');
+				var digit = that.find('.js-digit');
+
+				hover.reverse();
+
+				counter.removeClass('active');
+
+				if (digit.hasClass('val24')) {
+					animCounter(digit, 24, 0, true);
+				} else {
+					animCounter(digit, 90, 0, true);
+				}
+			});
 		}
 	}
 
@@ -100,7 +128,9 @@ $(document).ready(function () {
 			products.mousemove(function (e) {
 				var text = $(this).find('.products-item__bg-text span');
 				var posX = -e.offsetX * 100 / $(this).innerWidth();
-				var offset = posX * (text.innerWidth() - $(this).innerWidth()) / 100 - ($(this).innerWidth() / 1440) * 100;
+				var offset = posX * (text.innerWidth() - $(this).innerWidth()) / 100 - 17;
+
+				console.log(e.offsetX);
 
 				text.css('left', offset + 'px');
 			});
@@ -109,5 +139,46 @@ $(document).ready(function () {
 				$(this).find('.products-item__bg-text span').css('left', '-17px');
 			});
 		}
+	}
+
+	/**
+	 * Смещение блоков сверху вниз
+	 */
+	if (window.matchMedia('(min-width: 1080px)').matches) {
+		var playOnce = false;
+
+		$(window).scroll(function () {
+			var scroll = $(this).scrollTop();
+			var winH = $(this).innerHeight();
+			var elH = $('.first-screen__wrapper--bottom').outerHeight();
+			var elOffset = $('.first-screen__wrapper--bottom').offset().top - 350;
+			var centerScroll = (winH - elH) / 2 + scroll;
+
+			if (playOnce) return;
+
+			if (centerScroll >= elOffset && centerScroll <= elH + elOffset) {
+				$('.js-prop').each(function (index, elem) {
+					switch (index) {
+						case 0:
+							animCounter($(this), 0, 23);
+							break;
+						case 1:
+							animCounter($(this), 0, 59);
+							break;
+						case 2:
+							animCounter($(this), 0, 3);
+							break;
+						case 3:
+							animCounter($(this), 0, 5);
+							break;
+						case 4:
+							animCounter($(this), 0, 98);
+							break;
+					}
+				});
+
+				playOnce = true;
+			}
+		});
 	}
 })
