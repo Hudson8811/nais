@@ -67,12 +67,16 @@ $(document).ready(function () {
 
 	if (firstAnimation && firstAnimation.length > 0) {
 		if (window.matchMedia('(min-width: 1080px)').matches) {
-			const tl = gsap.timeline();
+			const tl = gsap.timeline({paused: true});
+			const tlStart = gsap.timeline();
+
+			setTimeout(function () {
+				tlStart.fromTo($('.first-screen__animate'), 0.8, {x: -450, y: -170}, {x: -185, y: -95, ease: 'power1.out'});
+			}, 500);
+
 			let hover = tl
 				.fromTo($('.first-screen__animate'), 0.8, {x: -185, y: -95}, {x: 0, y: 0, ease: 'power1.out'})
 				.fromTo($('.first-screen__animate'), 0.6, {x: 0, y: 0}, {x: -20, y: -10, ease: 'none'}, 0.8);
-
-			hover.pause();
 
 			firstAnimation.on('mouseenter', function () {
 				var that = $(this);

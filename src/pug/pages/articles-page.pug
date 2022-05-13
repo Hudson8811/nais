@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Статьи'
+		};
+
+block main
+	article.articles-page
+		.container.container--border.articles-page__container
+			+title-block('Статьи', 'articles-page__title')
+
