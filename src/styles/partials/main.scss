@@ -60,7 +60,7 @@ textarea {
 	}
 
 	&--small {
-		width: 833px;
+		width: 842px;
 		margin: 0;
 		padding: 0;
 
@@ -74,6 +74,7 @@ textarea {
 		}
 
 		@include max(md) {
+			width: 100%;
 			padding-right: 0;
 		}
 	}
@@ -91,6 +92,11 @@ textarea {
 			position: absolute;
 			top: 0;
 			left: 37.5%;
+			z-index: -1;
+
+			@include max(md) {
+				display: none;
+			}
 		}
 	}
 }

@@ -62,5 +62,9 @@
 		width: 100%;
 		padding: 42px 20px;
 		border-radius: 0;
+
+		@include hover {
+			background-color: $green-hover;
+		}
 	}
 }

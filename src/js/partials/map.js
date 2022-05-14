@@ -254,5 +254,5 @@ window.addEventListener('load', () => {
 		});
 	}
 
-	window.initMap = initMap();
+	//window.initMap = initMap();
 });

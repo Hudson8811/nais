@@ -1,0 +1,359 @@
+.article-single {
+	position: relative;
+	overflow: hidden;
+
+	&__container {
+		padding-top: 32px;
+		padding-bottom: 70px;
+
+		@include max(sm) {
+			padding-bottom: 32px;
+		}
+	}
+
+	&__title {
+		br {
+			@include max(lg) {
+				display: none;
+			}
+		}
+	}
+
+	&__row {
+		display: flex;
+		min-height: 486px;
+		margin-top: 32px;
+		position: relative;
+
+		@include max(md) {
+			flex-direction: column;
+			min-height: auto;
+		}
+	}
+
+	&__image {
+		width: 67.4%;
+		height: 486px;
+		position: absolute;
+		left: vw(-363);
+
+		@include max(md) {
+			width: calc(100% + 30px);
+			height: 400px;
+			margin-top: 30px;
+			position: relative;
+			left: -15px;
+			order: 1;
+		}
+
+		@include max(sm) {
+			height: 300px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__about-us {
+		font-size: 18px;
+		line-height: 32px;
+		font-weight: 300;
+		padding-left: 37.5%;
+		padding-top: 94px;
+
+		@include max(md) {
+			line-height: 24px;
+			padding-left: 0;
+			padding-top: 0;
+		}
+
+		@include max(sm) {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		p + p {
+			margin-top: 31px;
+
+			@include max(md) {
+				margin-top: 15px;
+			}
+
+			@include max(sm) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__quote {
+		margin-top: 64px;
+
+		@include max(md) {
+			margin-top: 0;
+		}
+	}
+
+	&__tabs {
+		margin-top: 64px;
+
+		@include max(md) {
+			margin-top: 50px;
+		}
+
+		@include max(sm) {
+			margin-top: 30px;
+		}
+	}
+
+	&__nav {
+		margin-top: 65px;
+
+		@include max(sm) {
+			margin-top: 40px;
+		}
+	}
+
+	&__slider {
+		margin-top: 52px;
+
+		@include max(sm) {
+			margin-top: 30px;
+		}
+	}
+
+	&__slide {
+		height: 468px;
+
+		@include max(sm) {
+			height: 300px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		margin-top: 128px;
+
+		@include max(md) {
+			margin-top: 80px;
+		}
+
+		@include max(sm) {
+			margin-top: 50px;
+		}
+	}
+
+	&__content-title {
+		font-size: 32px;
+		line-height: 36px;
+		font-weight: 700;
+
+		@include max(sm) {
+			font-size: 26px;
+			line-height: 30px;
+		}
+	}
+
+	&__content-text {
+		max-width: 837px;
+		font-size: 18px;
+		line-height: 32px;
+		font-weight: 300;
+		margin-top: 30px;
+
+		@include max(sm) {
+			font-size: 16px;
+			line-height: 22px;
+			margin-top: 15px;
+		}
+
+		p + p {
+			margin-top: 32px;
+
+			@include max(sm) {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	&__table {
+		max-width: 839px;
+		width: 100%;
+		border-collapse: collapse;
+		margin-top: 57px;
+
+		@include max(md) {
+			max-width: 100%;
+		}
+
+		@include max(sm) {
+			margin-top: 40px;
+		}
+
+		tbody {
+			background-color: $dunkl;
+		}
+
+		tr:last-child td:last-child {
+			@include max(sm) {
+				border: 0;
+			}
+		}
+
+		th {
+			font-size: 13px;
+			line-height: 19px;
+			font-weight: 500;
+			color: rgba($white, 0.32);
+			text-align: left;
+			vertical-align: top;
+			padding: 10px 10px 14px 13px;
+
+			@include max(sm) {
+				display: none;
+			}
+		}
+
+		td {
+			font-size: 14px;
+			line-height: 19px;
+			border: 2px solid $black-33;
+			padding: 24px 10px 23px 13px;
+
+			@include max(sm) {
+				display: flex;
+				justify-content: flex-start;
+				border: 0;
+				border-bottom: 2px solid $black-33;
+			}
+
+			&::before {
+				content: attr(aria-label);
+				display: none;
+				max-width: 180px;
+				width: 100%;
+				margin-right: 20px;
+
+				@include max(sm) {
+					display: inline-block;
+				}
+
+				@include max(xs) {
+					max-width: 100px;
+				}
+			}
+
+			&:first-child {
+				width: 24.5%;
+
+				@include max(sm) {
+					width: 100%;
+				}
+			}
+
+			&:last-child {
+				width: 33.5%;
+
+				@include max(sm) {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__certs-slider {
+		margin-top: 62px;
+
+		@include max(sm) {
+			margin-top: 40px;
+		}
+	}
+
+	&__certs-slide {
+		height: 266px;
+
+		@include max(sm) {
+			height: auto;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__certs-nav {
+		margin-top: 126px;
+
+		@include max(md) {
+			margin-top: 80px;
+		}
+
+		@include max(sm) {
+			margin-top: 40px;
+		}
+	}
+
+	&__bottom-nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 39px;
+	}
+
+	&__consult-btn {
+		max-width: 287px;
+		height: 89px;
+		padding: 20px;
+
+		@include max(sm) {
+			height: 60px;
+			padding: 10px;
+		}
+
+		svg {
+			stroke: $white;
+			stroke-width: 3px;
+			margin-left: 21px;
+		}
+	}
+
+	&__back {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 500;
+		color: $white;
+		margin-top: 43px;
+		transition: color 0.3s ease;
+
+		@include max(sm) {
+			margin-top: 30px;
+		}
+
+		@include hover {
+			color: $green-lemon;
+
+			svg {
+				stroke: $green-lemon;
+			}
+		}
+
+		svg {
+			stroke: $white;
+			stroke-width: 3px;
+			margin-right: 7px;
+			transition: stroke 0.3s ease;
+		}
+	}
+}

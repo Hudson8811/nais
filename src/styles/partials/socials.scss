@@ -20,10 +20,10 @@
 		}
 
 		&:not(:last-child) {
-			margin-right: 24px;
+			margin-right: 20px;
 
 			@include max(md) {
-				margin-right: 52px;
+				margin-right: 48px;
 			}
 		}
 

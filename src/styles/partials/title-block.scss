@@ -9,4 +9,16 @@
 		line-height: 37px;
 		margin-left: 0;
 	}
+
+	&--big {
+		font-size: 66px;
+		line-height: 66px;
+		margin-left: -2px;
+
+		@include max(md) {
+			font-size: 32px;
+			line-height: 37px;
+			margin-left: 0;
+		}
+	}
 }

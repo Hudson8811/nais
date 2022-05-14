@@ -1,0 +1,38 @@
+.filter {
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid $black-33;
+	background-color: $black-15;
+	border-radius: 100px;
+	padding: 13px 6px 0;
+
+	@include max(md) {
+		border-radius: 5px;
+	}
+
+	&__button {
+		font-size: 16px;
+		line-height: 19px;
+		font-weight: 500;
+		color: rgba($white, 0.32);
+		border-radius: 25px;
+		padding: 11px 23px;
+		margin-bottom: 10px;
+		cursor: pointer;
+		transition: color 0.3s ease, background-color 0.3s ease;
+
+		@include hover {
+			color: $white;
+			background-color: $green;
+		}
+
+		&:not(:last-child) {
+			margin-right: 3px;
+		}
+
+		&--active {
+			color: $white;
+			background-color: $green;
+		}
+	}
+}

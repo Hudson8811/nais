@@ -1,0 +1,6 @@
+mixin tabs(text, className)
+	.tabs(class=className)
+		each item in text
+			.tabs__item
+				+icon('tab')(width='32', height='32')
+				span!= item

@@ -1,0 +1,18 @@
+.quote {
+	padding: 31px 57px 31px 64px;
+	background-color: $dunkl;
+	font-size: 16px;
+	line-height: 24px;
+	color: $white;
+
+	@include max(md) {
+		width: calc(100% + 30px);
+		padding: 30px 30px 30px 20px;
+		margin-left: -15px;
+	}
+
+	@include max(xs) {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}

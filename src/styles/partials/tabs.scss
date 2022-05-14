@@ -1,0 +1,34 @@
+.tabs {
+	$parent: &;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		font-size: 22px;
+		line-height: 27px;
+		font-weight: 700;
+
+		@include max(sm) {
+			font-size: 18px;
+			line-height: 22px;
+		}
+
+		+ #{$parent}__item {
+			margin-top: 16px;
+
+			@include max(sm) {
+				margin-top: 5px;
+			}
+		}
+
+		svg {
+			fill: $green;
+			margin-right: 16px;
+
+			@include max(sm) {
+				max-width: 20px;
+				margin-right: 8px;
+			}
+		}
+	}
+}

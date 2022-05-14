@@ -1,0 +1,4 @@
+mixin filter(button, className)
+	.filter(class=className)
+		each item in button
+			button.filter__button(class= item.class ? item.class : '', data-filter= item.data)!= item.text

@@ -1,0 +1,32 @@
+.pattern {
+	display: flex;
+	flex-direction: column;
+	width: vw(107);
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	@include max(md) {
+		display: none;
+	}
+
+	svg {
+		width: 100%;
+		height: 100%;
+		position: relative;
+
+		&:not(:first-child) {
+			top: -16px;
+			clip-path: polygon(0 16px, 100% 16px, 100% 100%, 0 100%);
+		}
+
+		rect {
+			transition: all 0.3s ease;
+
+			@include hover {
+				fill: $orange;
+				opacity: 1;
+			}
+		}
+	}
+}

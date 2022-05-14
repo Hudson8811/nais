@@ -146,43 +146,55 @@ $(document).ready(function () {
 	}
 
 	/**
-	 * Смещение блоков сверху вниз
+	 * Анимированный счетчик
 	 */
-	if (window.matchMedia('(min-width: 1080px)').matches) {
-		var playOnce = false;
+	if ($('.first-screen__wrapper--bottom') && $('.first-screen__wrapper--bottom').length > 0) {
+		if (window.matchMedia('(min-width: 1080px)').matches) {
+			var playOnce = false;
 
-		$(window).scroll(function () {
-			var scroll = $(this).scrollTop();
-			var winH = $(this).innerHeight();
-			var elH = $('.first-screen__wrapper--bottom').outerHeight();
-			var elOffset = $('.first-screen__wrapper--bottom').offset().top - 350;
-			var centerScroll = (winH - elH) / 2 + scroll;
+			$(window).scroll(function () {
+				var scroll = $(this).scrollTop();
+				var winH = $(this).innerHeight();
+				var elH = $('.first-screen__wrapper--bottom').outerHeight();
+				var elOffset = $('.first-screen__wrapper--bottom').offset().top - 350;
+				var centerScroll = (winH - elH) / 2 + scroll;
 
-			if (playOnce) return;
+				if (playOnce) return;
 
-			if (centerScroll >= elOffset && centerScroll <= elH + elOffset) {
-				$('.js-prop').each(function (index, elem) {
-					switch (index) {
-						case 0:
-							animCounter($(this), 0, 23);
-							break;
-						case 1:
-							animCounter($(this), 0, 59);
-							break;
-						case 2:
-							animCounter($(this), 0, 3);
-							break;
-						case 3:
-							animCounter($(this), 0, 5);
-							break;
-						case 4:
-							animCounter($(this), 0, 98);
-							break;
-					}
-				});
+				if (centerScroll >= elOffset && centerScroll <= elH + elOffset) {
+					$('.js-prop').each(function (index, elem) {
+						switch (index) {
+							case 0:
+								animCounter($(this), 0, 23);
+								break;
+							case 1:
+								animCounter($(this), 0, 59);
+								break;
+							case 2:
+								animCounter($(this), 0, 3);
+								break;
+							case 3:
+								animCounter($(this), 0, 5);
+								break;
+							case 4:
+								animCounter($(this), 0, 98);
+								break;
+						}
+					});
 
-				playOnce = true;
-			}
-		});
+					playOnce = true;
+				}
+			});
+		}
 	}
+
+	/**
+	 * Адаптивная таблица
+	 */
+	$.each($('tbody tr'), function () {
+		var title = $(this).parent('tbody').siblings('thead').find('th');
+		$.each($(this).find('td'), function (index) {
+			$(this).attr('aria-label', title.eq(index).text());
+		});
+	});
 })

@@ -24,6 +24,10 @@
 @import "partials/breadcrumbs";
 @import "partials/title-block";
 @import "partials/slider-nav";
+@import "partials/filter";
+@import "partials/pattern";
+@import "partials/quote";
+@import "partials/tabs";
 
 
 /* blocks */
@@ -33,4 +37,6 @@
 @import "blocks/products";
 @import "blocks/clients";
 @import "blocks/map";
+@import "blocks/articles-card";
 @import "blocks/articles-page";
+@import "blocks/article-single";

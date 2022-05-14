@@ -6,7 +6,9 @@
 //= ./libs/gsap.min.js
 //= ./libs/ScrollTrigger.min.js
 //= ./libs/markerclusterer.js
-//= ./libs/jquery.easy_number_animate.min.js
+//= ./libs/isotope.pkgd.min.js
+//= ./libs/packery.pkgd.min.js
+//= ./libs/packery-mode.pkgd.min.js
 
 
 //= ./partials/main.js
@@ -14,3 +16,4 @@
 //= ./partials/swiper-mobile.js
 //= ./partials/map.js
 //= ./partials/anchor.js
+//= ./partials/filter.js

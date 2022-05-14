@@ -1,5 +1,33 @@
 .articles-page {
+	position: relative;
+	overflow: hidden;
+
 	&__container {
-		padding-top: 200px;
+		padding-top: 129px;
+		padding-bottom: 65px;
+
+		@include max(md) {
+			padding-top: 60px;
+		}
+	}
+
+	&__filter {
+		margin-top: 47px;
+	}
+
+	&__articles {
+		margin-top: 30px;
+
+		@include max(md) {
+			margin-top: 15px;
+		}
+	}
+
+	&__item {
+		margin-top: 33px;
+
+		@include max(md) {
+			margin-top: 20px;
+		}
 	}
 }

@@ -39,20 +39,6 @@
 		}
 	}
 
-	&__container-small {
-		width: 100%;
-		padding-right: vw(120);
-
-		@include max(lg) {
-			padding-right: 15px;
-		}
-
-		@include max(md) {
-			width: 100%;
-			padding-right: 0;
-		}
-	}
-
 	&__row,
 	&__mark {
 		display: flex;

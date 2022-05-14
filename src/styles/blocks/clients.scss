@@ -47,24 +47,6 @@
 		}
 	}
 
-	&__top {
-		display: flex;
-		justify-content: space-between;
-
-		@include max(md) {
-			align-items: flex-start;
-			flex-wrap: wrap;
-		}
-	}
-
-	&__title {
-		@include max(md) {
-			max-width: 175px;
-			margin-top: 9px;
-			margin-bottom: 14px;
-		}
-	}
-
 	&__slider {
 		margin-left: -1px;
 		margin-top: 62px;
