@@ -3,11 +3,11 @@ extends ../layouts/default
 block vars
 	-
 		const page = {
-			title: 'Статьи'
+			title: 'Проекты'
 		};
 
 block main
-	article.articles-page
+	article.projects-page
 		.pattern
 			svg(width='105' height='1542' viewBox='0 0 105 1542' fill='none' xmlns='http://www.w3.org/2000/svg')
 				g(opacity='1')
@@ -165,93 +165,118 @@ block main
 						rect(width='9.85216' height='548.512' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 81.3258 1135.43)' fill='#A0AB7B' opacity='0.12')
 						rect(width='9.85216' height='504.925' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 51.7906 1135.1)' fill='#A0AB7B' opacity='0.12')
 						rect(width='9.85216' height='459.066' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 19.3031 1137.78)' fill='#A0AB7B' opacity='0.12')
-		.container.container--border.articles-page__container
+		.container.container--border.projects-page__container
 			.container.container--small
-				+title-block('Статьи', 'title-block--big articles-page__title')
+				+title-block('Проекты', 'title-block--big projects-page__title')
 				+filter([
 					{
-						text: 'Все',
+						text: 'Все проекты',
 						class: 'filter__button--active',
 						data: '*'
 					},
 					{
-						text: 'Новости',
-						data: '.js-filter-news'
-					},
-					{
-						text: 'Проекты',
-						data: '.js-filter-projects'
-					},
-					{
-						text: 'Выступления',
-						data: '.js-filter-speeches'
-					},
-					{
-						text: 'Выставки',
-						data: '.js-filter-show'
-					},
-					{
-						text: 'Пресс-релизы',
-						data: '.js-filter-release'
-					},
-					{
-						text: 'СМИ',
-						data: '.js-filter-smi'
+						text: 'Решения для АПК',
+						data: '.js-filter-apk'
 					}
-				], 'articles-page__filter')
-				.articles-page__articles
-					a.articles-card.articles-page__item.js-filter-news.js-filter-smi(href='#', target='_blank')
+				], 'filter--wide projects-page__filter')
+				.projects-page__projects
+					a.projects-card.projects-page__item(href='#', target='_blank')
 						figure
-							.articles-card__left
-								.articles-card__title Строительство нуждается в стандартизации применения алюминия
-								.articles-card__text Алюминиевая Ассоциация выступила с инициативой стандартизации нормативных
-									|  документов, регулирующих вопросы применения алюминия и алюминиевых сплав...
-								+tags(['Автовесы', 'Вагонные весы'])
-							.articles-card__right
-								.articles-card__image
-									img(src='images/articles/1.jpg', srcset='images/articles/1@2x.jpg 2x', alt='')
-								.articles-card__date 31.03.2021
-					a.articles-card.articles-page__item.js-filter-show(href='#', target='_blank')
+							.projects-card__title Строительство и установка вагонных весов НАИС
+							.projects-card__info
+								p ООО РСК "Константа
+								p Заказчик
+							.projects-card__info
+								p с.Белая глина, <br> Краснодарский край
+								p Адрес объекта
+							+tags(['Автовесы', 'Вагонные весы'], 'projects-card__tags')
+					a.projects-card.projects-page__item.js-filter-apk(href='#', target='_blank')
 						figure
-							.articles-card__left
-								.articles-card__title Строительство нуждается в стандартизации применения алюминия
-								.articles-card__text Алюминиевая Ассоциация выступила с инициативой стандартизации нормативных
-									|  документов, регулирующих вопросы применения алюминия и алюминиевых сплав...
-								+tags(['Автовесы', 'Вагонные весы'])
-							.articles-card__right
-								.articles-card__image
-									img(src='images/articles/2.jpg', srcset='images/articles/2@2x.jpg 2x', alt='')
-								.articles-card__date 31.03.2021
-					a.articles-card.articles-page__item.js-filter-smi.js-filter-projects(href='#', target='_blank')
+							.projects-card__title Строительство и установка вагонных весов НАИС
+							.projects-card__info
+								p ООО РСК "Константа
+								p Заказчик
+							.projects-card__info
+								p с.Белая глина, <br> Краснодарский край
+								p Адрес объекта
+							+tags(['Автовесы', 'Вагонные весы', 'Станки КРС'], 'projects-card__tags')
+					a.projects-card.projects-page__item(href='#', target='_blank')
 						figure
-							.articles-card__left
-								.articles-card__title Строительство нуждается в стандартизации применения алюминия
-								.articles-card__text Алюминиевая Ассоциация выступила с инициативой стандартизации нормативных
-									|  документов, регулирующих вопросы применения алюминия и алюминиевых сплав...
-								+tags(['Автовесы', 'Вагонные весы'])
-							.articles-card__right
-								.articles-card__image
-									img(src='images/articles/3.jpg', srcset='images/articles/3@2x.jpg 2x', alt='')
-								.articles-card__date 31.03.2021
-					a.articles-card.articles-page__item.js-filter-news.js-filter-show.js-filter-projects(href='#', target='_blank')
+							.projects-card__title Строительство и установка вагонных весов НАИС
+							.projects-card__info
+								p ООО РСК "Константа
+								p Заказчик
+							.projects-card__info
+								p с.Белая глина, <br> Краснодарский край
+								p Адрес объекта
+							+tags(['Автовесы', 'Вагонные весы'], 'projects-card__tags')
+					a.projects-card.projects-page__item(href='#', target='_blank')
 						figure
-							.articles-card__left
-								.articles-card__title Строительство нуждается в стандартизации применения алюминия
-								.articles-card__text Алюминиевая Ассоциация выступила с инициативой стандартизации нормативных
-									|  документов, регулирующих вопросы применения алюминия и алюминиевых сплав...
-								+tags(['Автовесы', 'Вагонные весы'])
-							.articles-card__right
-								.articles-card__image
-									img(src='images/articles/4.jpg', srcset='images/articles/4@2x.jpg 2x', alt='')
-								.articles-card__date 31.03.2021
-					a.articles-card.articles-page__item.js-filter-smi.js-filter-release(href='#', target='_blank')
+							.projects-card__title Строительство и установка вагонных весов НАИС
+							.projects-card__info
+								p ООО РСК "Константа
+								p Заказчик
+							.projects-card__info
+								p с.Белая глина, <br> Краснодарский край
+								p Адрес объекта
+							+tags(['Автовесы', 'Вагонные весы'], 'projects-card__tags')
+					a.projects-card.projects-page__item.js-filter-apk(href='#', target='_blank')
 						figure
-							.articles-card__left
-								.articles-card__title Строительство нуждается в стандартизации применения алюминия
-								.articles-card__text Алюминиевая Ассоциация выступила с инициативой стандартизации нормативных
-									|  документов, регулирующих вопросы применения алюминия и алюминиевых сплав...
-								+tags(['Автовесы', 'Вагонные весы'])
-							.articles-card__right
-								.articles-card__image
-									img(src='images/articles/5.jpg', srcset='images/articles/5@2x.jpg 2x', alt='')
-								.articles-card__date 31.03.2021
+							.projects-card__title Строительство и установка вагонных весов НАИС
+							.projects-card__info
+								p ООО РСК "Константа
+								p Заказчик
+							.projects-card__info
+								p с.Белая глина, <br> Краснодарский край
+								p Адрес объекта
+							+tags(['Автовесы', 'Вагонные весы'], 'projects-card__tags')
+					a.projects-card.projects-page__item.js-filter-apk(href='#', target='_blank')
+						figure
+							.projects-card__title Строительство и установка вагонных весов НАИС
+							.projects-card__info
+								p ООО РСК "Константа
+								p Заказчик
+							.projects-card__info
+								p с.Белая глина, <br> Краснодарский край
+								p Адрес объекта
+							+tags(['Автовесы', 'Вагонные весы'], 'projects-card__tags')
+					a.projects-card.projects-page__item(href='#', target='_blank')
+						figure
+							.projects-card__title Строительство и установка вагонных весов НАИС
+							.projects-card__info
+								p ООО РСК "Константа
+								p Заказчик
+							.projects-card__info
+								p с.Белая глина, <br> Краснодарский край
+								p Адрес объекта
+							+tags(['Автовесы', 'Вагонные весы'], 'projects-card__tags')
+					a.projects-card.projects-page__item(href='#', target='_blank')
+						figure
+							.projects-card__title Строительство и установка вагонных весов НАИС
+							.projects-card__info
+								p ООО РСК "Константа
+								p Заказчик
+							.projects-card__info
+								p с.Белая глина, <br> Краснодарский край
+								p Адрес объекта
+							+tags(['Автовесы', 'Вагонные весы'], 'projects-card__tags')
+					a.projects-card.projects-page__item(href='#', target='_blank')
+						figure
+							.projects-card__title Строительство и установка вагонных весов НАИС
+							.projects-card__info
+								p ООО РСК "Константа
+								p Заказчик
+							.projects-card__info
+								p с.Белая глина, <br> Краснодарский край
+								p Адрес объекта
+							+tags(['Автовесы', 'Вагонные весы'], 'projects-card__tags')
+					a.projects-card.projects-page__item.js-filter-apk(href='#', target='_blank')
+						figure
+							.projects-card__title Строительство и установка вагонных весов НАИС
+							.projects-card__info
+								p ООО РСК "Константа
+								p Заказчик
+							.projects-card__info
+								p с.Белая глина, <br> Краснодарский край
+								p Адрес объекта
+							+tags(['Автовесы', 'Вагонные весы'], 'projects-card__tags')

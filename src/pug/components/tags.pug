@@ -1,0 +1,4 @@
+mixin tags(tag, className)
+	.tags(class=className)
+		each item in tag
+			.tags__item!= item

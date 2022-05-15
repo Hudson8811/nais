@@ -15,4 +15,13 @@
 		font-size: 14px;
 		line-height: 20px;
 	}
+
+	a {
+		color: $green-lemon;
+		text-decoration: underline;
+
+		@include hover {
+			text-decoration: none;
+		}
+	}
 }

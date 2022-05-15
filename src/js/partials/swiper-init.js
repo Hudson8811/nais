@@ -2,6 +2,8 @@ $(window).on('load', function () {
 	let clientsSlider = document.querySelectorAll('.__js_slider-clients');
 	let articleSlider = document.querySelectorAll('.__js_slider-article');
 	let certsSlider = document.querySelectorAll('.__js_slider-article-certs');
+	let reviewsSlider = document.querySelectorAll('.__js_slider-reviews');
+	let photosSlider = document.querySelectorAll('.__js_slider-photos');
 
 	const pagiOptions = {
 		type: 'bullets',
@@ -75,6 +77,42 @@ $(window).on('load', function () {
 					1080: {
 						slidesPerView: 4
 					}
+				}
+			})
+		});
+	}
+
+	if (reviewsSlider.length > 0) {
+		reviewsSlider.forEach(elem => {
+			new Swiper(elem, {
+				slidesPerView: 1.16,
+				spaceBetween: 32,
+				navigation: {
+					nextEl: '.project-single__nav .slider-nav__button--next',
+					prevEl: '.project-single__nav .slider-nav__button--prev',
+					disabledClass: 'slider-nav__button--disabled'
+				},
+				pagination: {
+					...pagiOptions,
+					el: '.project-single__nav .slider-nav__pagi',
+				}
+			})
+		});
+	}
+
+	if (photosSlider.length > 0) {
+		photosSlider.forEach(elem => {
+			new Swiper(elem, {
+				slidesPerView: 1.16,
+				spaceBetween: 32,
+				navigation: {
+					nextEl: '.project-single__pic-nav .slider-nav__button--next',
+					prevEl: '.project-single__pic-nav .slider-nav__button--prev',
+					disabledClass: 'slider-nav__button--disabled'
+				},
+				pagination: {
+					...pagiOptions,
+					el: '.project-single__pic-nav .slider-nav__pagi',
 				}
 			})
 		});

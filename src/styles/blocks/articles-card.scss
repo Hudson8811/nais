@@ -76,29 +76,6 @@
 		}
 	}
 
-	&__tags {
-		display: flex;
-		flex-wrap: wrap;
-		margin-top: 16px;
-	}
-
-	&__tags-item {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: rgba($textMainColor, 0.16);
-		border-radius: 100px;
-		padding: 12px 19px;
-		margin-bottom: 5px;
-		font-size: 12px;
-		line-height: 17px;
-		color: $white;
-
-		&:not(:last-child) {
-			margin-right: 3px;
-		}
-	}
-
 	&__image {
 		position: absolute;
 		top: 0;

@@ -3,11 +3,11 @@ extends ../layouts/default
 block vars
 	-
 		const page = {
-			title: 'Статьи'
+			title: 'Статья'
 		};
 
 block main
-	article.articles-page
+	article.project-single
 		.pattern
 			svg(width='105' height='1542' viewBox='0 0 105 1542' fill='none' xmlns='http://www.w3.org/2000/svg')
 				g(opacity='1')
@@ -165,93 +165,67 @@ block main
 						rect(width='9.85216' height='548.512' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 81.3258 1135.43)' fill='#A0AB7B' opacity='0.12')
 						rect(width='9.85216' height='504.925' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 51.7906 1135.1)' fill='#A0AB7B' opacity='0.12')
 						rect(width='9.85216' height='459.066' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 19.3031 1137.78)' fill='#A0AB7B' opacity='0.12')
-		.container.container--border.articles-page__container
+		.container.container--border.project-single__container
+			+title-block('Строительство и установка <br> вагонных весов НАИС', 'project-single__title')
+			.project-single__row
+				.project-single__about
+					.project-single__about-item
+						p 2014-2016
+						p Год проекта
+					.project-single__about-item
+						p ООО РСК "Константа
+						p Заказчик
+					.project-single__about-item
+						p с.Белая глина, Краснодарский край
+						p Адрес объекта
+					+tags(['весы автомобильные', 'по'], 'project-single__tags')
+				.project-single__image
+					img(src='images/project/poster.jpg', srcset='images/project/poster@2x.jpg 2x', alt='')
+
+			+quote('Повседневная практика показывает, что новая модель организационной деятельности обеспечивает ' +
+			'широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. ' +
+			'Не следует, однако забывать, что консультация с широким активом позволяет оценить [значение] позиций, занимаемых ' +
+			'участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что укрепление и развитие ' +
+			'структуры в значительной степени обуславливает создание существенных финансовых и административных условий. ' +
+			'Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции способствует ' +
+			'подготовки и реализации соответствующий <a href="#" target="_blank">условий</a> активизации.', 'project-single__quote')
+			+tabs(
+				[
+					'Частных загородных домов.',
+					'Офисов крупных корпораций.',
+					'Различных банков.',
+					'Элитных отелей.'
+				],
+				'project-single__tabs'
+			)
 			.container.container--small
-				+title-block('Статьи', 'title-block--big articles-page__title')
-				+filter([
-					{
-						text: 'Все',
-						class: 'filter__button--active',
-						data: '*'
-					},
-					{
-						text: 'Новости',
-						data: '.js-filter-news'
-					},
-					{
-						text: 'Проекты',
-						data: '.js-filter-projects'
-					},
-					{
-						text: 'Выступления',
-						data: '.js-filter-speeches'
-					},
-					{
-						text: 'Выставки',
-						data: '.js-filter-show'
-					},
-					{
-						text: 'Пресс-релизы',
-						data: '.js-filter-release'
-					},
-					{
-						text: 'СМИ',
-						data: '.js-filter-smi'
-					}
-				], 'articles-page__filter')
-				.articles-page__articles
-					a.articles-card.articles-page__item.js-filter-news.js-filter-smi(href='#', target='_blank')
-						figure
-							.articles-card__left
-								.articles-card__title Строительство нуждается в стандартизации применения алюминия
-								.articles-card__text Алюминиевая Ассоциация выступила с инициативой стандартизации нормативных
-									|  документов, регулирующих вопросы применения алюминия и алюминиевых сплав...
-								+tags(['Автовесы', 'Вагонные весы'])
-							.articles-card__right
-								.articles-card__image
-									img(src='images/articles/1.jpg', srcset='images/articles/1@2x.jpg 2x', alt='')
-								.articles-card__date 31.03.2021
-					a.articles-card.articles-page__item.js-filter-show(href='#', target='_blank')
-						figure
-							.articles-card__left
-								.articles-card__title Строительство нуждается в стандартизации применения алюминия
-								.articles-card__text Алюминиевая Ассоциация выступила с инициативой стандартизации нормативных
-									|  документов, регулирующих вопросы применения алюминия и алюминиевых сплав...
-								+tags(['Автовесы', 'Вагонные весы'])
-							.articles-card__right
-								.articles-card__image
-									img(src='images/articles/2.jpg', srcset='images/articles/2@2x.jpg 2x', alt='')
-								.articles-card__date 31.03.2021
-					a.articles-card.articles-page__item.js-filter-smi.js-filter-projects(href='#', target='_blank')
-						figure
-							.articles-card__left
-								.articles-card__title Строительство нуждается в стандартизации применения алюминия
-								.articles-card__text Алюминиевая Ассоциация выступила с инициативой стандартизации нормативных
-									|  документов, регулирующих вопросы применения алюминия и алюминиевых сплав...
-								+tags(['Автовесы', 'Вагонные весы'])
-							.articles-card__right
-								.articles-card__image
-									img(src='images/articles/3.jpg', srcset='images/articles/3@2x.jpg 2x', alt='')
-								.articles-card__date 31.03.2021
-					a.articles-card.articles-page__item.js-filter-news.js-filter-show.js-filter-projects(href='#', target='_blank')
-						figure
-							.articles-card__left
-								.articles-card__title Строительство нуждается в стандартизации применения алюминия
-								.articles-card__text Алюминиевая Ассоциация выступила с инициативой стандартизации нормативных
-									|  документов, регулирующих вопросы применения алюминия и алюминиевых сплав...
-								+tags(['Автовесы', 'Вагонные весы'])
-							.articles-card__right
-								.articles-card__image
-									img(src='images/articles/4.jpg', srcset='images/articles/4@2x.jpg 2x', alt='')
-								.articles-card__date 31.03.2021
-					a.articles-card.articles-page__item.js-filter-smi.js-filter-release(href='#', target='_blank')
-						figure
-							.articles-card__left
-								.articles-card__title Строительство нуждается в стандартизации применения алюминия
-								.articles-card__text Алюминиевая Ассоциация выступила с инициативой стандартизации нормативных
-									|  документов, регулирующих вопросы применения алюминия и алюминиевых сплав...
-								+tags(['Автовесы', 'Вагонные весы'])
-							.articles-card__right
-								.articles-card__image
-									img(src='images/articles/5.jpg', srcset='images/articles/5@2x.jpg 2x', alt='')
-								.articles-card__date 31.03.2021
+				+slider-nav('Отзывы', 'project-single__nav')
+			.project-single__slider.swiper.__js_slider-reviews
+				.swiper-wrapper
+					.project-single__slide.swiper-slide
+						iframe(src="https://www.youtube.com/embed/tEPB7uzKuh4" frameborder="0" allowfullscreen)
+					.project-single__slide.swiper-slide
+						iframe(src="https://www.youtube.com/embed/tEPB7uzKuh4" frameborder="0" allowfullscreen)
+					.project-single__slide.swiper-slide
+						iframe(src="https://www.youtube.com/embed/tEPB7uzKuh4" frameborder="0" allowfullscreen)
+			.article-single__content
+				.article-single__content-title Строительство и установка вагонных весов НАИС
+				.article-single__content-text
+					p Повседневная практика показывает, что новая модель организационной деятельности обеспечивает широкому
+						|  кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных
+						|  задач. Не следует, однако забывать, что консультация с широким активом позволяет оценить значение позиций,
+						|  занимаемых участниками в отношении поставленных задач.
+					p Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени
+						|  обуславливает создание существенных финансовых и административных условий. Значимость этих проблем настолько
+						|  очевидна, что начало повседневной работы по формированию позиции способствует подготовки и реализации
+						|  соответствующий условий активизации.
+			.container.container--small
+				+slider-nav('Фото', 'project-single__pic-nav')
+			.project-single__pic-slider.swiper.__js_slider-photos
+				.swiper-wrapper
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/1.jpg', srcset='images/project/1@2x.jpg 2x', alt='')
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/2.jpg', srcset='images/project/2@2x.jpg 2x', alt='')
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/1.jpg', srcset='images/project/1@2x.jpg 2x', alt='')

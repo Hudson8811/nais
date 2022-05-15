@@ -1,0 +1,51 @@
+.projects-card {
+	$parent: &;
+
+	background-color: $dunkl;
+	padding: 32px 31px 11px;
+
+	@include max(sm) {
+		padding: 25px 20px;
+	}
+
+	&__title {
+		font-size: 32px;
+		line-height: 36px;
+		font-weight: 700;
+		margin-bottom: 48px;
+
+		@include max(sm) {
+			font-size: 24px;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__info {
+		+ #{$parent}__info {
+			margin-top: 21px;
+
+			@include max(sm) {
+				margin-top: 15px;
+			}
+		}
+
+		p {
+			&:first-child {
+				font-size: 18px;
+				line-height: 27px;
+				font-weight: 500;
+			}
+
+			&:last-child {
+				font-size: 16px;
+				line-height: 24px;
+				color: rgba($textMainColor, 0.64);
+			}
+		}
+	}
+
+	&__tags {
+		margin-top: 35px;
+	}
+}

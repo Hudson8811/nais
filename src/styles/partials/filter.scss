@@ -1,4 +1,6 @@
 .filter {
+	$parent: &;
+
 	display: flex;
 	flex-wrap: wrap;
 	border: 1px solid $black-33;
@@ -33,6 +35,16 @@
 		&--active {
 			color: $white;
 			background-color: $green;
+		}
+	}
+
+	&--wide {
+		padding: 13px 31px 0 14px;
+
+		#{$parent} {
+			&__button {
+				padding: 11px 29px;
+			}
 		}
 	}
 }
