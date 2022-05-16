@@ -17,3 +17,4 @@
 //= ./partials/map.js
 //= ./partials/anchor.js
 //= ./partials/filter.js
+//= ./partials/tabs.js
