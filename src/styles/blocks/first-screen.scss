@@ -61,7 +61,6 @@
 		position: relative;
 		z-index: 2;
 		top: 25px;
-		transform: translate(-185px, -95px);
 		animation-direction: reverse;
 
 		@include max(lg) {
@@ -69,8 +68,20 @@
 			margin-top: -125px;
 		}
 
-		@include max(md) {
-			transform: translate(-20px, -10px);
+		&.js-move-1 {
+			transform: translate(-185px, -95px);
+
+			@include max(md) {
+				transform: translate(-20px, -10px);
+			}
+		}
+
+		&.js-move-2 {
+			transform: translate(-128px, -71px);
+
+			@include max(md) {
+				transform: translate(-20px, -10px);
+			}
 		}
 	}
 

@@ -3,6 +3,7 @@
 	margin-right: vw(-105);
 	border-bottom: 1px solid rgba($green-lemon, 0.12);
 	padding-bottom: 92px;
+	overflow: hidden;
 
 	@include max(md) {
 		margin-right: 0;
@@ -81,10 +82,11 @@
 		position: absolute;
 		left: 0;
 		top: 60px;
-		overflow: hidden;
+		z-index: -1;
 		pointer-events: none;
 
 		span {
+			display: inline-block;
 			position: relative;
 			left: -17px;
 		}

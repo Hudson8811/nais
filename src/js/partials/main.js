@@ -51,7 +51,7 @@ $(document).ready(function () {
 		}
 
 		gsap.from(value, {
-			duration: 1.6,
+			duration: 1,
 			ease: 'circ.out',
 			val: start,
 			roundProps: 'val',
@@ -68,22 +68,29 @@ $(document).ready(function () {
 	if (firstAnimation && firstAnimation.length > 0) {
 		if (window.matchMedia('(min-width: 1080px)').matches) {
 			const tl = gsap.timeline({paused: true});
+			const tl2 = gsap.timeline({paused: true});
 			const tlStart = gsap.timeline();
 
 			setTimeout(function () {
-				tlStart.fromTo($('.first-screen__animate'), 0.8, {x: -450, y: -170}, {x: -185, y: -95, ease: 'power1.out'});
+				tlStart.fromTo($('.js-move-1'), 0.8, {x: -450, y: -170}, {x: -185, y: -95, ease: 'power1.out'});
+				tlStart.fromTo($('.js-move-2'), 0.8, {x: -450, y: -170}, {x: -128, y: -71, ease: 'power1.out'});
 			}, 500);
 
-			let hover = tl
-				.fromTo($('.first-screen__animate'), 0.8, {x: -185, y: -95}, {x: 0, y: 0, ease: 'power1.out'})
-				.fromTo($('.first-screen__animate'), 0.6, {x: 0, y: 0}, {x: -20, y: -10, ease: 'none'}, 0.8);
+			let hover1 = tl
+				.fromTo($('.js-move-1'), 0.5, {x: -185, y: -95}, {x: 0, y: 0, ease: 'power1.out'})
+				.fromTo($('.js-move-1'), 0.3, {x: 0, y: 0}, {x: -20, y: -10, ease: 'none'}, 0.5);
+
+			let hover2 = tl2
+				.fromTo($('.js-move-2'), 0.5, {x: -128, y: -71}, {x: 0, y: 0, ease: 'power1.out'})
+				.fromTo($('.js-move-2'), 0.3, {x: 0, y: 0}, {x: -20, y: -10, ease: 'none'}, 0.5);
 
 			firstAnimation.on('mouseenter', function () {
 				var that = $(this);
 				var counter = that.find('.first-screen__counter');
 				var digit = that.find('.js-digit');
 
-				hover.play();
+				hover1.play();
+				hover2.play();
 
 				counter.addClass('active');
 
@@ -99,7 +106,8 @@ $(document).ready(function () {
 				var counter = that.find('.first-screen__counter');
 				var digit = that.find('.js-digit');
 
-				hover.reverse();
+				hover1.reverse();
+				hover2.reverse();
 
 				counter.removeClass('active');
 
@@ -128,21 +136,48 @@ $(document).ready(function () {
 	 * Сдвиг текста в зависимости от положения курсора
 	 */
 	if (products && products.length > 0) {
+		var rect = $('body')[0].getBoundingClientRect();
+		var mouse = {
+			x: 0,
+			y: 0,
+			moved: false
+		};
+
 		if (window.matchMedia('(min-width: 1080px)').matches) {
-			products.mousemove(function (e) {
-				var text = $(this).find('.products-item__bg-text span');
-				var posX = -e.offsetX * 100 / $(this).innerWidth();
-				var offset = posX * (text.innerWidth() - $(this).innerWidth()) / 100 - 17;
+			gsap.ticker.add(function() {
+				if (mouse.moved && window.matchMedia('(min-width: 1080px)')) {
+					parallaxIt('.products-item__bg-text--1 span', 12);
+					parallaxIt('.products-item__bg-text--2 span', 22);
+					parallaxIt('.products-item__bg-text--3 span', 65);
+				}
 
-				console.log(e.offsetX);
+				if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
+					parallaxIt('.products-item__bg-text--1 span', 10);
+					parallaxIt('.products-item__bg-text--2 span', 20);
+					parallaxIt('.products-item__bg-text--3 span', 64);
+				}
 
-				text.css('left', offset + 'px');
-			});
-
-			products.mouseleave(function () {
-				$(this).find('.products-item__bg-text span').css('left', '-17px');
+				if (mouse.moved && window.matchMedia('(min-width: 1900px)').matches) {
+					parallaxIt('.products-item__bg-text--1 span', 5);
+					parallaxIt('.products-item__bg-text--2 span', 15);
+					parallaxIt('.products-item__bg-text--3 span', 58);
+				}
+				mouse.moved = false;
 			});
 		}
+
+		function parallaxIt(target, coef) {
+			gsap.to(target, 0.3, {
+				x: (mouse.x - rect.width / 2) / rect.width * 150 * coef,
+				y: (mouse.y - rect.height / 5) / rect.height * 150
+			});
+		}
+
+		$(window).mousemove(function (e) {
+			mouse.moved = true;
+			mouse.x = e.clientX - rect.left;
+			mouse.y = e.clientY + rect.top;
+		});
 	}
 
 	/**

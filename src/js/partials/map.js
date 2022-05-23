@@ -251,11 +251,11 @@ window.addEventListener('load', () => {
 		});
 	}
 
-	/*if (mapMain) {
+	if (mapMain) {
 		initMap(mapMain, 65.061313, 101.477485, 3, locationsMain);
 	}
 
 	if (mapContacts) {
 		initMap(mapContacts, 55.768741, 37.672267, 17, locationsContacts);
-	}*/
+	}
 });
