@@ -166,19 +166,19 @@ block main
 						rect(width='9.85216' height='504.925' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 51.7906 1135.1)' fill='#A0AB7B' opacity='0.12')
 						rect(width='9.85216' height='459.066' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 19.3031 1137.78)' fill='#A0AB7B' opacity='0.12')
 		.container.container--border.software__container
-			+title-block('Автоматизация взвешивания и учета', 'title-block--big software__title')
-			+filter([
-				{
-					text: 'Отдел продаж',
-					class: 'filter__button--active'
-				},
-				{
-					text: 'Сервисная служба'
-				},
-				{
-					text: 'Отдел кадров'
-				},
-				{
-					text: 'По общим вопросам'
-				}
-			], 'software__tabs')
+			.container.container--small
+				+title-block('Автоматизация <br> взвешивания и учета', 'software__title')
+				.software__image
+					img(src='images/software/banner.png', srcset='images/software/banner@2x.png 2x', alt='')
+				+filter([
+					{
+						text: 'Автоматизации взвешивания',
+						class: 'filter__button--active'
+					},
+					{
+						text: 'Автоматизация учёта'
+					},
+					{
+						text: 'Нагрузка на ось'
+					}
+				], 'software__tabs')
