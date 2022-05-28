@@ -18,3 +18,4 @@
 //= ./partials/anchor.js
 //= ./partials/filter.js
 //= ./partials/tabs.js
+//= ./partials/tooltip.js
