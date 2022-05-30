@@ -51,7 +51,7 @@ $(document).ready(function () {
 		}
 
 		gsap.from(value, {
-			duration: 1,
+			duration: 0.6,
 			ease: 'circ.out',
 			val: start,
 			roundProps: 'val',
@@ -72,17 +72,15 @@ $(document).ready(function () {
 			const tlStart = gsap.timeline();
 
 			setTimeout(function () {
-				tlStart.fromTo($('.js-move-1'), 0.8, {x: -450, y: -170}, {x: -185, y: -95, ease: 'power1.out'});
-				tlStart.fromTo($('.js-move-2'), 0.8, {x: -450, y: -170}, {x: -128, y: -71, ease: 'power1.out'});
+				tlStart.fromTo($('.js-move-1'), 0.6, {x: -450, y: -170}, {x: -185, y: -95, ease: 'power1.out'});
+				tlStart.fromTo($('.js-move-2'), 0.6, {x: -450, y: -170}, {x: -128, y: -71, ease: 'power1.out'});
 			}, 500);
 
 			let hover1 = tl
-				.fromTo($('.js-move-1'), 0.5, {x: -185, y: -95}, {x: 0, y: 0, ease: 'power1.out'})
-				.fromTo($('.js-move-1'), 0.3, {x: 0, y: 0}, {x: -20, y: -10, ease: 'none'}, 0.5);
+				.fromTo($('.js-move-1'), 0.6, {x: -185, y: -95}, {x: 0, y: 0, ease: 'power1.out'});
 
 			let hover2 = tl2
-				.fromTo($('.js-move-2'), 0.5, {x: -128, y: -71}, {x: 0, y: 0, ease: 'power1.out'})
-				.fromTo($('.js-move-2'), 0.3, {x: 0, y: 0}, {x: -20, y: -10, ease: 'none'}, 0.5);
+				.fromTo($('.js-move-2'), 0.6, {x: -128, y: -71}, {x: 0, y: 0, ease: 'power1.out'});
 
 			firstAnimation.on('mouseenter', function () {
 				var that = $(this);

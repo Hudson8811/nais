@@ -60,6 +60,14 @@ function scripts() {
 		.pipe(browserSync.stream())
 }
 
+function data() {
+	return src([
+		'src/js/data/*.json',
+	])
+		.pipe(dest('public/js/data'))
+		.pipe(browserSync.stream())
+}
+
 function styles() {
 	return src('src/styles/main.scss')
 		.pipe(plumber())
@@ -138,6 +146,6 @@ exports.fonts = fonts;
 exports.images = images;
 exports.icons = icons;
 
-exports.build = series(cleandist, pugHtml, fonts, styles, scripts, images, icons);
+exports.build = series(cleandist, pugHtml, fonts, styles, scripts, images, icons, data);
 
-exports.default = parallel(pugHtml, fonts, styles, scripts, images, icons, browsersync, startwatch);
+exports.default = parallel(pugHtml, fonts, styles, scripts, images, icons, browsersync, startwatch, data);

@@ -1,6 +1,8 @@
 $(window).on('load', function(){
 	var contactsTabs = $('.contacts__tabs button');
 	var contactsContent = $('.contacts__content-item');
+	var softwareTabs = $('.software__tabs button');
+	var softwareContent = $('.software__content-item');
 
 	function setTabs(tabs, content) {
 		tabs.click(function () {
@@ -13,4 +15,5 @@ $(window).on('load', function(){
 	}
 
 	setTabs(contactsTabs, contactsContent);
+	setTabs(softwareTabs, softwareContent);
 });
