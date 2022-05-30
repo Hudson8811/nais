@@ -20,6 +20,7 @@ const rename = require("gulp-rename");
 function browsersync() {
 	browserSync.init({ // Инициализация Browsersync
 		server: { baseDir: 'public/' }, // Указываем папку сервера
+		directory: true,
 		notify: false, // Отключаем уведомления
 		online: true, // Режим работы: true или false
 		host: 'localhost',

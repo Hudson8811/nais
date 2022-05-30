@@ -9,7 +9,7 @@
 //= ./libs/isotope.pkgd.min.js
 //= ./libs/packery.pkgd.min.js
 //= ./libs/packery-mode.pkgd.min.js
-
+//= ./libs/jquery.fancybox.min.js
 
 //= ./partials/main.js
 //= ./partials/swiper-init.js
@@ -18,3 +18,5 @@
 //= ./partials/anchor.js
 //= ./partials/filter.js
 //= ./partials/tabs.js
+//= ./partials/img-map.js
+//= ./partials/modals.js

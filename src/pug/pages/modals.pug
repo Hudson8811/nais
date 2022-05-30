@@ -1,0 +1,174 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Главная'
+		};
+
+block main
+	.modals-test-wrap
+		a.button.js-open-modal(href="#modal-call-you")  Давайте мы вам позвоним
+		a.button.js-open-modal(href="#modal-request-call")  Заказать обратный звонок
+		a.button.js-open-modal(href="#modal-registration")  !!!!!Регистрация
+		a.button.js-open-modal(href="#modal-privacy")  Политика конфиденциальности
+		a.button.js-open-modal(href="#modal-partners")  Партнерам
+
+
+	.modal#modal-call-you
+		button.custom-fancybox-close.custom-fancybox-close--inner(data-fancybox-close='' title='{{CLOSE}}')
+			svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M19.0623 7.06066C19.6481 6.47487 19.6481 5.52513 19.0623 4.93934C18.4765 4.35355 17.5268 4.35355 16.941 4.93934L12.0016 9.87868L7.31066 5.18771C6.72488 4.60192 5.77513 4.60192 5.18934 5.18771C4.60355 5.77349 4.60355 6.72324 5.18934 7.30903L9.88031 12L5.18934 16.691C4.60355 17.2768 4.60355 18.2265 5.18934 18.8123C5.77513 19.3981 6.72487 19.3981 7.31066 18.8123L12.0016 14.1213L16.941 19.0607C17.5268 19.6464 18.4765 19.6464 19.0623 19.0607C19.6481 18.4749 19.6481 17.5251 19.0623 16.9393L14.123 12L19.0623 7.06066Z' fill='#467C3F')
+
+		.modal-inner.modal-inner--call-you
+			.call-you
+				.call-you__pic
+					img(src="images/phone-icon.svg", alt="")
+
+
+				.call-you__title Давайте мы вам позвоним
+				.call-you__desc Оставьте свой номер, и мы<br> перезвоним вам.
+				form.call-you__inp-row(action="")
+					.call-you__input.cutom-inp
+						input.cutom-inp__field(type="text", name="" placeholder="Ваш номер телефона")
+					button.button.button--square.call-you__button(type="submit") Жду звонка
+
+	.modal#modal-request-call
+		button.custom-fancybox-close.custom-fancybox-close--inner(data-fancybox-close='' title='{{CLOSE}}')
+			svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M19.0623 7.06066C19.6481 6.47487 19.6481 5.52513 19.0623 4.93934C18.4765 4.35355 17.5268 4.35355 16.941 4.93934L12.0016 9.87868L7.31066 5.18771C6.72488 4.60192 5.77513 4.60192 5.18934 5.18771C4.60355 5.77349 4.60355 6.72324 5.18934 7.30903L9.88031 12L5.18934 16.691C4.60355 17.2768 4.60355 18.2265 5.18934 18.8123C5.77513 19.3981 6.72487 19.3981 7.31066 18.8123L12.0016 14.1213L16.941 19.0607C17.5268 19.6464 18.4765 19.6464 19.0623 19.0607C19.6481 18.4749 19.6481 17.5251 19.0623 16.9393L14.123 12L19.0623 7.06066Z' fill='#467C3F')
+
+		.modal-inner
+			.modal-title Заказать обратный звонок
+
+			form.modal-form(action="")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Имя")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Телефон")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="E-Mail")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Организация")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							button.button.button--square.button--modal Отправить
+
+
+
+	.modal.modal--registration#modal-registration
+		button.custom-fancybox-close.custom-fancybox-close--inner(data-fancybox-close='' title='{{CLOSE}}')
+			svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M19.0623 7.06066C19.6481 6.47487 19.6481 5.52513 19.0623 4.93934C18.4765 4.35355 17.5268 4.35355 16.941 4.93934L12.0016 9.87868L7.31066 5.18771C6.72488 4.60192 5.77513 4.60192 5.18934 5.18771C4.60355 5.77349 4.60355 6.72324 5.18934 7.30903L9.88031 12L5.18934 16.691C4.60355 17.2768 4.60355 18.2265 5.18934 18.8123C5.77513 19.3981 6.72487 19.3981 7.31066 18.8123L12.0016 14.1213L16.941 19.0607C17.5268 19.6464 18.4765 19.6464 19.0623 19.0607C19.6481 18.4749 19.6481 17.5251 19.0623 16.9393L14.123 12L19.0623 7.06066Z' fill='#467C3F')
+
+		.modal-inner
+			.modal-title Регистрация
+
+			form.modal-form(action="")
+				.modal-form-row
+					.modal-form-row__col.modal-form-row__col--50
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="ФИО")
+					.modal-form-row__col.modal-form-row__col--50
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Должность")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Название компании")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							.simple-select-wrap
+								select.js-simple-select(name="" data-placeholder="Вид деятельности")
+									option
+									option(value="1") Lorem Ipsum is simply dummy
+									option(value="12") like Aldus PageMaker in
+									option(value="123") it to make a type specimen boo
+									option(value="1234") Вид it to make a type specimen boo
+									option(value="12345") like Aldus PageMaker in
+									option(value="123456") Вид like Aldus PageMaker in
+									option(value="1234567") it to make a type specimen boo
+								.simple-select-items-wrapper
+				.modal-form-row
+					.modal-form-row__col.modal-form-row__col--50
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Регион")
+					.modal-form-row__col.modal-form-row__col--50
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="E-Mail")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Телефон")
+				.modal-form-row.modal-form-row--align-right.modal-form-row--mt32
+					.modal-form-row__col--btn-register
+						button.button.button--square.button--modal Вход
+
+
+
+	.modal.modal--privacy#modal-privacy
+		button.custom-fancybox-close.custom-fancybox-close--inner(data-fancybox-close='' title='{{CLOSE}}')
+			svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M19.0623 7.06066C19.6481 6.47487 19.6481 5.52513 19.0623 4.93934C18.4765 4.35355 17.5268 4.35355 16.941 4.93934L12.0016 9.87868L7.31066 5.18771C6.72488 4.60192 5.77513 4.60192 5.18934 5.18771C4.60355 5.77349 4.60355 6.72324 5.18934 7.30903L9.88031 12L5.18934 16.691C4.60355 17.2768 4.60355 18.2265 5.18934 18.8123C5.77513 19.3981 6.72487 19.3981 7.31066 18.8123L12.0016 14.1213L16.941 19.0607C17.5268 19.6464 18.4765 19.6464 19.0623 19.0607C19.6481 18.4749 19.6481 17.5251 19.0623 16.9393L14.123 12L19.0623 7.06066Z' fill='#467C3F')
+
+		.modal-inner
+			.modal-title Политика кон&shy;фи&shy;ден&shy;ци&shy;аль&shy;но&shy;сти
+			.privacy-modal-text
+				p Разнообразный и богатый опыт новая модель организационной деятельности представляет собой интересный эксперимент проверки направлений прогрессивного развития.
+				p Таким образом укрепление и развитие структуры играет важную роль в формировании дальнейших направлений развития.
+				ul
+					li
+						b  Частных загородных домов.
+					li
+						b  Офисов крупных корпораций.
+					li
+						b  Различных банков.
+					li
+						b  Элитных отелей.
+				p Разнообразный и богатый опыт новая модель <a href="">организационной</a> деятельности представляет собой интересный эксперимент проверки направлений прогрессивного развития. Таким образом укрепление и развитие структуры играет важную роль в формировании дальнейших направлений развития.
+
+				ol
+					li Список текст point
+					li Список текст point текст
+					li Список текст point Список текст point
+					li Список текст
+				p Разнообразный и богатый опыт новая модель организационной деятельности представляет собой интересный эксперимент проверки направлений прогрессивного развития. Таким образом укрепление и развитие структуры играет важную роль в формировании дальнейших направлений развития.
+				p Разнообразный и богатый опыт новая модель организационной деятельности представляет собой интересный эксперимент проверки направлений прогрессивного развития. Таким образом укрепление и развитие структуры играет важную роль в формировании дальнейших направлений развития.
+
+
+
+
+	.modal#modal-partners
+		button.custom-fancybox-close.custom-fancybox-close--inner(data-fancybox-close='' title='{{CLOSE}}')
+			svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M19.0623 7.06066C19.6481 6.47487 19.6481 5.52513 19.0623 4.93934C18.4765 4.35355 17.5268 4.35355 16.941 4.93934L12.0016 9.87868L7.31066 5.18771C6.72488 4.60192 5.77513 4.60192 5.18934 5.18771C4.60355 5.77349 4.60355 6.72324 5.18934 7.30903L9.88031 12L5.18934 16.691C4.60355 17.2768 4.60355 18.2265 5.18934 18.8123C5.77513 19.3981 6.72487 19.3981 7.31066 18.8123L12.0016 14.1213L16.941 19.0607C17.5268 19.6464 18.4765 19.6464 19.0623 19.0607C19.6481 18.4749 19.6481 17.5251 19.0623 16.9393L14.123 12L19.0623 7.06066Z' fill='#467C3F')
+
+		.modal-inner
+			.modal-title Партнерам
+
+			form.modal-form(action="")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Имя")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Телефон")
+
+				.modal-form-row.modal-form-row--mt32
+					.modal-form-row__col.modal-form-row__col--btn-register-partners-left
+						button.button.button--square.button--modal Регистрация
+
+					.modal-form-row__col.modal-form-row__col--btn-register-partners-right
+						button.simple-btn-with-arrow Вход

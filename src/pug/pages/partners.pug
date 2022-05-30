@@ -166,96 +166,109 @@ block main
 						rect(width='9.85216' height='504.925' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 51.7906 1135.1)' fill='#A0AB7B' opacity='0.12')
 						rect(width='9.85216' height='459.066' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 19.3031 1137.78)' fill='#A0AB7B' opacity='0.12')
 		.container.container--border.software__container
-			.software-inner-container
-				+title-block('Автоматизация <br> взвешивания и учета', ' software__title')
+			.partners-inner-container
+				+title-block('Партнерам', ' title-block--big title-block--default-mt')
 
-				.img-map.img-map--software
-					.img-map__inner.js-img-map__inner
-						img.img-map__pic(src="../images/software/software_top.png", alt="")
-						.img-map__points
-							.img-map-point(style="left: 12.3%; top: 46.2%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 1
-							.img-map-point(style="left: 14.9%;top: 57.2%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 2
-							.img-map-point(style="left: 20.4%; top: 69%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 3
-							.img-map-point(style="left: 25.4%;    top: 65.1%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 4
-							.img-map-point(style="left: 25%;    top: 73%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 5
-							.img-map-point(style="    left: 52.5%;    top: 60%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 6
-							.img-map-point(style="left: 64.6%;    top: 32.6%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 7
-							.img-map-point(style="left: 74%;    top: 39%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 8 12 23 34 45 56 67 78 89 Cчитыватель rfid 8 Cчитыватель rfid 8 Cчитыватель rfid 8
-							.img-map-point(style="    left: 90.2%;    top: 26.6%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 9
-							.img-map-point(style="left: 89.6%;    top: 31.3%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 10
-							.img-map-point(style="    left: 89.7%;    top: 39.6%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 11
-							.img-map-point(style="    left: 92.2%;    top: 43%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 12
-							.img-map-point(style="left: 88.7%;    top: 47.2%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 13 12 23 34 45 56 67 78 89  12 23 34 45 56 67 78 89  Cчитыватель rfid 13 Cчитыватель rfid 13 Cчитыватель rfid 13 Cчитыватель rfid 13
-							.img-map-point(style="    left: 97.4%;    top: 54.7%;")
-								.img-map-point__point
-								.img-map-point__text-wrap
-									.img-map-point__text Cчитыватель rfid 14
+				.partners-banner.partners-banner--half
+					.partners-banner__inner
+						.partners-banner__left
+							.partners-banner__title Очень конверсирующий заголовок pdf банера
+							.partners-banner__button-wrap
+								+button('Получить  предложение', 'button--square partners-banner__button ', '#', 'file', '16', '21')
+					.partners-banner__image
+						img(src="images/partners/1.jpg", alt="")
 
-				+filter([
-					{
-						text: 'Автоматизации взвешивания',
-						class: 'filter__button--active'
-					},
-					{
-						text: 'Автоматизация учёта'
-					},
-					{
-						text: 'Нагрузка на ось'
-					}
-				], 'software__tabs')
+				.partners-banner
+					.partners-banner__inner
+						.partners-banner__left
+							.partners-banner__title Очень конверсирующий заголовок pdf банера
+							.partners-banner__button-wrap
+								+button('Получить  предложение', 'button--square  partners-banner__button ', '#', 'file', '16', '21')
+					.partners-banner__image
+						img(src="images/partners/2.jpg", alt="")
 
-				.software-cards
-					each val in [1,2,3,4]
-						.software-card
-							.software-card__pic
-								.software-card__pic-inner
-									img(src="../images/software/soft_pic_1.png", alt="")
-								.software-card__tags
-									.software-card__tag Базовый модуль
-							.software-card__name Весовая 5.0
-							.software-card__desc Универсальное решение для автоматизации действий оператора электронных весов для большегрузов
-						.software-card
-							.software-card__pic
-								.software-card__pic-inner
-									img(src="../images/software/soft_pic_2.png", alt="")
-							.software-card__name Весовая 5.0
-							.software-card__desc Универсальное решение для автоматизации действий оператора электронных весов для большегрузов
+				.section-download-files
+					.title-l2.title-l2--download-files Строительная документация на весы для скачивания:
+
+					.download-files
+						a.download-files-item(href="")
+							.download-files-item__icon
+								img(src="images/file.svg", alt="")
+							.download-files-item__title Файл название
+							.download-files-item__description Государственная система обеспечения единства измерений (ГСИ).
+						a.download-files-item(href="")
+							.download-files-item__icon
+								img(src="images/file.svg", alt="")
+							.download-files-item__title Файл название
+							.download-files-item__description Государственная система обеспечения единства измерений (ГСИ).
+
+						a.download-files-item(href="")
+							.download-files-item__icon
+								img(src="images/file.svg", alt="")
+							.download-files-item__title Файл название
+							.download-files-item__description Государственная система обеспечения единства измерений (ГСИ).
+						a.download-files-item(href="")
+							.download-files-item__icon
+								img(src="images/file.svg", alt="")
+							.download-files-item__title Файл название
+							.download-files-item__description Государственная система обеспечения единства измерений (ГСИ).
+
+						a.download-files-item(href="")
+							.download-files-item__icon
+								img(src="images/file.svg", alt="")
+							.download-files-item__title Файл название
+							.download-files-item__description Государственная система обеспечения единства измерений (ГСИ).
+						a.download-files-item(href="")
+							.download-files-item__icon
+								img(src="images/file.svg", alt="")
+							.download-files-item__title Файл название
+							.download-files-item__description Государственная система обеспечения единства измерений (ГСИ).
+
+				//.container.container--small
+				+slider-nav('Референс листы', 'article-single__certs-nav')
+				.ref-list-slider.swiper.__js_slider-article-certs
+					.swiper-wrapper
+						a.ref-list-slide.swiper-slide(href="images/certs/1@2x.jpg" data-fancybox="refs-slider-gallery")
+							.ref-list-slide__pic
+								img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
+							.ref-list-slide__name Юг, Северный Кавказ
+						a.ref-list-slide.swiper-slide(href="images/certs/1@2x.jpg" data-fancybox="refs-slider-gallery")
+							.ref-list-slide__pic
+								img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
+							.ref-list-slide__name Центр, Северо-Запад
+						a.ref-list-slide.swiper-slide(href="images/certs/1@2x.jpg" data-fancybox="refs-slider-gallery")
+							.ref-list-slide__pic
+								img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
+							.ref-list-slide__name Хранение, перевалка зерна
+						a.ref-list-slide.swiper-slide(href="images/certs/1@2x.jpg" data-fancybox="refs-slider-gallery")
+							.ref-list-slide__pic
+								img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
+							.ref-list-slide__name АПК
+						a.ref-list-slide.swiper-slide(href="images/certs/1@2x.jpg" data-fancybox="refs-slider-gallery")
+							.ref-list-slide__pic
+								img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
+							.ref-list-slide__name Хранение, перевалка зерна 1
+						a.ref-list-slide.swiper-slide(href="images/certs/1@2x.jpg" data-fancybox="refs-slider-gallery")
+							.ref-list-slide__pic
+								img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
+							.ref-list-slide__name АПК 2
+						a.ref-list-slide.swiper-slide(href="images/certs/1@2x.jpg" data-fancybox="refs-slider-gallery")
+							.ref-list-slide__pic
+								img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
+							.ref-list-slide__name Хранение, перевалка зерна 3
+						a.ref-list-slide.swiper-slide(href="images/certs/1@2x.jpg" data-fancybox="refs-slider-gallery")
+							.ref-list-slide__pic
+								img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
+							.ref-list-slide__name АПК 4
+					//	.article-single__certs-slide.swiper-slide
+							img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
+						.article-single__certs-slide.swiper-slide
+							img(src='images/certs/2.jpg', srcset='images/certs/2@2x.jpg 2x', alt='')
+						.article-single__certs-slide.swiper-slide
+							img(src='images/certs/3.jpg', srcset='images/certs/3@2x.jpg 2x', alt='')
+						.article-single__certs-slide.swiper-slide
+							img(src='images/certs/4.jpg', srcset='images/certs/4@2x.jpg 2x', alt='')
+						.article-single__certs-slide.swiper-slide
+							img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
+						.article-single__certs-slide.swiper-slide
+							img(src='images/certs/2.jpg', srcset='images/certs/2@2x.jpg 2x', alt='')

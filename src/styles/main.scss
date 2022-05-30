@@ -10,6 +10,7 @@
 /* libs */
 @import "./../../node_modules/swiper/swiper";
 @import "libs/select2.min.css";
+@import "libs/jquery.fancybox.min.css";
 
 
 /* main */
@@ -17,6 +18,7 @@
 
 /* components */
 @import "partials/button";
+@import "partials/fields";
 @import "partials/menu";
 @import "partials/socials";
 @import "partials/header";
@@ -29,7 +31,6 @@
 @import "partials/quote";
 @import "partials/tabs";
 @import "partials/tags";
-
 
 /* blocks */
 @import "blocks/preloader";
@@ -46,3 +47,5 @@
 @import "blocks/project-single";
 @import "blocks/contacts";
 @import "blocks/software";
+@import "blocks/partners";
+@import "blocks/modals";
