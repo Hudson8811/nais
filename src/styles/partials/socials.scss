@@ -28,7 +28,7 @@
 		}
 
 		svg {
-			fill: rgba($white, 0.32);
+			fill: $white-op-0-32;
 			transition: fill 0.3s ease;
 		}
 	}

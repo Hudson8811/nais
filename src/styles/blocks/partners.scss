@@ -11,7 +11,7 @@
 	position: relative;
 	z-index: 1;
 	margin-top: 56px;
-	background: #252924;
+	background: $dunkl;
 
 	&+.partners-banner {
 		margin-top: 32px;
@@ -43,7 +43,7 @@
 
 		/* green white */
 
-		color: #252924;
+		color: $dunkl;
 
 	}
 
@@ -114,7 +114,7 @@
 		}
 		.partners-banner__title{
 
-		color: #F0F0ED;
+		color: $textMainColor;
 		}
 	}
 }
@@ -173,7 +173,7 @@
 			font-weight: 700;
 			font-size: 22px;
 			line-height: 27px;
-			color: #F0F0ED;
+			color: $textMainColor;
 			margin-top: 32px;
 		}
 
@@ -186,7 +186,7 @@
 			font-size: 16px;
 			line-height: 28px;
 			text-decoration-line: underline;
-			color: #F0F0ED;
+			color: $textMainColor;
 			@media only screen and (max-width: 460px) {
 				width: 100%;
 			}
@@ -226,6 +226,6 @@
 		font-weight: 700;
 		font-size: 16px;
 		line-height: 27px;
-		color: #FFFFFF;
+		color: $white;
 	}
 }

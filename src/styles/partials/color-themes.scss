@@ -1,0 +1,178 @@
+body {
+	--textMainColor: #{$src-textMainColor};
+	--white: #{$src-white};
+	--black: #{$src-black};
+	--black-15: #{$src-black-15};
+	--black-33: #{$src-black-33};
+	--gray-c9: #{$src-gray-c9};
+	--green-lemon: #{$src-green-lemon};
+	--thatch-green: #{$src-thatch-green};
+	--green: #{$src-green};
+	--dunkl: #{$src-dunkl};
+	--green-hover: #{$src-green-hover};
+	--orange: #{$src-orange};
+	--inp-background: #{$src-inp-background};
+	--logo-color: #{$src-logo-color};
+
+	--white-op-0-02: #{$src-white-op-0-02};
+	--white-op-0-16: #{$src-white-op-0-16};
+	--white-op-0-32: #{$src-white-op-0-32};
+	--white-op-0-6: #{$src-white-op-0-6};
+	--white-op-0-64: #{$src-white-op-0-64};
+	--black-op-0-1: #{$src-black-op-0-1};
+	--black-op-0-2: #{$src-black-op-0-2};
+	--black-15-op-0-2: #{$src-black-15-op-0-2};
+	--textMainColor-op-0-02: #{$src-textMainColor-op-0-02};
+	--textMainColor-op-0-16: #{$src-textMainColor-op-0-16};
+	--textMainColor-op-0-32: #{$src-textMainColor-op-0-32};
+	--textMainColor-op-0-64: #{$src-textMainColor-op-0-64};
+	--green-op-0-16: #{$src-green-op-0-16};
+	--green-lemon-op-0-12: #{$src-green-lemon-op-0-12};
+	--green-lemon-op-0-32: #{$src-green-lemon-op-0-32};
+	--dunkl-op-0-02: #{$src-dunkl-op-0-02};
+	--dunkl-op-0-16: #{$src-dunkl-op-0-16};
+	--dunkl-op-0-3: #{$src-dunkl-op-0-3};
+
+}
+
+
+
+.color-theme-light {
+	--textMainColor: #{$theme-light-textMainColor};
+	--white: #{$theme-light-white};
+	--black: #{$theme-light-black};
+	--black-15: #{$theme-light-black-15};
+	--black-33: #{$theme-light-black-33};
+	--gray-c9: #{$theme-light-gray-c9};
+	--green-lemon: #{$theme-light-green-lemon};
+	--thatch-green: #{$theme-light-thatch-green};
+	--green: #{$theme-light-green};
+	--dunkl: #{$theme-light-dunkl};
+	--green-hover: #{$theme-light-green-hover};
+	--orange: #{$theme-light-orange};
+	--inp-background: #{$theme-light-inp-background};
+	--logo-color: #{$theme-light-logo-color};
+
+	--white-op-0-02: #{$theme-light-white-op-0-02};
+	--white-op-0-16: #{$theme-light-white-op-0-16};
+	--white-op-0-32: #{$theme-light-white-op-0-32};
+	--white-op-0-6: #{$theme-light-white-op-0-6};
+	--white-op-0-64: #{$theme-light-white-op-0-64};
+	--black-op-0-1: #{$theme-light-black-op-0-1};
+	--black-op-0-2: #{$theme-light-black-op-0-2};
+	--black-15-op-0-2: #{$theme-light-black-15-op-0-2};
+	--textMainColor-op-0-02: #{$theme-light-textMainColor-op-0-02};
+	--textMainColor-op-0-16: #{$theme-light-textMainColor-op-0-16};
+	--textMainColor-op-0-32: #{$theme-light-textMainColor-op-0-32};
+	--textMainColor-op-0-64: #{$theme-light-textMainColor-op-0-64};
+	--green-op-0-16: #{$theme-light-green-op-0-16};
+	--green-lemon-op-0-12: #{$theme-light-green-lemon-op-0-12};
+	--green-lemon-op-0-32: #{$theme-light-green-lemon-op-0-32};
+	--dunkl-op-0-02: #{$theme-light-dunkl-op-0-02};
+	--dunkl-op-0-16: #{$theme-light-dunkl-op-0-16};
+	--dunkl-op-0-3: #{$theme-light-dunkl-op-0-3};
+
+
+	.button {
+		color: #FFFFFF;
+
+		svg {
+			fill: #F0F0ED;
+		}
+	}
+
+	.button--white-on-light {
+		&.button--bordered {
+			border-color: rgba(160, 171, 123, 0.22);
+			color: #252924;
+
+			&::before {
+				background: #E3E7DF;
+
+
+			}
+		}
+	}
+
+	.menu__link>svg {
+		fill: #F0F0ED;
+	}
+
+	.header__theme-switcher.active svg {
+
+		fill: #467C3F;
+	}
+
+	.first-screen__phone {
+		color: #FFFFFF;
+		background: #467C3F;
+	}
+
+	.first-screen__call-me svg {
+		fill: #FFFFFF;
+	}
+
+	.products {
+		background-color: var(--black-15);
+	}
+
+	.slider-nav__button {
+		filter: drop-shadow(0px 22px 22px rgba(0, 0, 0, 0.08));
+
+		svg {
+			stroke: rgba(37, 41, 36, 0.32);
+		}
+
+		&--next {
+
+			svg {
+				stroke: #F0F0ED;
+			}
+
+		}
+
+	}
+
+	.clients {
+		background-color: var(--black-15);
+	}
+
+	.clients__slider .swiper-wrapper {
+		border-color: #262A20;
+
+	}
+
+	.clients__item {
+		border-color: #262A20;
+
+		img {
+			filter: brightness(38%);
+		}
+	}
+
+
+
+
+
+	.cutom-inp__field {
+
+		background: #F0F0ED;
+		color: #252924;
+		&::placeholder{
+			color: rgba(37, 41, 36, 0.64);
+		}
+	}
+
+	.select2-container--custom-theme .select2-selection, .select2-container--custom-theme .select2-dropdown{
+
+		background: #F0F0ED;
+		color: #252924;
+	}
+
+	.footer__up svg {
+		stroke: #f0f0ed;
+		stroke-width: 3px;
+		margin-left: 0;
+	}
+
+}

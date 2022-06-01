@@ -79,7 +79,7 @@
 
 		@include hover {
 			&::after {
-				background-color: rgba($black, 0.1);
+				background-color: $black-op-0-1;
 			}
 
 			#{$parent}__play {

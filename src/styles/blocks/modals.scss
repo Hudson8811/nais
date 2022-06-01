@@ -30,7 +30,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #252924;
+	background: $dunkl;
 	margin-top: 33px;
 	margin-right: 33px;
 	transition-duration: .2s;
@@ -79,7 +79,7 @@
 .modal {
 	width: 606px;
 	display: none;
-	background: #252924;
+	background: $dunkl;
 	padding: 0;
 	max-width: 100%;
 
@@ -113,7 +113,7 @@
 		font-weight: 500;
 		font-size: 22px;
 		line-height: 27px;
-		color: #F0F0ED;
+		color: $textMainColor;
 	}
 
 	&__desc {
@@ -121,7 +121,7 @@
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 28px;
-		color: #F0F0ED;
+		color: $textMainColor;
 	}
 
 	&__inp-row {
@@ -166,7 +166,7 @@
 	font-weight: 700;
 	font-size: 54px;
 	line-height: 62px;
-	color: #F0F0ED;
+	color: $textMainColor;
 
 	@media screen and (max-width: 900px) {
 
@@ -244,7 +244,7 @@
 	font-weight: 300;
 	font-size: 18px;
 	line-height: 32px;
-	color: #F0F0ED;
+	color: $textMainColor;
 	p{
 		&+p, &+*{
 		    margin-top: 32px;
@@ -348,7 +348,7 @@
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 22px;
-	color: #FFFFFF;
+	color: $white;
     padding: 10px 15px;
 	cursor: pointer;
 	transition-duration: .3s;
@@ -385,7 +385,7 @@
 .simple-select--placeholder-selected+.select2-container--custom-theme{
 
 	.select2-selection {
-		color: rgba(255, 255, 255, 0.64);
+		color: $white-op-0-64;
 	}
 }
 .select2-container--custom-theme {
@@ -393,7 +393,6 @@
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 145%;
-	color: #292929;
 
 	&.select2-container {
 
@@ -413,8 +412,8 @@
 		align-items: center;
 		height: 89px;
 		padding: 33px 90px 33px 22px;
-		background: #1f231e;
-		color: #f0f0ed;
+		background: $inp-background;
+		color: $textMainColor;
 		font-weight: 300;
 		font-size: 16px;
 		line-height: 22px;
@@ -433,7 +432,7 @@
 					top: 15px;
 					width: 56px;
 					height: 56px;
-					border: 2px solid rgba(37, 41, 36, 0.16);
+					border: 2px solid $dunkl-op-0-16;
 					background: url(../images/select-arrow.svg) no-repeat 17px 20px;
 					background-size: 19px 12px;
 					border-radius: 50%;
@@ -442,8 +441,8 @@
 				}
 				&:hover{
 					&::after {
-						border-color: rgba(37, 41, 36, 1);
-						background-color: rgba(37, 41, 36, 0.3);;
+						border-color: $dunkl;
+						background-color: $dunkl-op-0-3;
 					}
 				}
 			}
@@ -456,7 +455,7 @@
 
 
 	.select2-dropdown {
-		background: #1F231E;
+		background: $inp-background;
 		border-radius: 0 !important;
 		border: none !important;
 		padding: 16px 21px 32px;
@@ -467,10 +466,10 @@
 		font-weight: 300;
 		font-size: 16px;
 		line-height: 22px;
-		color: rgba(255, 255, 255, 0.6);
+		color: $white-op-0-6;
 		transition-duration: .3s;
 		&:hover{
-			color: #f0f0ed;
+			color: $textMainColor;
 
 		}
 		&+.select2-results__option{

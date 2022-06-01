@@ -40,7 +40,7 @@
 			&:last-child {
 				font-size: 16px;
 				line-height: 24px;
-				color: rgba($textMainColor, 0.64);
+				color: $textMainColor-op-0-64;
 			}
 		}
 	}

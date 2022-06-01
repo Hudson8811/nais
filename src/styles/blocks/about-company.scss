@@ -133,7 +133,7 @@
 		line-height: 105px;
 		display: flex;
 		align-items: center;
-		color: #FFFFFF;
+		color: $white;
 		@media only screen and (max-width: 400px) {
 			line-height: 1.16;
 			font-size: 60px;
@@ -144,7 +144,7 @@
 		font-weight: 500;
 		font-size: 18px;
 		line-height: 32px;
-		color: #F0F0ED;
+		color: $textMainColor;
 		opacity: 0.64;
 		margin-left: 6px;
 		width: 100%;
@@ -285,7 +285,7 @@
 			font-weight: 700;
 			font-size: 22px;
 			line-height: 27px;
-			color: #F0F0ED;
+			color: $textMainColor;
 			margin-top: 28px;
 			@media only screen and (max-width: 600px) {
 				padding-left: 20px;
@@ -305,7 +305,7 @@
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 28px;
-	color: #F0F0ED;
+	color: $textMainColor;
 
 	&--chyst {
 		width: 606px;
@@ -360,7 +360,7 @@
 			line-height: 105px;
 			display: flex;
 			align-items: center;
-			color: #FFFFFF;
+			color: $white;
 		}
 
 		&__name {
@@ -369,7 +369,7 @@
 			line-height: 27px;
 			margin-top: 8px;
 
-			color: #F0F0ED;
+			color: $textMainColor;
 		}
 
 		&__desc {
@@ -377,7 +377,7 @@
 			font-weight: 300;
 			font-size: 16px;
 			line-height: 28px;
-			color: #F0F0ED;
+			color: $textMainColor;
 		}
 	}
 }
@@ -385,11 +385,11 @@
 .chyst-quote {
 	margin-top: 135px;
 	padding: 50px 54px 50px 64px;
-	background: #252924;
+	background: $dunkl;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 26px;
-	color: #FFFFFF;
+	color: $white;
 	@media only screen and (max-width: 600px) {
 		padding: 30px;
 	}
@@ -459,7 +459,7 @@
 
 			/* green white */
 
-			color: #F0F0ED;
+			color: $textMainColor;
 
 			&:hover {}
 
@@ -472,7 +472,7 @@
 			font-weight: 300;
 			font-size: 16px;
 			line-height: 28px;
-			color: #F0F0ED;
+			color: $textMainColor;
 			margin-top: 8px;
 			width: 246px;
 			max-width: 100%;
@@ -485,7 +485,7 @@
 
 a.standarts-item__title {
 	text-decoration-line: underline;
-	color: #F2802C;
+	color: $orange;
 
 	&+.standarts-item__desc {
 		margin-top: 16px;

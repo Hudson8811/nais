@@ -1,7 +1,7 @@
 .products-item {
 	position: relative;
 	margin-right: vw(-105);
-	border-bottom: 1px solid rgba($green-lemon, 0.12);
+	border-bottom: 1px solid $green-lemon-op-0-12;
 	padding-bottom: 92px;
 	overflow: hidden;
 
@@ -77,7 +77,7 @@
 		font-size: 222px;
 		line-height: 255px;
 		font-weight: 700;
-		color: rgba($textMainColor, 0.02);
+		color: $white-op-0-02;
 		white-space: nowrap;
 		position: absolute;
 		left: 0;
