@@ -96,6 +96,7 @@ body {
 
 	.menu__link>svg {
 		fill: #F0F0ED;
+		fill: #252924;
 	}
 
 	.header__theme-switcher.active svg {
@@ -154,25 +155,90 @@ body {
 
 
 
-	.cutom-inp__field {
-
-		background: #F0F0ED;
-		color: #252924;
-		&::placeholder{
-			color: rgba(37, 41, 36, 0.64);
-		}
-	}
-
-	.select2-container--custom-theme .select2-selection, .select2-container--custom-theme .select2-dropdown{
-
-		background: #F0F0ED;
-		color: #252924;
-	}
-
 	.footer__up svg {
 		stroke: #f0f0ed;
 		stroke-width: 3px;
 		margin-left: 0;
 	}
 
+	//about-company
+	.chyst-quote {
+		background: #DADDD9;
+
+	}
+
+	//employees
+	.employees__offer-btn svg {
+		stroke: #f0f0ed;
+	}
+
+	//partners
+	.partners-banner {
+		background: #DADDD9;
+	}
+
+	.partners-banner__title {
+		color: #252924;
+	}
+
+	//software
+
+	.filter__button--active{
+		color: #FFFFFF;
+	}
+	@media (min-width: 1080px){
+		.filter__button:focus, .filter__button:hover {
+			color: #FFFFFF;
+		}
+
+	}
+	.software-card__tag{
+		color: #252924;
+	}
+	//contacts
+	//articles-page.html
+	.articles-card__date{
+		color: #fff;
+	}
+
+	//articles-single.html
+	.article-single__table td{
+		border-color: #F0F0ED;
+	}
+	.article-single__consult-btn svg{
+		stroke: #F0F0ED;
+	}
+	//modals
+	.cutom-inp__field {
+
+		background: #F0F0ED;
+		color: #252924;
+
+		&::placeholder {
+			color: rgba(37, 41, 36, 0.64);
+		}
+	}
+
+	.select2-container--custom-theme .select2-selection,
+	.select2-container--custom-theme .select2-dropdown {
+
+		background: #F0F0ED;
+		color: #252924;
+	}
+
+	.simple-select--placeholder-selected+.select2-container--custom-theme .select2-selection {
+		color: var(--white-op-0-64);
+	}
+
+	.simple-btn-with-arrow::after {
+		background: url(../images/btn-arrow-right-dark.svg) no-repeat center center;
+		background-size: contain;
+	}
+
+	.select2-container--custom-theme .select2-selection--single .select2-selection__rendered::after {
+		border-color: rgba(37, 41, 36, 0.16);
+		background: url(../images/select-arrow-dark.svg) no-repeat 17px 20px;
+		background-size: 19px 12px;
+	}
 }
+//rgba(37, 41, 36, 0.32)

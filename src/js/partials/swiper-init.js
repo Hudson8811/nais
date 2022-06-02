@@ -61,7 +61,7 @@ $(window).on('load', function () {
 		certsSlider.forEach(elem => {
 			new Swiper(elem, {
 				slidesPerView: 2,
-				spaceBetween: 26,
+				spaceBetween: 11,
 				navigation: {
 					nextEl: '.article-single__certs-nav .slider-nav__button--next',
 					prevEl: '.article-single__certs-nav .slider-nav__button--prev',

@@ -1,7 +1,8 @@
 .partners-inner-container {
 	width: 837px;
 	max-width: 100%;
-	@media only screen and (max-width: 1079px){
+
+	@media only screen and (max-width: 1079px) {
 		width: 100%;
 	}
 }
@@ -51,6 +52,7 @@
 		display: flex;
 		justify-content: flex-start;
 		margin-top: 96px;
+
 		@media only screen and (max-width: 766px) {
 			margin-top: 45px;
 		}
@@ -70,12 +72,14 @@
 			justify-content: center;
 
 		}
+
 		svg {
 			-webkit-box-ordinal-group: 0;
 			-ms-flex-order: -1;
 			order: -1;
 			margin-left: 0;
 			margin-right: 17px;
+
 			@media only screen and (max-width: 766px) {
 				margin-right: 10px;
 			}
@@ -106,22 +110,25 @@
 
 		.partners-banner__image {
 			width: 49%;
+
 			@media only screen and (max-width: 766px) {
 				display: none;
 			}
 		}
-		.partners-banner__left{
-		}
-		.partners-banner__title{
 
-		color: $textMainColor;
+		.partners-banner__left {}
+
+		.partners-banner__title {
+
+			color: $textMainColor;
 		}
 	}
 }
 
 .section-download-files {
 	margin-top: 127px;
-	@media only screen and (max-width: 767px){
+
+	@media only screen and (max-width: 767px) {
 		margin-top: 40px;
 	}
 }
@@ -146,7 +153,7 @@
 		width: calc(50% - 36px);
 		transition-duration: .3s;
 
-		&:hover{
+		&:hover {
 			opacity: .7;
 		}
 
@@ -187,6 +194,7 @@
 			line-height: 28px;
 			text-decoration-line: underline;
 			color: $textMainColor;
+
 			@media only screen and (max-width: 460px) {
 				width: 100%;
 			}
@@ -195,28 +203,38 @@
 	}
 }
 
-.ref-list-slider{
-    margin-top: 62px;
-    margin-bottom: -35px;
+.ref-list-slider {
+	margin-top: 55px;
+	margin-bottom: -60px;
+	padding-bottom: 25px;
 }
+
 .ref-list-slide {
-	transition-duration: .3s;
 	outline: none;
 
-	&:hover{
-		opacity: .7;
+	&:hover {
+		.ref-list-slide__pic {
+			opacity: .7;
+		}
+
+		.ref-list-slide__name {
+			opacity: .7;
+		}
 	}
+
 	&__pic {
 		position: relative;
+		transition-duration: .3s;
 
 		padding-top: 142.245%;
+		border: 1px solid #151814;
 
 		img {
 			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
+			left: 7px;
+			top: 7px;
+			width: calc(100% - 14px);
+			height: calc(100% - 14px);
 			object-fit: cover;
 		}
 	}
@@ -227,5 +245,6 @@
 		font-size: 16px;
 		line-height: 27px;
 		color: $white;
+		transition-duration: .3s;
 	}
 }

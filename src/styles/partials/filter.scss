@@ -6,7 +6,7 @@
 	border: 1px solid $black-33;
 	background-color: $black-15;
 	border-radius: 100px;
-	padding: 13px 6px 0;
+	padding: 13px 13px 0;
 
 	@include max(md) {
 		border-radius: 5px;
@@ -19,7 +19,7 @@
 		text-align: left;
 		color: $white-op-0-32;
 		border-radius: 100px;
-		padding: 11px 23px;
+		padding: 11px 22px;
 		margin-bottom: 10px;
 		cursor: pointer;
 		transition: color 0.3s ease, background-color 0.3s ease;

@@ -269,7 +269,8 @@
 	}
 
 	&__certs-slider {
-		margin-top: 62px;
+		margin-top: 53px;
+		margin-bottom: -7px;
 
 		@include max(sm) {
 			margin-top: 40px;
@@ -277,7 +278,13 @@
 	}
 
 	&__certs-slide {
-		height: 266px;
+		padding: 7px;
+		border: 0.933333px solid #151814;
+		position: relative;
+		&::before{
+			padding-top: 139.800%;
+		}
+
 
 		@include max(sm) {
 			height: auto;
@@ -287,6 +294,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
+			object-position: center center;
 		}
 	}
 
