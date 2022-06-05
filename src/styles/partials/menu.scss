@@ -76,7 +76,7 @@
 				a {
 					font-size: 16px;
 					line-height: 18px;
-					color: rgba($white, 0.64);
+					color: $white-op-0-64;
 					transition: color 0.3s ease;
 
 					@include hover {

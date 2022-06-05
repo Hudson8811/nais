@@ -8,7 +8,8 @@
 	&__container {
 		padding-top: 147px;
 		padding-bottom: 100px;
-		border-left: 1px solid rgba($green-lemon, 0.12);
+		border-left: 1px solid $green-lemon-op-0-12;
+		border-top: 1px solid $green-lemon-op-0-12;
 
 		@include max(md) {
 			padding-top: 32px;

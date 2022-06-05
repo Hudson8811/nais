@@ -14,6 +14,7 @@ $mulishFont: 'Mulish', sans-serif;
 $robotoFont: 'Roboto', sans-serif;
 
 /* цвета */
+/*
 $textMainColor: #f0f0ed;
 $white: #ffffff;
 $black: #000000;
@@ -26,3 +27,171 @@ $green: #467c3f;
 $dunkl: #252924;
 $green-hover: #60a058;
 $orange: #f2802c;
+$inp-background: #1f231e;
+
+$white-op-0-32: rgba($white, 0.32);
+$white-op-0-6: rgba($white, 0.6);
+$white-op-0-64: rgba($white, 0.64);
+$black-op-0-1: rgba($black, 0.1);
+$black-op-0-2: rgba($black, 0.2);
+$black-15-op-0-2: rgba($black-15, 0.2);
+$white-op-0-02: rgba($textMainColor, 0.02);
+$white-op-0-16: rgba($textMainColor, 0.16);
+$white-op-0-32: rgba($textMainColor, 0.32);
+$white-op-0-64: rgba($textMainColor, 0.64);
+$green-op-0-16: rgba($green, 0.16);
+$green-lemon-op-0-12: rgba($green-lemon, 0.12);
+$green-lemon-op-0-32: rgba($green-lemon, 0.32);
+$dunkl-op-0-02: rgba($dunkl, 0.3);
+*/
+
+
+
+
+
+$src-textMainColor: #f0f0ed;
+$src-white: #ffffff;
+$src-black: #000000;
+$src-black-15: #151814;
+$src-black-33: #333633;
+$src-gray-c9: #c9c9c9;
+$src-green-lemon: #a0ab7b;
+$src-thatch-green: #2f4919;
+$src-green: #467c3f;
+$src-dunkl: #252924;
+$src-green-hover: #60a058;
+$src-orange: #f2802c;
+$src-inp-background: #1f231e;
+$src-logo-color: $src-white;
+
+$src-white-op-0-02: rgba($src-white, 0.02);
+$src-white-op-0-16: rgba($src-white, 0.16);
+$src-white-op-0-32: rgba($src-white, 0.32);
+$src-white-op-0-6: rgba($src-white, 0.6);
+$src-white-op-0-64: rgba($src-white, 0.64);
+$src-black-op-0-1: rgba($src-black, 0.1);
+$src-black-op-0-2: rgba($src-black, 0.2);
+$src-black-15-op-0-2: rgba($src-black-15, 0.2);
+$src-textMainColor-op-0-02: rgba($src-textMainColor, 0.02);
+$src-textMainColor-op-0-16: rgba($src-textMainColor, 0.16);
+$src-textMainColor-op-0-32: rgba($src-textMainColor, 0.32);
+$src-textMainColor-op-0-64: rgba($src-textMainColor, 0.64);
+$src-green-op-0-16: rgba($src-green, 0.16);
+$src-green-lemon-op-0-12: rgba($src-green-lemon, 0.12);
+$src-green-lemon-op-0-32: rgba($src-green-lemon, 0.32);
+$src-dunkl-op-0-02: rgba($src-dunkl, 0.02);
+$src-dunkl-op-0-16: rgba($src-dunkl, 0.16);
+$src-dunkl-op-0-3: rgba($src-dunkl, 0.3);
+
+
+
+$theme-light-textMainColor: #252924;//#f0f0ed;
+$theme-light-white: #252924;//#ffffff;
+$theme-light-black: #000000;//#000000;
+$theme-light-black-15: #F0F0ED;//#151814;
+$theme-light-black-33: #333633;//#333633;
+$theme-light-gray-c9: #c9c9c9;//#c9c9c9;
+$theme-light-green-lemon: #a0ab7b;//#a0ab7b;
+$theme-light-thatch-green: #2f4919;//#2f4919;
+$theme-light-green: #467c3f;//#467c3f;
+$theme-light-dunkl: #FFFFFF;//#252924;
+$theme-light-green-hover: #60a058;//#60a058;
+$theme-light-orange: #f2802c;//#f2802c;
+$theme-light-inp-background: #1f231e;//#1f231e;
+$theme-light-logo-color: $theme-light-thatch-green;
+
+$theme-light-white-op-0-02: rgba($theme-light-white, 0.02);
+$theme-light-white-op-0-16: rgba($theme-light-white, 0.16);
+$theme-light-white-op-0-32: rgba($theme-light-white, 0.32);
+$theme-light-white-op-0-6: rgba($theme-light-white, 0.6);
+$theme-light-white-op-0-64: rgba($theme-light-white, 0.64);
+$theme-light-black-op-0-1: rgba($theme-light-black, 0.1);
+$theme-light-black-op-0-2: rgba($theme-light-black, 0.2);
+$theme-light-black-15-op-0-2: rgba($theme-light-black-15, 0.2);
+$theme-light-textMainColor-op-0-02: rgba($theme-light-textMainColor, 0.02);
+$theme-light-textMainColor-op-0-16: rgba($theme-light-textMainColor, 0.16);
+$theme-light-textMainColor-op-0-32: rgba($theme-light-textMainColor, 0.32);
+$theme-light-textMainColor-op-0-64: rgba($theme-light-textMainColor, 0.64);
+$theme-light-green-op-0-16: rgba($theme-light-green, 0.16);
+$theme-light-green-lemon-op-0-12: rgba($theme-light-green-lemon, 0.12);
+$theme-light-green-lemon-op-0-32: rgba($theme-light-green-lemon, 0.32);
+$theme-light-dunkl-op-0-02: rgba($theme-light-dunkl, 0.02);
+$theme-light-dunkl-op-0-16: rgba($theme-light-dunkl, 0.16);
+$theme-light-dunkl-op-0-3: rgba($theme-light-dunkl, 0.3);
+
+
+
+
+
+
+
+/*
+
+$textMainColor: var(--textMainColor);
+$white:  var(--white);
+$black:  var(--black);
+$black-15:  var(--black-15);
+$black-33:  var(--black-33);
+$gray-c9:  var(--gray-c9);
+$green-lemon:  var(--green-lemon);
+$thatch-green:  var(--thatch-green);
+$green:  var(--green);
+$dunkl:  var(--dunkl);
+$green-hover:  var(--green-hover);
+$orange:  var(--orange);
+$inp-background:  var(--inp-background);
+
+$white-op-0-32: var(--white-op-0-32);
+$white-op-0-6: var(--white-op-0-6);
+$white-op-0-64: var(--white-op-0-64);
+$black-op-0-1: var(--black-op-0-1);
+$black-op-0-2: var(--black-op-0-2);
+$black-15-op-0-2: var(--black-15-op-0-2);
+$white-op-0-02: var(--white-op-0-02);
+$white-op-0-16: var(--white-op-0-16);
+$white-op-0-32: var(--white-op-0-32);
+$white-op-0-64: var(--white-op-0-64);
+$green-op-0-16: var(--green-op-0-16);
+$green-lemon-op-0-12: var(--green-lemon-op-0-12);
+$green-lemon-op-0-32: var(--green-lemon-op-0-32);
+$dunkl-op-0-02: var(--dunkl-op-0-02);
+*/
+
+
+
+
+
+
+$textMainColor: var(--textMainColor);
+$white:  var(--white);
+$black:  var(--black);
+$black-15:  var(--black-15);
+$black-33:  var(--black-33);
+$gray-c9:  var(--gray-c9);
+$green-lemon:  var(--green-lemon);
+$thatch-green:  var(--thatch-green);
+$green:  var(--green);
+$dunkl:  var(--dunkl);
+$green-hover:  var(--green-hover);
+$orange:  var(--orange);
+$inp-background:  var(--inp-background);
+$logo-color:  var(--logo-color);
+
+$white-op-0-02: var(--white-op-0-02);
+$white-op-0-16: var(--white-op-0-16);
+$white-op-0-6: var(--white-op-0-6);
+$white-op-0-32: var(--white-op-0-32);
+$white-op-0-64: var(--white-op-0-64);
+$black-op-0-1: var(--black-op-0-1);
+$black-op-0-2: var(--black-op-0-2);
+$black-15-op-0-2: var(--black-15-op-0-2);
+$textMainColor-op-0-02: var(--textMainColor-op-0-02);
+$textMainColor-op-0-16: var(--textMainColor-op-0-16);
+$textMainColor-op-0-32: var(--textMainColor-op-0-32);
+$textMainColor-op-0-64: var(--textMainColor-op-0-64);
+$green-op-0-16: var(--green-op-0-16);
+$green-lemon-op-0-12: var(--green-lemon-op-0-12);
+$green-lemon-op-0-32: var(--green-lemon-op-0-32);
+$dunkl-op-0-02: var(--dunkl-op-0-02);
+$dunkl-op-0-16: var(--dunkl-op-0-16);
+$dunkl-op-0-3: var(--dunkl-op-0-3);

@@ -1,0 +1,172 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Главная'
+		};
+
+block main
+	//	.title-l2 Полный цикл
+	.section-product-tabs
+		.container
+			h2.title-l2.title-l2--product-tabs Весы автомобильные тензометрические ВАТ
+			+filter([
+				{
+					text: 'Описание',
+					class: 'filter__button--active'
+				},
+				{text: 'Способы установки'},
+				{text: 'Характеристики'},
+				{text: 'Модели'},
+				{text: 'Сертификаты'}
+			], 'product__tabs')
+			.product__content
+				.product__content-item(style='display: block;')
+
+					.simple-text.simple-text--chyst
+						p Весы автомобильные тензометрические ВАТ предназначены для статического взвешивания автомобильного транспорта. Устанавливаются на фундамент.
+					.chyst-cycle.chyst-cycle--product-tabs
+						.chyst-cycle-item
+							.chyst-cycle-item__icon
+								img(src="images/product/icons/tab1/1.svg", alt="")
+							.chyst-cycle-item__name Датчики HBM, Германия
+						.chyst-cycle-item
+							.chyst-cycle-item__icon
+								img(src="images/product/icons/tab1/2.svg", alt="")
+							.chyst-cycle-item__name Запатентованная конструкция платформы
+						.chyst-cycle-item
+							.chyst-cycle-item__icon
+								img(src="images/product/icons/tab1/3.svg", alt="")
+							.chyst-cycle-item__name Штатный терминал
+						.chyst-cycle-item
+							.chyst-cycle-item__icon
+								img(src="images/product/icons/tab1/4.svg", alt="")
+							.chyst-cycle-item__name Автоматизация взвешивания
+						.chyst-cycle-item
+							.chyst-cycle-item__icon
+								img(src="images/product/icons/tab1/5.svg", alt="")
+							.chyst-cycle-item__name Система защиты от внешнего воздействия
+						.chyst-cycle-item
+							.chyst-cycle-item__icon
+								img(src="images/product/icons/tab1/6.svg", alt="")
+							.chyst-cycle-item__name Взрывозащищенное исполнение
+						.chyst-cycle-item
+							.chyst-cycle-item__icon
+								img(src="images/product/icons/tab1/7.svg", alt="")
+							.chyst-cycle-item__name Сертифицированное измерение нагрузки на ось
+						.chyst-cycle-item
+							.chyst-cycle-item__icon
+								img(src="images/product/icons/tab1/8.svg", alt="")
+							.chyst-cycle-item__name Оперативная установка
+
+				.product__content-item
+					.simple-text.simple-text--product-tab-2
+						h3 Врезной
+						img(src="images/product/tab2/1.svg", alt="")
+						p  Монтаж осуществляется на фундамент в приямок на одном уровне с дорожным полотном. Организуется дренажная система. Отсутствие пандуса облегчает заезд и съезд автомобиля с весов.
+						h3 Плюсы
+						ul
+							li Требуется меньшая площадь под установку весов
+							li Исключается экстремальный съезд транспорта с весов
+							li Весы не препятствуют движению
+							li Ограничен доступ для установки устройств несанкционированного воздействия
+							li Возможно подключение измерения нагрузки на ось
+						h3 Наземный
+						img(src="images/product/tab2/2.svg", alt="")
+						p Монтаж осуществляется на фундамент, спроектированный с учётом особенностей рельефа. Заезд автомобиля происходит по металлическим или бетонным пандусам.
+						h3 Плюсы
+						ul
+							li Лёгкий доступ ко всем рабочим узлам весов для обслуживания, ремонта, контроля
+							li Удобство очистки подвесового пространства
+							li Водоотведение в районе весов происходит по сформированным уклонам поверхности
+
+				.product__content-item
+					table.table.table--product-1.table--product-1--x2
+						tbody
+							tr
+								td Врезной
+								td Врезной
+							tr
+								td Врезной
+								td Врезной
+
+					.big-letters-list
+						.bl-list-item
+							.bl-list-item__number 01
+							.bl-list-item__content.simple-text
+								p Точные и надежные тензометрические датчики Hottinger Baldwin Messtechnik, Германия, гарантируют защиту от взлома и преднамеренного изменения данных.
+						.bl-list-item
+							.bl-list-item__number 02
+							.bl-list-item__content.simple-text
+								p Запатентованная конструкция платформы за счёт шарнирного соединения её модулей повышает точность взвешивания.
+						.bl-list-item
+							.bl-list-item__number 03
+							.bl-list-item__content.simple-text
+								p Штатный терминал с интуитивно понятным интерфейсом и широким набором функций:
+								ul
+									li сохранение истории калибровок
+									li режим просмотра покилограммного взвешивания
+									li оповещение о неработающем датчике
+									li измерение температуры окружающей среды
+									li стабилизация данных измерений при ветре
+						.bl-list-item
+							.bl-list-item__number 04
+							.bl-list-item__content.simple-text
+								p Автоматизация процесса взвешивания с использованием собственного программного обеспечения для получения корректных данных, особенно при работе весовой с интенсивным трафиком.
+
+						.bl-list-item
+							.bl-list-item__number 05
+							.bl-list-item__content.simple-text
+								p Система защиты элементов весового комплекса от внешнего воздействия:
+								ul
+									li чехлы для дополнительной грязезащиты датчиков
+									li бензомаслостойкое резиновое уплотнение с высоким содержанием каучука для предотвращения попадания грязи в подвесовое пространство
+									li металлорукава для защиты кабельных линий от механических повреждений
+						.bl-list-item
+							.bl-list-item__number 06
+							.bl-list-item__content.simple-text
+								p Максимально быстрая – до 8 дней, установка весов за счет возможности применения сборно-блочного фундамента, изготовленного на заводе
+						.bl-list-item
+							.bl-list-item__number 07
+							.bl-list-item__content.simple-text
+								p Возможность взрывозащищенного исполнения
+						.bl-list-item
+							.bl-list-item__number 08
+							.bl-list-item__content.simple-text
+								p Сертифицированное измерение нагрузки на ось с возможностью печати актов взвешивания
+
+				.product__content-item
+					table.table.table--product-2
+						tbody
+							tr
+								th Модель
+								th Нагрузка тонны
+								th Размер
+								th Кол-во платфор
+								th Кол-во датчиков
+								th Примеры авто
+							each val in [1,2,3,4,5,6]
+								tr
+									td ВАТ-30-6-3-1
+									td 30
+									td 100
+									td 24
+									td 4
+									td
+										.table-product-cars
+											.table-product-car
+												img(src="images/product/car.png", alt="")
+											.table-product-car
+												img(src="images/product/car.png", alt="")
+
+				.product__content-item
+					.cert-gallery
+						a.cert-gallery-item(href="images/certs/1@2x.jpg" data-fancybox="cert-gallery")
+							img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
+						a.cert-gallery-item(href="images/certs/2@2x.jpg" data-fancybox="cert-gallery")
+							img(src='images/certs/2.jpg', srcset='images/certs/2@2x.jpg 2x', alt='')
+						a.cert-gallery-item(href="images/certs/3@2x.jpg" data-fancybox="cert-gallery")
+							img(src='images/certs/3.jpg', srcset='images/certs/3@2x.jpg 2x', alt='')
+						a.cert-gallery-item(href="images/certs/4@2x.jpg" data-fancybox="cert-gallery")
+							img(src='images/certs/4.jpg', srcset='images/certs/4@2x.jpg 2x', alt='')

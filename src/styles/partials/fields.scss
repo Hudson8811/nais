@@ -9,14 +9,14 @@
 		align-items: center;
 		height: 89px;
 		padding: 33px 22px;
-		background: #1F231E;
-		color: #F0F0ED;
+		background: $inp-background;
+		color: $textMainColor;
 		font-weight: 300;
 		font-size: 16px;
 		line-height: 22px;
 
 		&::placeholder {
-			color: rgba(255, 255, 255, 0.64);
+			color: $white-op-0-64;
 		}
 	}
 }

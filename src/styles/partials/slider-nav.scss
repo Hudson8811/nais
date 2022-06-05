@@ -31,7 +31,7 @@
 		height: 56px;
 		padding: 0;
 		background-color: transparent;
-		border: 1px solid rgba($green, 0.32);
+		border: 1px solid $green-lemon-op-0-32;
 		position: relative;
 
 		@include hover {
@@ -61,7 +61,7 @@
 		}
 
 		&--disabled {
-			border-color: rgba($green, 0.16);
+			border-color: $green-op-0-16;
 			border-radius: 50%;
 			cursor: default;
 
@@ -70,7 +70,7 @@
 			}
 
 			svg {
-				stroke: rgba($textMainColor, 0.32);
+				stroke: $textMainColor-op-0-32;
 			}
 		}
 	}

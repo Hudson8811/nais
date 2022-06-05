@@ -79,7 +79,7 @@
 			&:last-child {
 				font-size: 16px;
 				line-height: 21px;
-				color: rgba($textMainColor, 0.64);
+				color: $textMainColor-op-0-64;
 				margin-top: 7px;
 
 				@include max(sm) {

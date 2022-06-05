@@ -7,6 +7,7 @@ body {
 	font-family: $mainFont;
 	color: $textMainColor;
 	background-color: $black-15;
+	transition: background-color .3s;
 }
 
 a {
@@ -80,7 +81,7 @@ textarea {
 	}
 
 	&--border {
-		border-left: 1px solid rgba($green-lemon, 0.12);
+		border-left: 1px solid $green-lemon-op-0-12;
 		position: relative;
 
 		&::before {
@@ -88,7 +89,7 @@ textarea {
 			display: block;
 			width: 1px;
 			height: 100%;
-			background-color: rgba($green-lemon, 0.12);
+			background-color: $green-lemon-op-0-12;
 			position: absolute;
 			top: 0;
 			left: 37.5%;
@@ -112,5 +113,5 @@ textarea {
 	font-weight: 700;
 	font-size: 32px;
 	line-height: 37px;
-	color: #F0F0ED;
+	color: $textMainColor;
 }

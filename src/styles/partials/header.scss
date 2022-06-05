@@ -2,6 +2,7 @@
 	$parent: &;
 
 	background-color: $dunkl;
+	transition: background-color .3s;
 	padding: 57px 0;
 	position: relative;
 	z-index: 100;
@@ -32,7 +33,7 @@
 		transform: translateY(-50%);
 
 		svg {
-			fill: $white;
+			fill: $logo-color;
 		}
 	}
 
@@ -70,6 +71,7 @@
 	&__theme-switcher {
 		opacity: 0.32;
 		cursor: pointer;
+		transition-duration: .3s;
 
 		+ #{$parent}__theme-switcher {
 			margin-left: 13px;
