@@ -143,23 +143,48 @@ $(document).ready(function () {
 
 		if (window.matchMedia('(min-width: 1080px)').matches) {
 			gsap.ticker.add(function() {
-				if (mouse.moved && window.matchMedia('(min-width: 1080px)')) {
-					parallaxIt('.products-item__bg-text--1 span', 12);
-					parallaxIt('.products-item__bg-text--2 span', 22);
-					parallaxIt('.products-item__bg-text--3 span', 65);
+				if ($('.products-item__bg-text--1 span').length > 0) {
+					if (mouse.moved && window.matchMedia('(min-width: 1080px)')) {
+						parallaxIt('.products-item__bg-text--1 span', 12);
+					}
+
+					if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
+						parallaxIt('.products-item__bg-text--1 span', 10);
+					}
+
+					if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
+						parallaxIt('.products-item__bg-text--1 span', 5);
+					}
 				}
 
-				if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
-					parallaxIt('.products-item__bg-text--1 span', 10);
-					parallaxIt('.products-item__bg-text--2 span', 20);
-					parallaxIt('.products-item__bg-text--3 span', 64);
+				if ($('.products-item__bg-text--2 span').length > 0) {
+					if (mouse.moved && window.matchMedia('(min-width: 1080px)')) {
+						parallaxIt('.products-item__bg-text--2 span', 22);
+					}
+
+					if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
+						parallaxIt('.products-item__bg-text--2 span', 20);
+					}
+
+					if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
+						parallaxIt('.products-item__bg-text--2 span', 15);
+					}
 				}
 
-				if (mouse.moved && window.matchMedia('(min-width: 1900px)').matches) {
-					parallaxIt('.products-item__bg-text--1 span', 5);
-					parallaxIt('.products-item__bg-text--2 span', 15);
-					parallaxIt('.products-item__bg-text--3 span', 58);
+				if ($('.products-item__bg-text--3 span').length > 0) {
+					if (mouse.moved && window.matchMedia('(min-width: 1080px)')) {
+						parallaxIt('.products-item__bg-text--3 span', 65);
+					}
+
+					if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
+						parallaxIt('.products-item__bg-text--3 span', 64);
+					}
+
+					if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
+						parallaxIt('.products-item__bg-text--3 span', 58);
+					}
 				}
+
 				mouse.moved = false;
 			});
 		}
