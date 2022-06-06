@@ -67,20 +67,20 @@ $(document).ready(function () {
 
 	if (firstAnimation && firstAnimation.length > 0) {
 		if (window.matchMedia('(min-width: 1080px)').matches) {
-			const tl = gsap.timeline({paused: true});
-			const tl2 = gsap.timeline({paused: true});
+			const tl = gsap.timeline({ paused: true });
+			const tl2 = gsap.timeline({ paused: true });
 			const tlStart = gsap.timeline();
 
 			setTimeout(function () {
-				tlStart.fromTo($('.js-move-1'), 0.6, {x: -450, y: -170}, {x: -185, y: -95, ease: 'power1.out'});
-				tlStart.fromTo($('.js-move-2'), 0.6, {x: -450, y: -170}, {x: -128, y: -71, ease: 'power1.out'});
+				tlStart.fromTo($('.js-move-1'), 0.6, { x: -450, y: -170 }, { x: -185, y: -95, ease: 'power1.out' });
+				tlStart.fromTo($('.js-move-2'), 0.6, { x: -450, y: -170 }, { x: -128, y: -71, ease: 'power1.out' });
 			}, 500);
 
 			let hover1 = tl
-				.fromTo($('.js-move-1'), 0.6, {x: -185, y: -95}, {x: 0, y: 0, ease: 'power1.out'});
+				.fromTo($('.js-move-1'), 0.6, { x: -185, y: -95 }, { x: 0, y: 0, ease: 'power1.out' });
 
 			let hover2 = tl2
-				.fromTo($('.js-move-2'), 0.6, {x: -128, y: -71}, {x: 0, y: 0, ease: 'power1.out'});
+				.fromTo($('.js-move-2'), 0.6, { x: -128, y: -71 }, { x: 0, y: 0, ease: 'power1.out' });
 
 			firstAnimation.on('mouseenter', function () {
 				var that = $(this);
@@ -142,7 +142,7 @@ $(document).ready(function () {
 		};
 
 		if (window.matchMedia('(min-width: 1080px)').matches) {
-			gsap.ticker.add(function() {
+			gsap.ticker.add(function () {
 				if (mouse.moved && window.matchMedia('(min-width: 1080px)')) {
 					parallaxIt('.products-item__bg-text--1 span', 12);
 					parallaxIt('.products-item__bg-text--2 span', 22);
@@ -229,5 +229,27 @@ $(document).ready(function () {
 		$.each($(this).find('td'), function (index) {
 			$(this).attr('aria-label', title.eq(index).text());
 		});
+	});
+
+
+
+
+	var simpleBarOptions = {
+		autoHide: false
+	};
+
+	$('.js-table-scrollbar').each(function () {
+		new SimpleBar($(this)[0], simpleBarOptions);
+	});
+
+	$("body").on('mouseover mouseleave', '.table-hover-x td', function (e) {
+		if (e.type == 'mouseover') {
+			$(this).parent().addClass("hover");
+			$(this).closest('table').find("colgroup").eq($(this).index()).addClass("hover");
+		}
+		else {
+			$(this).parent().removeClass("hover");
+			$(this).closest('table').find("colgroup").eq($(this).index()).removeClass("hover");
+		}
 	});
 })

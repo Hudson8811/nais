@@ -19,4 +19,6 @@ $(window).on('load', function(){
 	setTabs(contactsTabs, contactsContent);
 	setTabs(softwareTabs, softwareContent);
 	setTabs(productTabs, productContent);
+
+
 });

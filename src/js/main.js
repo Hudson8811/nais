@@ -10,6 +10,7 @@
 //= ./libs/packery.pkgd.min.js
 //= ./libs/packery-mode.pkgd.min.js
 //= ./libs/jquery.fancybox.min.js
+//= ./libs/simplebar.min.js
 
 //= ./partials/main.js
 //= ./partials/swiper-init.js

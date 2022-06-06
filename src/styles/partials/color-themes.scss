@@ -183,31 +183,38 @@ body {
 
 	//software
 
-	.filter__button--active{
+	.filter__button--active {
 		color: #FFFFFF;
 	}
-	@media (min-width: 1080px){
-		.filter__button:focus, .filter__button:hover {
+
+	@media (min-width: 1080px) {
+
+		.filter__button:focus,
+		.filter__button:hover {
 			color: #FFFFFF;
 		}
 
 	}
-	.software-card__tag{
+
+	.software-card__tag {
 		color: #252924;
 	}
+
 	//contacts
 	//articles-page.html
-	.articles-card__date{
+	.articles-card__date {
 		color: #fff;
 	}
 
 	//articles-single.html
-	.article-single__table td{
+	.article-single__table td {
 		border-color: #F0F0ED;
 	}
-	.article-single__consult-btn svg{
+
+	.article-single__consult-btn svg {
 		stroke: #F0F0ED;
 	}
+
 	//modals
 	.cutom-inp__field {
 
@@ -240,5 +247,18 @@ body {
 		background: url(../images/select-arrow-dark.svg) no-repeat 17px 20px;
 		background-size: 19px 12px;
 	}
+
+
+
+	.cert-gallery {
+
+		&-item {
+			border-color: #262A20;
+		}
+	}
+	.simplebar-scrollbar:before {
+		background: #ffffff;
+	}
 }
+
 //rgba(37, 41, 36, 0.32)
