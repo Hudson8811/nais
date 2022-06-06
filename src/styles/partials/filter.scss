@@ -1,15 +1,23 @@
 .filter {
 	$parent: &;
 
-	display: flex;
-	flex-wrap: wrap;
-	border: 1px solid $black-33;
-	background-color: $black-15;
-	border-radius: 100px;
-	padding: 13px 13px 0;
+	overflow: auto;
+	margin-left: -15px;
+	margin-right: -15px;
+	padding: 0 15px;
 
-	@include max(md) {
-		border-radius: 5px;
+	&__inner{
+		display: flex;
+		flex-wrap: nowrap;
+		border: 1px solid $black-33;
+		background-color: $black-15;
+		border-radius: 100px;
+		padding: 13px 1px 10px;
+		width: max-content;
+	}
+
+	&__item{
+		padding: 0 12px;
 	}
 
 	&__button {
@@ -19,10 +27,10 @@
 		text-align: left;
 		color: $white-op-0-32;
 		border-radius: 100px;
-		padding: 11px 22px;
-		margin-bottom: 10px;
+		padding: 11px 24px;
 		cursor: pointer;
 		transition: color 0.3s ease, background-color 0.3s ease;
+		white-space: nowrap;
 
 		@include hover {
 			color: $white;

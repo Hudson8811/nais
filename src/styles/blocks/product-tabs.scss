@@ -10,11 +10,9 @@
 
 .product__tabs {
 	margin-top: 97px;
-	justify-content: space-between;
-	width: 851px;
-	max-width: 100%;
-	border: 1px solid $black-33;
-	background: none;
+	.filter__inner{
+		background: none;
+	}
 }
 
 .product__content {}
