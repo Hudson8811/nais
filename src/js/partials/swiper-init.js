@@ -3,8 +3,10 @@ $(window).on('load', function () {
 	let articleSlider = document.querySelectorAll('.__js_slider-article');
 	let certsSlider = document.querySelectorAll('.__js_slider-article-certs');
 	let reviewsSlider = document.querySelectorAll('.__js_slider-reviews');
+	let reviewsSlider2 = document.querySelectorAll('.__js_slider-reviews-2');
 	let photosSlider = document.querySelectorAll('.__js_slider-photos');
 	let partnersSlider = document.querySelectorAll('.__js_slider-partners');
+	let projectsSlider = document.querySelectorAll('.__js_slider-projects');
 
 	const pagiOptions = {
 		type: 'bullets',
@@ -101,6 +103,24 @@ $(window).on('load', function () {
 		});
 	}
 
+	if (reviewsSlider2.length > 0) {
+		reviewsSlider2.forEach(elem => {
+			new Swiper(elem, {
+				slidesPerView: 1.16,
+				spaceBetween: 32,
+				navigation: {
+					nextEl: '.weights-page__nav .slider-nav__button--next',
+					prevEl: '.weights-page__nav .slider-nav__button--prev',
+					disabledClass: 'slider-nav__button--disabled'
+				},
+				pagination: {
+					...pagiOptions,
+					el: '.weights-page__nav .slider-nav__pagi',
+				}
+			})
+		});
+	}
+
 	if (photosSlider.length > 0) {
 		photosSlider.forEach(elem => {
 			new Swiper(elem, {
@@ -140,6 +160,24 @@ $(window).on('load', function () {
 					1080: {
 						slidesPerView: 4
 					}
+				}
+			})
+		});
+	}
+
+	if (projectsSlider.length > 0) {
+		projectsSlider.forEach(elem => {
+			new Swiper(elem, {
+				slidesPerView: 2.3,
+				spaceBetween: 16,
+				navigation: {
+					nextEl: '.weights-page__projects-nav .slider-nav__button--next',
+					prevEl: '.weights-page__projects-nav .slider-nav__button--prev',
+					disabledClass: 'slider-nav__button--disabled'
+				},
+				pagination: {
+					...pagiOptions,
+					el: '.weights-page__projects-nav .slider-nav__pagi',
 				}
 			})
 		});

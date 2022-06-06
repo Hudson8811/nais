@@ -5,6 +5,8 @@ $(window).on('load', function(){
 	var softwareContent = $('.software__content-item');
 	var productTabs = $('.product__tabs button');
 	var productContent = $('.product__content-item');
+	var weightsTabs = $('.weights-page__tabs button');
+	var weightsContent = $('.weights-page__about-content');
 
 	function setTabs(tabs, content) {
 		tabs.click(function () {
@@ -21,4 +23,5 @@ $(window).on('load', function(){
 	setTabs(productTabs, productContent);
 
 
+	setTabs(weightsTabs, weightsContent);
 });
