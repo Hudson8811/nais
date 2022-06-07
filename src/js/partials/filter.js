@@ -58,7 +58,7 @@ $(window).on('load', function(){
 				let container = $(this).closest('.container');
 				let leftContainer = container.offset().left;
 				let widthContainer = container.innerWidth();
-				if (container.hasClass('container--border')){
+				if ($(this).parents('.container--border').length > 0){
 					$(this).css('width',widthContainer);
 				} else {
 					$(this).css('width',windowWidth-leftContainer);
