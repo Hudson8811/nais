@@ -135,71 +135,40 @@ $(document).ready(function () {
 	 */
 	if (products && products.length > 0) {
 		var rect = $('body')[0].getBoundingClientRect();
-		var mouse = {
-			x: 0,
-			y: 0,
-			moved: false
-		};
+		var mouse = {x: 0, y: 0, moved: false};
 
-		if (window.matchMedia('(min-width: 1080px)').matches) {
-			gsap.ticker.add(function() {
-				if ($('.products-item__bg-text--1 span').length > 0) {
-					if (mouse.moved && window.matchMedia('(min-width: 1080px)')) {
-						parallaxIt('.products-item__bg-text--1 span', 12);
+		if($(window).width()>1079){
+			gsap.ticker.add(function(){
+				if (mouse.moved){
+					if ($('.products-item__bg-text--1 span').length > 0) {
+						parallaxIt(".products-item__bg-text--1 span", 250);
 					}
-
-					if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
-						parallaxIt('.products-item__bg-text--1 span', 10);
+					if ($('.products-item__bg-text--2 span').length > 0) {
+						parallaxIt(".products-item__bg-text--2 span", 250);
 					}
-
-					if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
-						parallaxIt('.products-item__bg-text--1 span', 5);
+					if ($('.products-item__bg-text--3 span').length > 0) {
+						parallaxIt(".products-item__bg-text--3 span", 250);
 					}
 				}
-
-				if ($('.products-item__bg-text--2 span').length > 0) {
-					if (mouse.moved && window.matchMedia('(min-width: 1080px)')) {
-						parallaxIt('.products-item__bg-text--2 span', 22);
-					}
-
-					if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
-						parallaxIt('.products-item__bg-text--2 span', 20);
-					}
-
-					if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
-						parallaxIt('.products-item__bg-text--2 span', 15);
-					}
-				}
-
-				if ($('.products-item__bg-text--3 span').length > 0) {
-					if (mouse.moved && window.matchMedia('(min-width: 1080px)')) {
-						parallaxIt('.products-item__bg-text--3 span', 65);
-					}
-
-					if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
-						parallaxIt('.products-item__bg-text--3 span', 64);
-					}
-
-					if (mouse.moved && window.matchMedia('(min-width: 1440px)').matches) {
-						parallaxIt('.products-item__bg-text--3 span', 58);
-					}
-				}
-
 				mouse.moved = false;
 			});
 		}
 
-		function parallaxIt(target, coef) {
-			gsap.to(target, 0.3, {
-				x: (mouse.x - rect.width / 2) / rect.width * 150 * coef,
-				y: (mouse.y - rect.height / 5) / rect.height * 150
+		function parallaxIt(target, movement) {
+			TweenMax.to(target, 0.3, {
+				x: (mouse.x - rect.width / 2) / rect.width * movement * -1,
+				y: (mouse.y - rect.height / 6) / rect.height * movement * -1
 			});
 		}
 
-		$(window).mousemove(function (e) {
+		$("body").mousemove(function(e) {
 			mouse.moved = true;
 			mouse.x = e.clientX - rect.left;
 			mouse.y = e.clientY + rect.top;
+		});
+
+		$(window).on('resize scroll', function(){
+			rect = $('body')[0].getBoundingClientRect();
 		});
 	}
 
