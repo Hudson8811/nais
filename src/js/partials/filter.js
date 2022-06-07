@@ -38,4 +38,36 @@ $(window).on('load', function(){
 		let index = $(this).parent().index();
 		$('.js-img-move').eq(index).addClass('active').siblings().removeClass('active');
 	});
+
+
+
+
+
+
+
+
+
+
+
+
+	$(window).on('resize',function (){
+		let windowWidth = $(window).width();
+
+		$('.filter').each(function (){
+			if (windowWidth > 1079){
+				let container = $(this).closest('.container');
+				let leftContainer = container.offset().left;
+				let widthContainer = container.innerWidth();
+				if (container.hasClass('container--border')){
+					$(this).css('width',widthContainer);
+				} else {
+					$(this).css('width',windowWidth-leftContainer);
+				}
+			} else {
+				$(this).css('width',"");
+			}
+		});
+
+
+	});
 });
