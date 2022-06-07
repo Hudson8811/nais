@@ -65,17 +65,18 @@
 
 		.products-item__image {
 			margin-top: 38px;
-			margin-left: -205px;
-			img{
-				margin-left: 0;
-			}
 		}
 
 		&--truck {
 			margin-top: 254px;
 			position: relative;
 
-			.products-item__image {}
+			.products-item__image {
+				margin-left: -205px;
+				img{
+					margin-left: 0;
+				}
+			}
 
 			.products-item__truck {
 				display: flex;
