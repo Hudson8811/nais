@@ -18,7 +18,7 @@ $(window).on('load', function(){
 				}
 				tabs.removeClass('active');
 				$(this).addClass('active');
-				content.hide().eq($(this).index()).fadeIn(300);
+				content.hide().eq($(this).parent().index()).fadeIn(300);
 			}
 		});
 	}

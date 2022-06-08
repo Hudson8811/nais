@@ -115,6 +115,15 @@ $(document).ready(function () {
 					animCounter(digit, 90, 0, true);
 				}
 			});
+		} else {
+			var digit = firstAnimation.find('.js-digit');
+			digit.each(function (){
+				if ($(this).hasClass('val24')) {
+					animCounter($(this), 0, 24, true);
+				} else {
+					animCounter($(this), 0, 90, true);
+				}
+			});
 		}
 	}
 

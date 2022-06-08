@@ -33,10 +33,30 @@ $(window).on('load', function(){
 
 
 
+	let allowTruck = true;
 	$('.weights-page__tabs-dynamic .filter__button').on('click', function() {
-		$(this).addClass(filterActiveClass).parent().siblings().find('.filter__button').removeClass(filterActiveClass);
-		let index = $(this).parent().index();
-		$('.js-img-move').eq(index).addClass('active').siblings().removeClass('active');
+		if (allowTruck){
+			allowTruck = false;
+			$(this).addClass(filterActiveClass).parent().siblings().find('.filter__button').removeClass(filterActiveClass);
+			let index = $(this).parent().index();
+			let prevTruck = $('.js-img-move.active');
+			let nextTruck = $('.js-img-move').eq(index);
+
+			prevTruck.removeClass('active').addClass('out');
+			setTimeout(function (){
+				prevTruck.removeClass('visible')
+			},250);
+			setTimeout(function (){
+				prevTruck.removeClass('out')
+			},700);
+			setTimeout(function (){
+				nextTruck.addClass('active visible');
+			},200);
+
+			setTimeout(function (){
+				allowTruck = true;
+			},1000);
+		}
 	});
 
 

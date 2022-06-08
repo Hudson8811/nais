@@ -2,6 +2,11 @@
 	width: 837px;
 	max-width: 100%;
 
+	@media only screen and (min-width: 1439px){
+		width: 100%;
+		padding-right: vw(134);
+	}
+
 	@media only screen and (max-width: 1079px) {
 		width: 100%;
 	}
@@ -148,10 +153,20 @@
 	margin-bottom: -32px;
 	justify-content: space-between;
 
+	@media only screen and (min-width: 1439px){
+		width: 100%;
+		padding-right: vw(183);
+	}
+
+
 	&-item {
 		margin-bottom: 32px;
 		width: calc(50% - 36px);
 		transition-duration: .3s;
+
+		@media only screen and (min-width: 1439px){
+			width: calc(50% - 2.5vw);
+		}
 
 		&:hover {
 			opacity: .7;

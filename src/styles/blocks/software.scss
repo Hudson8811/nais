@@ -7,13 +7,22 @@
 .software-inner-container {
 	width: 858px;
 	max-width: 100%;
+	&--wide{
+		@media only screen and (min-width: 1439px){
+			width: 100%;
+			padding-right: vw(139);
+		}
+	}
 	@media only screen and (max-width: 1079px){
 		width: 100%;
 	}
 }
 
 .software__title {
-	margin-top: 32px;
+	padding-top: 32px;
+	@include max(md) {
+		padding-top: 60px;
+	}
 }
 
 .img-map--software {
@@ -177,6 +186,10 @@
 	margin-top: 30px;
 	width: 848px;
 	max-width: 100%;
+
+	@media only screen and (min-width: 1439px){
+		width: calc(100% + 16px);
+	}
 
 	@media only screen and (max-width: 1079px) {
 		width: auto;

@@ -22,6 +22,9 @@
 		}
 	}
 	&--default-mt{
-		margin-top: 129px;
+		padding-top: 129px;
+		@include max(md) {
+			padding-top: 60px;
+		}
 	}
 }
