@@ -1,4 +1,4 @@
-.pattern {
+/*.pattern {
 	display: flex;
 	flex-direction: column;
 	width: vw(107);
@@ -29,4 +29,78 @@
 			}
 		}
 	}
+}*/
+
+.pattern {
+	display: flex;
+	flex-direction: column;
+	width: vw(107);
+	position: absolute;
+	top: 0;
+	right: 0;
+    height: 100%;
+    max-height: 100%;
+	overflow: hidden;
+
+	@include max(md) {
+		display: none;
+	}
+
+	&__inner {}
+
+	svg {
+		width: 100%;
+		height: auto;
+		position: relative;
+		pointer-events: none;
+
+		&:first-child {
+			margin-top: -7vw;
+		}
+
+		&:not(:first-child) {
+			//clip-path: polygon(0 16px, 100% 16px, 100% 100%, 0 100%);
+			//clip-path: url(#cross);
+			margin-top: -7vw;
+			//background: red;
+		}
+
+		&:nth-child(2n){
+			//background: #ff000033;
+		}
+
+		path {
+			transition: all 1s  ease-in-out;
+			pointer-events: all;
+
+			//animation: svg_path_anim 3s ease-in-out infinite;
+
+			/*@include hover {
+				fill: $orange;
+				opacity: 1;
+			}*/
+
+
+			&.pattern-path-hovered, &:hover {
+				fill: $orange;
+				opacity: 1;
+				//animation: svg_path_anim 3s ease-in-out forwards;
+			}
+		}
+	}
 }
+/*
+@keyframes svg_path_anim {
+	0% {
+		fill: $orange;
+	}
+
+	50% {
+		fill: $orange;
+		opacity: 1;
+	}
+
+	100% {
+		fill: $orange;
+	}
+}*/

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   fill="none"
+   viewBox="0 0 105 580"
+   version="1.1"
+   id="svg76"
+   sodipodi:docname="pattern_w_mask.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs80" />
+  <sodipodi:namedview
+     id="namedview78"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="256"
+     inkscape:cx="105.15625"
+     inkscape:cy="-0.3359375"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg76" />
+  <g
+     mask="url(#a)"
+     fill="#A0AB7B"
+     id="g74">
+    <path
+       opacity=".12"
+       d="m106.273 455.843 7.036 6.896L-1.03 579.396l-7.036-6.896 114.339-116.657Z"
+       id="path42" />
+    <path
+       opacity=".12"
+       d="m106.273 425.843 7.036 6.896L-1.03 549.396l-7.036-6.896 114.339-116.657Z"
+       id="path44" />
+    <path
+       opacity=".12"
+       d="m106.273 394.843 7.036 6.896L-1.03 518.396l-7.036-6.896 114.339-116.657Z"
+       id="path46" />
+    <path
+       opacity=".12"
+       d="m106.273 364.843 7.036 6.896L-1.03 488.396l-7.036-6.896 114.339-116.657Z"
+       id="path48" />
+    <path
+       opacity=".12"
+       d="m106.273 333.843 7.036 6.896L-1.03 457.396l-7.036-6.896 114.339-116.657Z"
+       id="path50" />
+    <path
+       opacity=".12"
+       d="m106.273 303.843 7.036 6.896L-1.03 427.396l-7.036-6.896 114.339-116.657Z"
+       id="path52" />
+    <path
+       opacity=".12"
+       d="m106.273 272.843 7.036 6.896L-1.03 396.396l-7.036-6.896 114.339-116.657Z"
+       id="path54" />
+    <path
+       opacity=".12"
+       d="m106.273 242.843 7.036 6.896L-1.03 366.396l-7.036-6.896 114.339-116.657Z"
+       id="path56" />
+    <path
+       opacity=".12"
+       d="m106.273 211.843 7.036 6.896L-1.03 335.396l-7.036-6.896 114.339-116.657Z"
+       id="path58" />
+    <path
+       opacity=".12"
+       d="m106.273 181.843 7.036 6.896L-1.03 305.396l-7.036-6.896 114.339-116.657Z"
+       id="path60" />
+    <path
+       opacity=".12"
+       d="m106.273 150.843 7.036 6.896L-1.03 274.396l-7.036-6.896 114.339-116.657Z"
+       id="path62" />
+    <path
+       opacity=".12"
+       d="m106.273 120.843 7.036 6.896L-1.03 244.396l-7.036-6.896 114.339-116.657Z"
+       id="path64" />
+    <path
+       opacity=".12"
+       d="m106.273 89.843 7.036 6.896L-1.03 213.396l-7.036-6.896L106.273 89.843Z"
+       id="path66" />
+    <path
+       opacity=".12"
+       d="m106.273 59.843 7.036 6.896L-1.03 183.396l-7.036-6.896L106.273 59.843Z"
+       id="path68" />
+    <path
+       opacity=".12"
+       d="m106.273 28.843 7.036 6.896L-1.03 152.396l-7.036-6.896L106.273 28.843Z"
+       id="path70" />
+    <path
+       opacity=".12"
+       d="m106.273-1.157 7.036 6.896L-1.03 122.396l-7.036-6.896L106.273-1.157Z"
+       id="path72" />
+  </g>
+  <path
+     style="fill:#000000"
+     d="M -0.10602397,578.73928 105.2549,471.53843 105.625,-0.3125 V -0.6640625 L -0.233268,106.93987 Z"
+     id="path357"
+     sodipodi:nodetypes="cccccc" />
+</svg>

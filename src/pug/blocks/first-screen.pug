@@ -1,5 +1,10 @@
 section.first-screen
-	.first-screen__bg
+	.pattern
+		.pattern__inner
+			include ../../images/pattern.svg
+			include ../../images/pattern.svg
+			include ../../images/pattern.svg
+	//.first-screen__bg
 		svg(width='105' height='1542' viewBox='0 0 105 1542' fill='none' xmlns='http://www.w3.org/2000/svg')
 			g(opacity='1')
 				mask#mask0_2218_5622(style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='586' width='105' height='579')
@@ -156,10 +161,14 @@ section.first-screen
 					rect(width='9.85216' height='548.512' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 81.3258 1135.43)' fill='#A0AB7B' opacity='0.12')
 					rect(width='9.85216' height='504.925' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 51.7906 1135.1)' fill='#A0AB7B' opacity='0.12')
 					rect(width='9.85216' height='459.066' transform='matrix(-0.714169 -0.699974 -0.699974 0.714169 19.3031 1137.78)' fill='#A0AB7B' opacity='0.12')
+
+
+
 	.container.first-screen__container
 		.first-screen__wrapper
 			.first-screen__col.first-screen__col--animate
 				.first-screen__dynamic(data-tab='0', style='display: block')
+					.first-screen__dynamic-hov-area
 					.first-screen__animate.js-move-1
 						img(src='images/wagon-1.png', alt='')
 					.first-screen__rails
@@ -169,6 +178,7 @@ section.first-screen
 								span <span class="js-digit">0,0000</span>
 							p Тонн
 				.first-screen__dynamic.first-screen__dynamic--2(data-tab='1')
+					.first-screen__dynamic-hov-area
 					.first-screen__animate.js-move-2
 						img(src='images/wagon-4.png', alt='')
 					.first-screen__rails
