@@ -53,20 +53,30 @@
 		#{$parent} {
 			&__image {
 				width: 37.8%;
+				max-width: 408px;
 				height: 335px;
 				padding: 0;
+				position: relative;
 
 				@include max(sm) {
 					width: 100%;
-					height: 420px;
+					max-width: 100%;
+					height: auto;
+					padding-top: 82.1078%;
+
 				}
 
 				@include max(xs) {
-					height: 280px;
 				}
 
 				img {
 					position: static;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+
 					@include max(sm) {
 						object-position: top;
 					}

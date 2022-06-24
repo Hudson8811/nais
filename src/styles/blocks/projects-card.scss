@@ -4,6 +4,13 @@
 	background-color: $dunkl;
 	padding: 32px 31px 11px;
 
+	transition-duration: .3s;
+	cursor: pointer;
+
+	&:hover{
+		opacity: .6;
+	}
+
 	@include max(sm) {
 		padding: 25px 20px;
 	}

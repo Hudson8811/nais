@@ -4,6 +4,13 @@
 	position: relative;
 	overflow: hidden;
 
+	transition-duration: .3s;
+	cursor: pointer;
+
+	&:hover{
+		opacity: .6;
+	}
+
 	&__container {
 		padding-top: 32px;
 		padding-bottom: 80px;

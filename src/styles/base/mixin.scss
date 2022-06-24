@@ -61,8 +61,9 @@
 /* Ховер на десктопах */
 @mixin hover {
 	@media (min-width: 1080px) {
-		&:hover,
-		&:focus {
+		&:hover
+		//,&:focus
+		 {
 			@content;
 		}
 	}

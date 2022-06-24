@@ -34,10 +34,12 @@ $(window).on('load', function(){
 
 
 	let allowTruck = true;
-	$('.weights-page__tabs-dynamic .filter__button').on('click', function() {
+	$('.weights-page__tabs-dynamic .filter__button').off().on('click', function() {
 		if (allowTruck){
 			allowTruck = false;
-			$(this).addClass(filterActiveClass).parent().siblings().find('.filter__button').removeClass(filterActiveClass);
+			var control=$(this);
+			control.addClass(filterActiveClass).parent().siblings().find('.filter__button').removeClass(filterActiveClass);
+
 			let index = $(this).parent().index();
 			let prevTruck = $('.js-img-move.active');
 			let nextTruck = $('.js-img-move').eq(index);

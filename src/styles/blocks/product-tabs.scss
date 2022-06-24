@@ -275,7 +275,7 @@
 		}
 
 		&:hover {
-			background-color: $orange;
+			background-color: $orange !important;
 			color: #252924;
 		}
 
@@ -374,8 +374,12 @@
 
 			td,
 			th {
-				opacity: 0.16;
+				//opacity: 0.16;
 
+			}
+
+			tr.hover{
+				background: rgba(242, 128, 44, 0.2);
 			}
 
 			tr.hover td {
@@ -408,8 +412,10 @@
 					&:nth-child(10)~tbody th:nth-child(10) {
 						opacity: 1;
 
+				background: rgba(242, 128, 44, 0.2);
 						&.table-models__col--heading {
 							color: $white;
+							background:none;
 						}
 					}
 				}

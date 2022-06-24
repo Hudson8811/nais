@@ -477,8 +477,12 @@
 }
 
 a.standarts-item__title {
+	transition-duration: .3s;
+	&:hover{
+
 	text-decoration-line: underline;
 	color: $orange;
+	}
 
 	&+.standarts-item__desc {
 		margin-top: 16px;

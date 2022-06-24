@@ -7,13 +7,13 @@ block vars
 		};
 
 block main
-	.pattern
-		.pattern__inner
-			include ../../images/pattern.svg
-			include ../../images/pattern.svg
-			include ../../images/pattern.svg
 	article.weights-page
 		.weights-page__first
+			.pattern
+				.pattern__inner
+					include ../../images/pattern.svg
+					include ../../images/pattern.svg
+					include ../../images/pattern.svg
 			//.pattern
 				.pattern__inner
 					include ../../images/pattern.svg
@@ -221,9 +221,9 @@ block main
 			.products-item.weights-page__product.weights-page__product--truck
 				.products-item__truck-inner
 					.products-item__truck
-						img.js-img-move.active.visible(src='images/truck-1.png', alt='')
-						img.js-img-move(src='images/truck-2.png', alt='')
-						img.js-img-move(src='images/truck-1.png', alt='')
+						img.js-img-move.active.visible(src='images/truck-2.png', srcset='images/truck-2@2x.png 2x', alt='')
+						img.js-img-move(src='images/truck-1.png', srcset='images/truck-1@2x.png 2x', alt='')
+						img.js-img-move(src='images/truck-2.png', srcset='images/truck-2@2x.png 2x', alt='')
 					.products-item__image
 						img(src='images/products/2.png', srcset='images/products/2@2x.png 2x', alt='')
 			.weights-page__caption Статическое взвешивание с измерением осевых нагрузок
@@ -254,6 +254,11 @@ block main
 		+button('98% наших весов работают бесперебойно свыше 10 лет', 'button--square weights-page__other-btn', '#', 'elephant', '25', '17')
 
 		.weights-page__slider-wrapper
+			.pattern
+				.pattern__inner
+					include ../../images/pattern.svg
+					include ../../images/pattern.svg
+					include ../../images/pattern.svg
 			.container.weights-page__container.weights-page__container--4
 				//.pattern
 					.pattern__inner
@@ -264,12 +269,15 @@ block main
 					+slider-nav('Отзывы', 'weights-page__nav')
 				.weights-page__slider.swiper.__js_slider-reviews-2
 					.swiper-wrapper
-						.weights-page__slide.swiper-slide
-							img(src='images/articles/1.jpg', srcset='images/articles/1@2x.jpg 2x', alt='')
-						.weights-page__slide.swiper-slide
-							img(src='images/articles/1.jpg', srcset='images/articles/1@2x.jpg 2x', alt='')
-						.weights-page__slide.swiper-slide
-							img(src='images/articles/1.jpg', srcset='images/articles/1@2x.jpg 2x', alt='')
+						.weights-page__slide.swiper-slide.js-start-iframe(data-iframe-link="https://www.youtube.com/embed/kRD4UvIYVa8")
+							img(src='images/weights-page/rev.jpg', srcset='images/weights-page/rev.jpg 2x', alt='')
+							button.button.button--bordered.employees__play  <svg width="23" height="26"><use xlink:href="./images/sprite.svg#play"></use> </svg>
+						.weights-page__slide.swiper-slide.js-start-iframe(data-iframe-link="https://www.youtube.com/embed/kRD4UvIYVa8")
+							img(src='images/weights-page/rev.jpg', srcset='images/weights-page/rev.jpg 2x', alt='')
+							button.button.button--bordered.employees__play  <svg width="23" height="26"><use xlink:href="./images/sprite.svg#play"></use> </svg>
+						.weights-page__slide.swiper-slide.js-start-iframe(data-iframe-link="https://www.youtube.com/embed/kRD4UvIYVa8")
+							img(src='images/weights-page/rev.jpg', srcset='images/weights-page/rev.jpg 2x', alt='')
+							button.button.button--bordered.employees__play  <svg width="23" height="26"><use xlink:href="./images/sprite.svg#play"></use> </svg>
 
 				.container.container--small
 					+slider-nav('Проекты', 'weights-page__projects-nav')

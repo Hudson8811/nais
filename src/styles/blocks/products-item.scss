@@ -83,6 +83,8 @@
 		top: -10px;
 		z-index: -1;
 		pointer-events: none;
+		transition: ease;
+		transition-duration: .1;
 
 		span {
 			display: inline-block;

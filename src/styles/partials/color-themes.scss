@@ -121,17 +121,23 @@ body {
 		filter: drop-shadow(0px 22px 22px rgba(0, 0, 0, 0.08));
 
 		svg {
-			stroke: rgba(37, 41, 36, 0.32);
+			//stroke: rgba(37, 41, 36, 0.32);
+		}
+		svg {
+			stroke: #F0F0ED;
 		}
 
 		&--next {
 
-			svg {
-				stroke: #F0F0ED;
-			}
 
 		}
 
+		&--disabled{
+			svg{
+
+			stroke: rgba(37,41,36,.32);
+			}
+		}
 	}
 
 	.clients {
@@ -189,7 +195,7 @@ body {
 
 	@media (min-width: 1080px) {
 
-		.filter__button:focus,
+		//.filter__button:focus,
 		.filter__button:hover {
 			color: #FFFFFF;
 		}
