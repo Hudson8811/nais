@@ -20,7 +20,8 @@
 			{text: 'Способы установки'},
 			{text: 'Характеристики'},
 			{text: 'Модели'},
-			{text: 'Сертификаты'}
+			{text: 'Сертификаты'},
+			{text: 'Ещё что-то там'}
 		], 'product__tabs')
 		.product__content
 			.product__content-item(style='display: block;')
@@ -262,3 +263,10 @@
 						img(src='images/certs/3.jpg', srcset='images/certs/3@2x.jpg 2x', alt='')
 					a.cert-gallery-item(href="images/certs/4@2x.jpg" data-fancybox="cert-gallery")
 						img(src='images/certs/4.jpg', srcset='images/certs/4@2x.jpg 2x', alt='')
+
+			.product__content-item
+				.video-block.js-start-iframe(data-iframe-link="https://www.youtube.com/embed/kRD4UvIYVa8")
+					img(src='images/weights-page/rev.jpg', srcset='images/weights-page/rev.jpg 2x', alt='')
+					button.button.button--bordered.employees__play  <svg width="23" height="26"><use xlink:href="./images/sprite.svg#play"></use> </svg>
+				.product-custom-tab-buttons
+					+button('Смотреть презинтацю PDF', 'button button--square partners-banner__button', '#', 'file', '16', '21')
