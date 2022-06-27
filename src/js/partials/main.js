@@ -324,7 +324,7 @@ $(document).ready(function () {
 
 	var pattern_path_timers = [];
 	//mouseover
-	$("body").on('mouseenter ', '.pattern svg path', function (e) {
+	$("body").on('mouseenter mouseover', '.pattern svg path', function (e) {
 		var path = $(this),
 			svg = path.closest('svg');
 

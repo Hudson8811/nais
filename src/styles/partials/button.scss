@@ -66,10 +66,17 @@
 		@include hover {
 			background-color: $green-hover;
 		}
+		&.button--disable-hover {
+			@include hover {
+					background-color: $green !important;
+			}
+		}
 	}
 	&--modal{
 		height: 89px;
 		padding: 20px;
 
 	}
+
 }
+
