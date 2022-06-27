@@ -324,7 +324,7 @@ $(document).ready(function () {
 
 	var pattern_path_timers = [];
 	//mouseover
-	$("body").on('mouseover ', '.pattern svg path', function (e) {
+	$("body").on('mouseenter ', '.pattern svg path', function (e) {
 		var path = $(this),
 			svg = path.closest('svg');
 
@@ -349,7 +349,7 @@ $(document).ready(function () {
 
 	function trigger_pattern_path(path) {
 		if (path.length > 0 && !path.hasClass('pattern-path-hovered')) {
-			path.trigger('mouseover');
+			path.trigger('mouseenter');
 			path.trigger('mouseleave');
 		}
 	}
