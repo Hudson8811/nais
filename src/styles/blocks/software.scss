@@ -44,6 +44,9 @@
 	&__inner {
 		display: block;
 		position: relative;
+		@media only screen and (max-width: 1490px) and (min-width: 1024px){
+			max-width: 696px;
+		}
 	}
 
 	&__pic {
@@ -91,6 +94,20 @@
 			transition-duration: .3s;
 			cursor: pointer;
 			z-index: 3;
+		}
+		&::after{
+			z-index: 2;
+			content: '';
+			display: block;
+			position: absolute;
+			width: 150%;
+			height: 150%;
+			transform: translate(-50%, -50%);
+			left: 50%;
+			top: 50%;
+
+			cursor: pointer;
+
 		}
 	}
 
@@ -207,11 +224,19 @@
 	margin-left: 16px;
 	margin-bottom: 43px;
 	width: calc(50% - 16px);
-	transition-duration: .3s;
 	cursor: pointer;
 
 	&:hover{
-		opacity: .6;
+		.software-card{
+			&__tags,
+			&__name,
+			&__desc,
+			&__pic-inner img{
+				opacity: .6;
+
+			}
+
+		}
 	}
 
 	@media only screen and (max-width: 735px) {
@@ -231,6 +256,7 @@
 			height: auto;
 			object-fit: contain;
 			object-position: center center;
+			transition-duration: .3s;
 		}
 
 		&::before {
@@ -268,6 +294,7 @@
 		flex-wrap: wrap;
 		align-items: flex-start;
 		align-content: flex-start;
+		transition-duration: .3s;
 	}
 
 	&__tag {
@@ -289,6 +316,7 @@
 		line-height: 27px;
 		color: $textMainColor;
 		margin-top: 16px;
+		transition-duration: .3s;
 	}
 
 	&__desc {
@@ -297,6 +325,7 @@
 		line-height: 28px;
 		color: $textMainColor;
 		margin-top: 19px;
+		transition-duration: .3s;
 	}
 }
 
