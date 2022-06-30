@@ -150,6 +150,8 @@ $(document).ready(function () {
 	 if (products && products.length > 0) {
 		var rect = $('body')[0].getBoundingClientRect();
 		var mouse = { x: 0, y: 0, moved: false };
+		var mouseAbsolute = { x: 0, y: 0, moved: false };
+		var mouseClient = { x: 0, y: 0, moved: false };
 
 		var lastHovId=0;
 		var lastHovItem=$('.js-products-item').first();
@@ -157,7 +159,8 @@ $(document).ready(function () {
 		var mouseMovementY=[140,-90,140];*/
 
 		var mouseMovementX=[56,-105,56];
-		var mouseMovementY=[98,-60,98];
+		//var mouseMovementY=[98,-60,98];
+		var mouseMovementY=[98,98,98];
 
 
 		if ($(window).width() > 1079) {
@@ -194,17 +197,30 @@ $(document).ready(function () {
 		}
 
 		function parallaxIt(target, movementX, movementY) {
+			console.log(target);
+			console.log((mouseClient.y - rect.height / 6) / rect.height * movementY * -1);
+			//var yMovementV2=mouseAbsolute.y - $(target).offset().top - $(target).height()/2;
 			TweenMax.to(target, 1.2, {
+				x: (mouse.x - rect.width / 7) / rect.width * movementX * -1,
+				y: (mouseClient.y - rect.height / 6) / rect.height * movementY * -1,
+				ease:  Elastic.easeOut
+			});
+
+			/*TweenMax.to(target, 1.2, {
 				x: (mouse.x - rect.width / 7) / rect.width * movementX * -1,
 				y: (mouse.y - rect.height / 6) / rect.height * movementY * -1,
 				ease:  Elastic.easeOut
-			});
+			});*/
 		}
 
 		$("body").mousemove(function (e) {
 			mouse.moved = true;
 			mouse.x = e.clientX - rect.left;
 			mouse.y = e.clientY + rect.top;
+			mouseAbsolute.x = e.pageX;
+			mouseAbsolute.y = e.pageY;
+			mouseClient.x = e.clientX;
+			mouseClient.y = e.clientY;
 		});
 
 		$(window).on('resize scroll', function () {
