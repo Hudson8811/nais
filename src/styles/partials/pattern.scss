@@ -36,6 +36,7 @@
 	flex-direction: column;
 	width: vw(107);
 	position: absolute;
+	z-index: 10;
 	top: 0;
 	right: 0;
     height: 100%;
@@ -70,7 +71,7 @@
 		}
 
 		path {
-			transition: all 1s  ease-in-out;
+			transition: all 0.6s  ease-out;
 			pointer-events: all;
 
 			//animation: svg_path_anim 3s ease-in-out infinite;

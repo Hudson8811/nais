@@ -22,6 +22,7 @@
 //= ./partials/img-map.js
 //= ./partials/modals.js
 //= ./partials/tooltip.js
+//= ./partials/pattern-hov.js
 
 
 

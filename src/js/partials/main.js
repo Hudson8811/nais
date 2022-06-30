@@ -1,4 +1,4 @@
-var pattern_path_timers;
+
 $(document).ready(function () {
 	var firstAnimation = $('.first-screen__dynamic');
 	var firstAnimationHovArea = $('.first-screen__dynamic-hov-area');
@@ -153,8 +153,11 @@ $(document).ready(function () {
 
 		var lastHovId=0;
 		var lastHovItem=$('.js-products-item').first();
-		var mouseMovementX=[80,-150,80];
-		var mouseMovementY=[140,-90,140];
+		/*var mouseMovementX=[80,-150,80];
+		var mouseMovementY=[140,-90,140];*/
+
+		var mouseMovementX=[56,-105,56];
+		var mouseMovementY=[98,-60,98];
 
 
 		if ($(window).width() > 1079) {
@@ -291,179 +294,6 @@ $(document).ready(function () {
 
 
 
-	var xMousePos = 0;
-	var yMousePos = 0;
-	var lastScrolledLeft = 0;
-	var lastScrolledTop = 0;
-
-	$(document).mousemove(function (event) {
-		captureMousePosition(event);
-	});
-	function captureMousePosition(event) {
-		xMousePos = event.pageX;
-		yMousePos = event.pageY;
-		//console.log(xMousePos+'|'+yMousePos);
-	};
-
-
-	function vw(v) {
-		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-		return w / 100 * v;
-	}
-
-
-
-	var pattern_block = $('.pattern'),
-		pattern_inner_block = pattern_block.find('.pattern__inner'),
-		pattern_svg = pattern_inner_block.find('svg'),
-		vw7 = vw(7),
-		pattern_svg_h = pattern_svg.first().height() - vw7,
-		pattern_offset = pattern_block.offset(),
-		paths_in_one_svg = 16;
-	one_path_h = pattern_svg_h / paths_in_one_svg;
-
-	var pattern_path_timers = [];
-	//mouseover
-	$("body").on('mouseenter mouseover', '.pattern svg path', function (e) {
-		var path = $(this),
-			svg = path.closest('svg');
-
-		var key = path.index() + "_" + svg.index();
-		if (key in pattern_path_timers && typeof (pattern_path_timers[key]) !== 'undefined') {
-			clearTimeout(pattern_path_timers[key]);
-			pattern_path_timers[key] = undefined;
-		}
-		path.addClass('pattern-path-hovered');
-		//alert(path.offset().left+'|'+path.offset().top);
-	});
-
-	$("body").on('mouseleave', '.pattern svg path', function (e) {
-		var path = $(this),
-			svg = path.closest('svg');
-		var key = path.index() + "_" + svg.index();
-
-		pattern_path_timers[key] = setTimeout(function () {
-			path.removeClass('pattern-path-hovered');
-		}, 1000);
-	});
-
-	function trigger_pattern_path(path) {
-		if (path.length > 0 && !path.hasClass('pattern-path-hovered')) {
-			path.trigger('mouseenter');
-			path.trigger('mouseleave');
-		}
-	}
-
-
-	var prevElement = '';
-	var scrollTimerPattern;
-	var lastScrollTop = 0;
-	$(window).on('scroll', function (e) {
-		if (window.matchMedia('(min-width: 1080px)').matches) {
-			if (lastScrolledTop != $(document).scrollTop()) {
-				yMousePos -= lastScrolledTop;
-				lastScrolledTop = $(document).scrollTop();
-				yMousePos += lastScrolledTop;
-			}
-			if (xMousePos - pattern_offset.left >= 0) {
-				var top_in_pattern = yMousePos - pattern_offset.top;
-
-				var target_svg_path_global_number = Math.ceil(top_in_pattern / one_path_h);
-				var svg_index = Math.ceil(target_svg_path_global_number / paths_in_one_svg) - 1;
-				target_svg_path_global_number = Math.ceil(top_in_pattern / one_path_h);
-				var path_index = Math.ceil(target_svg_path_global_number % paths_in_one_svg);
-
-				/*var svg_index = Math.ceil(top_in_pattern / pattern_svg_h) - 1;
-				var path_index = Math.ceil((top_in_pattern % pattern_svg_h) / one_path_h);*/
-				var target_svg = pattern_svg.eq(svg_index);
-				var target_svg_path = target_svg.find('path');
-
-				//console.log(top_in_pattern+'|'+pattern_svg_h+'|'+one_path_h);
-				console.log(target_svg_path_global_number);
-				console.log(svg_index + '|' + path_index);
-				//if(path_index-2<0){trigger_pattern_path(target_svg_path.eq(path_index-2));}
-
-
-				var st = window.pageYOffset || document.documentElement.scrollTop;
-				if (st > lastScrollTop) {
-					// downscroll
-					if (path_index - 2 >= 0) {
-						trigger_pattern_path(target_svg_path.eq(path_index - 2));
-					}
-					setTimeout(() => {
-						if (path_index - 1 >= 0) {
-							trigger_pattern_path(target_svg_path.eq(path_index - 1));
-						}
-						setTimeout(() => {
-							if (path_index - 1 >= 0) {
-								trigger_pattern_path(target_svg_path.eq(path_index));
-							}
-						}, 100);
-					}, 100);
-				} else {
-					// upscroll
-					trigger_pattern_path(
-						target_svg_path.eq(path_index + 2));
-					setTimeout(() => {
-						trigger_pattern_path(
-							target_svg_path.eq(path_index + 1));
-						setTimeout(() => {
-							if (path_index - 1 >= 0) { trigger_pattern_path(target_svg_path.eq(path_index)); }
-						}, 100);
-
-					}, 100);
-
-				}
-				lastScrollTop = st <= 0 ? 0 : st;
-
-
-
-				//if(path_index+2<0){trigger_pattern_path(target_svg_path.eq(path_index+2));}
-
-				//if(top_in_pattern-pattern_svg_h>)
-
-
-			}
-
-			/*if(el.is('path')){
-				el.trigger('mouseover');
-				el.trigger('mouseleave');
-			}*/
-
-
-			/*clearTimeout(scrollTimerPattern);
-			//
-			scrollTimerPattern=setTimeout(function() {
-				// скролл завершился
-				prevElement=''
-			}, 250);*/
-		}
-
-	});
-
-
-	function refresh_pattern() {
-		var pattern = $('.pattern'),
-			inner = pattern.find('.pattern__inner'),
-			svg = inner.find('svg:first');
-
-		if (window.matchMedia('(min-width: 1080px)').matches) {
-			while (inner.height() < pattern.height() + window.innerHeight) {
-				svg.clone().appendTo(inner);
-			}
-		}
-		pattern_svg = pattern_inner_block.find('svg');
-	}
-
-	refresh_pattern();
-	$(window).on('resize', function (e) {
-		refresh_pattern();
-		pattern_svg_h = pattern_svg.first().height();
-		pattern_offset = pattern_block.offset();
-		one_path_h = pattern_svg_h / paths_in_one_svg;
-		vw7 = vw(7);
-	});
-
 
 	$('.js-start-iframe').on('click', function(){
 		var link=$(this).attr('data-iframe-link');
@@ -472,3 +302,11 @@ $(document).ready(function () {
 		}
 	});
 });
+
+
+function vw(v) {
+	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	return w / 100 * v;
+}
+
+

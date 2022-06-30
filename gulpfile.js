@@ -52,10 +52,10 @@ function scripts() {
 	])
 		.pipe(plumber())
 		.pipe(rigger())
-		.pipe(sourcemaps.init())
+		//.pipe(sourcemaps.init())
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
-		.pipe(sourcemaps.write('./maps'))
+		//.pipe(sourcemaps.write('./maps'))
 		.pipe(dest('public/js/'))
 		.pipe(browserSync.stream())
 }
