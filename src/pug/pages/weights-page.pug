@@ -218,14 +218,16 @@ block main
 				}
 			], 'weights-page__tabs-dynamic')
 		.container
+
+
 			.products-item.weights-page__product.weights-page__product--truck
 				.products-item__truck-inner
 					.products-item__truck
-						img.js-img-move.active.visible(src='images/truck-2.png', srcset='images/truck-2v2@2x.png 2x', alt='')
-						img.js-img-move(src='images/truck-1.png', srcset='images/truck-1v2@2x.png 2x', alt='')
-						img.js-img-move(src='images/truck-2.png', srcset='images/truck-2v2@2x.png 2x', alt='')
+						img.js-img-move.active.visible(src='images/truck-2.png', srcset='images/truck-2v2@2x.png 2x', alt='', style="width: 37%; margin-bottom: -9px;")
+						img.js-img-move(src='images/truck-1.png', srcset='images/truck-1v2@2x.png 2x', alt='', style="width: 51.5%;")
+						img.js-img-move(src='images/ural.png', srcset='images/ural@2x.png 2x', alt='', style=" width: 27%; margin-bottom: -5px;")
 					.products-item__image
-						img(src='images/products/2.png', srcset='images/products/2@2x.png 2x', alt='')
+						img(src='images/products/2.png', srcset='images/products/2@2x.png 2x', alt='' )
 			.weights-page__caption Статическое взвешивание с измерением осевых нагрузок
 			+title-block('Полный цикл производства', 'weights-page__title')
 			.weights-page__text.weights-page__text--maxw

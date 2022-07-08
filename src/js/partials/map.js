@@ -632,8 +632,12 @@ window.addEventListener('load', () => {
 				position,
 				map: homepageMapObject,
 				icon: {
-					url: './images/marker.svg'
-				}
+					url: './images/map_icon_v2.png',
+					height: 92,
+					width: 74
+				},
+				height: 92,
+				width: 74
 			});
 
 			return marker;
@@ -641,10 +645,10 @@ window.addEventListener('load', () => {
 
 		const markerCluster = new markerClusterer.MarkerClusterer(homepageMapObject, markers, {
 			styles: [{
-				url: './images/marker.svg',
+				url: './images/map_icon_v2.png',
 				textColor: 'white',
-				height: 58,
-				width: 43
+				height: 92,
+				width: 74
 			}]
 		});
 	}

@@ -1,0 +1,55 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Программное обеспечение для автомобильных и жд весов'
+		};
+
+block main
+	article.software
+		.pattern
+			.pattern__inner
+				include ../../images/pattern.svg
+				include ../../images/pattern.svg
+				include ../../images/pattern.svg
+
+		.container.container--border.software__container
+			.partners-inner-container
+				+title-block('Спецпредложения', ' title-block--big title-block--default-mt')
+
+				.partners-banner.partners-banner--half
+					.partners-banner__inner
+						.partners-banner__left
+							.partners-banner__title Вводный текст для спецпредложения, длинной в 2 - 3 строки вводим через админку
+							.partners-banner__button-wrap
+								+button('Получить  предложение', 'button--square partners-banner__button ', '#', 'file', '16', '21')
+					.partners-banner__image
+						img(src="images/partners/1.jpg", alt="")
+
+				.partners-banner
+					.partners-banner__inner
+						.partners-banner__left
+							.partners-banner__title Другой вводный текст для второго формата баннера
+							.partners-banner__button-wrap
+								+button('Получить  предложение', 'button--square  partners-banner__button ', '#', 'file', '16', '21')
+					.partners-banner__image
+						img(src="images/partners/2.jpg", alt="")
+
+				.partners-banner.partners-banner--half
+					.partners-banner__inner
+						.partners-banner__left
+							.partners-banner__title Вводный текст для спецпредложения, длинной в 2 - 3 строки вводим через админку
+							.partners-banner__button-wrap
+								+button('Получить  предложение', 'button--square partners-banner__button ', '#', 'file', '16', '21')
+					.partners-banner__image
+						img(src="images/partners/1.jpg", alt="")
+
+				.partners-banner
+					.partners-banner__inner
+						.partners-banner__left
+							.partners-banner__title Другой вводный текст для второго формата баннера
+							.partners-banner__button-wrap
+								+button('Получить  предложение', 'button--square  partners-banner__button ', '#', 'file', '16', '21')
+					.partners-banner__image
+						img(src="images/partners/2.jpg", alt="")

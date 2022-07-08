@@ -26,6 +26,7 @@
 		position: relative;
 		min-height: 486px;
 		margin-top: 32px;
+		z-index: 90;
 
 		@include max(md) {
 			flex-direction: column;
