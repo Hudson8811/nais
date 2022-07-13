@@ -2,7 +2,7 @@ $(window).on('load', function(){
 	var employeesVideo = $('.employees__video-preview');
 
 	function openPopup(elem, options) {
-		console.log(1);
+		//console.log(1);
 		elem.fancybox({
 			...options,
 			touch: false,

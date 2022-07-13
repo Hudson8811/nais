@@ -197,8 +197,8 @@ $(document).ready(function () {
 		}
 
 		function parallaxIt(target, movementX, movementY) {
-			console.log(target);
-			console.log((mouseClient.y - rect.height / 6) / rect.height * movementY * -1);
+			//console.log(target);
+			//console.log((mouseClient.y - rect.height / 6) / rect.height * movementY * -1);
 			//var yMovementV2=mouseAbsolute.y - $(target).offset().top - $(target).height()/2;
 			TweenMax.to(target, 1.2, {
 				x: (mouse.x - rect.width / 7) / rect.width * movementX * -1,

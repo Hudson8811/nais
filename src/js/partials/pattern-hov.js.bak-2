@@ -75,8 +75,8 @@ $(document).ready(function () {
 				var target_svg_path = target_svg.find('path');
 
 				//console.log(top_in_pattern+'|'+pattern_svg_h+'|'+one_path_h);
-				console.log(target_svg_path_global_number);
-				console.log(svg_index + '|' + path_index);
+				//console.log(target_svg_path_global_number);
+				//console.log(svg_index + '|' + path_index);
 				//if(path_index-2<0){trigger_pattern_path(target_svg_path.eq(path_index-2));}
 
 
