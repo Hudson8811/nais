@@ -14,6 +14,13 @@ html(lang="ru")
 
 		title= `${page.title}`
 
+		script.
+			var globalColorThemeName='color-theme-dark';
+			var mapIconSource = {
+				'color-theme-dark': './images/map_icon_v2.png',
+				'color-theme-light': './images/map-tag-light.png'
+			};
+
 	body
 		include ../blocks/preloader.pug
 

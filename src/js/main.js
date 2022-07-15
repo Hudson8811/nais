@@ -24,8 +24,4 @@
 //= ./partials/tooltip.js
 //= ./partials/pattern-hov.js
 
-
-
-
-
 //= ./partials/theme.js

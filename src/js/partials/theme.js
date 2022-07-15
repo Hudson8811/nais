@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 	$('.js-header__theme-switcher').on('click',function(){
 		if($(this).hasClass('active')){
@@ -11,10 +12,17 @@ $(document).ready(function () {
 			alter.removeClass('active');
 			$('body').removeClass(alterName).addClass(name);
 			localStorage.setItem('colorThemeName', name);
+			globalColorThemeName=name;
 
+			$('body').trigger('switchColorTheme');
 
 			if(homepageMapObject!==-1){
 				homepageMapObject.setOptions({styles: mapStyles[name]});
+
+				clearMarkers();
+				setTimeout(function(){
+					initMarkers();
+				}, 500);
 			}
 		}
 	});
@@ -23,6 +31,7 @@ $(document).ready(function () {
 		if(colorThemeName && colorThemeName.length>0){
 			$('body').addClass(colorThemeName);
 			$('.js-header__theme-switcher[data-class="'+colorThemeName+'"]').addClass('active').siblings('.js-header__theme-switcher').removeClass('active');
+			globalColorThemeName=colorThemeName;
 		}
 	}
 });

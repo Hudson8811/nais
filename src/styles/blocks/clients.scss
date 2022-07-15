@@ -8,11 +8,13 @@
 
 	&__bg-outer {
 		width: vw(105);
-		height: calc(100% + 205px);
+		//height: calc(100% + 205px);
 		position: absolute;
-		top: -205px;
+		//top: -205px;
+		top: 0;
 		right: 0;
 		overflow: hidden;
+		bottom: 0;
 	}
 
 	&__bg {
