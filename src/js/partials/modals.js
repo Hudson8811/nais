@@ -1,5 +1,4 @@
-window.addEventListener('load', () => {
-
+$(function(){
 	$('.js-open-modal').on('click', function () {
 		$.fancybox.open({
 			src: $(this).attr('href'),

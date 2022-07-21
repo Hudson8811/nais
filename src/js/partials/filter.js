@@ -1,21 +1,26 @@
-$(window).on('load', function(){
+$(function(){
 	var filterActiveClass = 'filter__button--active';
 
-	var articlesFilter = $('.articles-page__articles').isotope({
-		itemSelector: '.articles-page__item',
-		layoutMode: 'packery',
-		packery: {
-			gutter: 0,
-		},
-	});
+	if($('.articles-page__articles').length>0){
+		var articlesFilter = $('.articles-page__articles').isotope({
+			itemSelector: '.articles-page__item',
+			layoutMode: 'packery',
+			packery: {
+				gutter: 0,
+			},
+		});
+	}
 
-	var projectsFilter = $('.projects-page__projects').isotope({
-		itemSelector: '.projects-page__item',
-		layoutMode: 'packery',
-		packery: {
-			gutter: 16,
-		},
-	});
+	if($('.projects-page__projects').length>0){
+		var projectsFilter = $('.projects-page__projects').isotope({
+			itemSelector: '.projects-page__item',
+			layoutMode: 'packery',
+			packery: {
+				gutter: 16,
+			},
+		});
+	}
+
 
 	$('.articles-page__filter .filter__button').on('click', function() {
 		var filterValue = $(this).attr('data-filter');

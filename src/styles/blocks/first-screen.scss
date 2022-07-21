@@ -101,10 +101,27 @@
 		}
 
 		&.js-move-2 {
+			top: 71px;
 			transform: translate(-128px, -71px);
+			@include max(lg) {
+				top: 51px;
+				width: 180px;
+
+			}
 
 			@include max(md) {
 				transform: translate(-20px, -10px);
+			}
+
+			&+.first-screen__rails {
+				margin-top: -102px;
+				width: 614px;
+
+				@include max(lg) {
+					margin-top: -52px;
+					width: 363px;
+
+				}
 			}
 		}
 	}
