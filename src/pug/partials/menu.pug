@@ -2,7 +2,7 @@ nav.menu
 	each item in MENU
 		if item.sub
 			li.menu__link.menu__link--expand
-				a(href=item.url)= item.text
+				a.menu__link-a(href=item.url)= item.text
 				.menu__link-expand-svg
 					+icon('chevron-down')(width='17', height='11')
 				.menu__inner
@@ -13,4 +13,4 @@ nav.menu
 									a(href=subItem.url)= subItem.text
 		else
 			li.menu__link
-				a(href=item.url)= item.text
+				a.menu__link-a(href=item.url)= item.text

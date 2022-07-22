@@ -26,7 +26,7 @@
 		}
 
 		@include hover {
-			>a {
+			>a, >.menu__link-a {
 				color: $green-lemon;
 
 				@include max(md) {}
@@ -55,7 +55,7 @@
 			@include max(md) {}
 		}
 
-		>a {
+		>a, >.menu__link-a {
 			font-size: 16px;
 			line-height: 18px;
 			transition: color 0.3s ease;
@@ -88,7 +88,7 @@
 				margin-right: 0;
 			}
 			&--opened{
-				>a {
+				>a, >.menu__link-a {
 					color: $green-lemon;
 
 					@include max(md) {}
