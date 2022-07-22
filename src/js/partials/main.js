@@ -147,28 +147,28 @@ $(document).ready(function () {
 	 * Сдвиг текста в зависимости от положения курсора
 	 */
 
-	 if (products && products.length > 0) {
+	if (products && products.length > 0) {
 		var rect = $('body')[0].getBoundingClientRect();
 		var mouse = { x: 0, y: 0, moved: false };
 		var mouseAbsolute = { x: 0, y: 0, moved: false };
 		var mouseClient = { x: 0, y: 0, moved: false };
 
-		var lastHovId=0;
-		var lastHovItem=$('.js-products-item').first();
+		var lastHovId = 0;
+		var lastHovItem = $('.js-products-item').first();
 		/*var mouseMovementX=[80,-150,80];
 		var mouseMovementY=[140,-90,140];*/
 
-		var mouseMovementX=[56,-105,56];
+		var mouseMovementX = [56, -105, 56];
 		//var mouseMovementY=[98,-60,98];
-		var mouseMovementY=[98,98,98];
+		var mouseMovementY = [98, 98, 98];
 
 
 		if ($(window).width() > 1079) {
 			$('.js-products-item').on('mouseover', function () {
 				$(this).addClass('js-products-item--hovered');
 				//mouseMovement[parseInt($(this).attr('data-idx'))]=120;
-				lastHovId=parseInt($(this).attr('data-idx'));
-				lastHovItem=$(this);
+				lastHovId = parseInt($(this).attr('data-idx'));
+				lastHovItem = $(this);
 				/*mouseMovementX=[100,140,100];
 				mouseMovementY=[140,100,140];
 				mouseMovementX[lastHovId]=150;
@@ -203,7 +203,7 @@ $(document).ready(function () {
 			TweenMax.to(target, 1.2, {
 				x: (mouse.x - rect.width / 7) / rect.width * movementX * -1,
 				y: (mouseClient.y - rect.height / 6) / rect.height * movementY * -1,
-				ease:  Elastic.easeOut
+				ease: Elastic.easeOut
 			});
 
 			/*TweenMax.to(target, 1.2, {
@@ -311,12 +311,48 @@ $(document).ready(function () {
 
 
 
-	$('.js-start-iframe').on('click', function(){
-		var link=$(this).attr('data-iframe-link');
-		if($(this).find('iframe').length<1){
-			$(this).append('<iframe src="'+link+'?autoplay=1" allow="autoplay"></iframe>');
+	$('.js-start-iframe').on('click', function () {
+		var link = $(this).attr('data-iframe-link');
+		if ($(this).find('iframe').length < 1) {
+			$(this).append('<iframe src="' + link + '?autoplay=1" allow="autoplay"></iframe>');
 		}
 	});
+
+	// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+	let vh = window.innerHeight * 0.01;
+	// Then we set the value in the --vh custom property to the root of the document
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	// We listen to the resize event
+	window.addEventListener('resize', () => {
+		// We execute the same script as before
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	});
+
+	$('.sh-burger').click(function () {
+		$(this).toggleClass('sh-burger--active');
+		$('.header__container').toggleClass('header__container--mob-opened');
+
+		$('body').toggleClass('body-fixed');
+	});
+
+
+
+	$('.menu__link-expand-svg').click(function () {
+		if (window.matchMedia('(max-width: 1079px)').matches) {
+			var item=$(this).closest('.menu__link--expand')
+			if (item.hasClass('menu__link--expand--opened')) {
+				item.removeClass('menu__link--expand--opened').find('.menu__inner').slideUp(400);
+			}
+			else {
+				item.addClass('menu__link--expand--opened').find('.menu__inner').slideDown(400);
+			}
+		}
+		/*$('.header-bottom').toggleClass('header-bottom--visible');
+
+		$('body').toggleClass('body-fixed');*/
+	});
+
 });
 
 

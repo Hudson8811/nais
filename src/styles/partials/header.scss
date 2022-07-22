@@ -8,9 +8,15 @@
 	z-index: 100;
 
 	@include max(md) {
-		display: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 13px 30px 7px 17px;
+
 	}
 
+
+	&__container,
 	&__container,
 	&__login,
 	&__theme,
@@ -21,19 +27,51 @@
 
 	&__container {
 		padding-right: 18px;
+
+		@include max(md) {
+			display: block;
+			left: 0;
+			width: 100%;
+			position: absolute;
+			top: 100%;
+			background-color: var(--dunkl);
+			height: calc(100vh - 100%);
+			height: calc(var(--vh) * 100 - 100%);
+			padding: 77px 18px 30px;
+			margin: 0;
+			overflow: auto;
+			opacity: 0;
+			pointer-events: none;
+			transition-duration: .3s;
+
+			&--mob-opened{
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+
 	}
 
 	&__logo {
+		display: block;
 		padding: 15px 0;
 		margin-right: auto;
 		position: absolute;
 		top: 50%;
 		left: 127px;
-		z-index: 1;
+		z-index: 3;
 		transform: translateY(-50%);
 
 		svg {
 			fill: $logo-color;
+		}
+
+		@include max(md) {
+			display: block;
+			position: static;
+			transform: none;
+			padding: 0;
+
 		}
 	}
 
@@ -45,6 +83,10 @@
 		z-index: 1;
 		margin-left: auto;
 		transition: color 0.3s ease;
+
+		@include max(md) {
+			margin-top: 39px;
+		}
 
 		@include hover {
 			color: $green-lemon;
@@ -66,6 +108,11 @@
 		margin-left: 55px;
 		position: relative;
 		z-index: 1;
+
+		@include max(md) {
+			margin-left: 0;
+			margin-top: 39px;
+		}
 	}
 
 	&__theme-switcher {
@@ -73,8 +120,12 @@
 		cursor: pointer;
 		transition-duration: .3s;
 
-		+ #{$parent}__theme-switcher {
+		+#{$parent}__theme-switcher {
 			margin-left: 13px;
+
+			@include max(md) {
+				margin-left: 42px;
+			}
 		}
 
 		svg {
@@ -84,5 +135,75 @@
 		&.active {
 			opacity: 1;
 		}
+	}
+}
+
+
+.sh-burger {
+	z-index: 105;
+	width: 19px;
+	height: 19px;
+	cursor: pointer;
+	position: relative;
+	transition-duration: .2s;
+	display: none;
+
+	@include max(md) {
+
+		display: block;
+	}
+
+	span,
+	span::before,
+	span::after {
+		position: absolute;
+		top: 50%;
+		right: 50%;
+		width: 19px;
+		height: 4px;
+		margin-top: -1px;
+		margin-right: -10px;
+		background-color: $white;
+	}
+
+	span {
+		height: 0px;
+	}
+
+	span::before,
+	span::after {
+		content: '';
+		transition: 0.2s;
+	}
+
+	span::before {
+		transform: translateY(-8px);
+	}
+
+	span::after {
+		transform: translateY(2px);
+		width: 15px;
+	}
+
+	&--active {
+		span {
+			&::before {
+				transform: translateY(-2px) rotate(45deg);
+			}
+
+			&::after {
+				transform: translateY(-2px) rotate(-45deg);
+				width: 19px;
+			}
+		}
+	}
+
+	&__size-expander {
+		position: absolute;
+		left: -10px;
+		top: -10px;
+		width: calc(100% + 20px);
+		height: calc(100% + 20px);
+		//background: rgba(255, 0, 0, 0.397);
 	}
 }

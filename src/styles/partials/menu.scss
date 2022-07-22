@@ -5,48 +5,111 @@
 	flex-wrap: wrap;
 	margin-right: 10px;
 
+	@include max(md) {
+		display: block;
+		margin: 0;
+	}
+
 	&__link {
 		display: flex;
 		align-items: center;
 		flex-wrap: nowrap;
 		margin: 10px 0;
 
+		@include max(md) {
+			margin: 0;
+			flex-wrap: wrap;
+
+			&:not(:first-child) {
+				margin-top: 40px;
+			}
+		}
+
 		@include hover {
-			> a {
+			>a {
 				color: $green-lemon;
+
+				@include max(md) {}
 			}
 
-			> svg {
+			>.menu__link-expand-svg svg {
 				fill: $green-lemon;
 				transform: rotate(180deg);
+
+				@include max(md) {}
 			}
 
 			#{$parent} {
 				&__inner {
 					opacity: 1;
 					pointer-events: auto;
+
+					@include max(md) {}
 				}
 			}
 		}
 
 		&:not(#{$parent}__link--expand):not(:last-child) {
 			margin-right: 60px;
+
+			@include max(md) {}
 		}
 
-		> a {
+		>a {
 			font-size: 16px;
 			line-height: 18px;
 			transition: color 0.3s ease;
+
+			@include max(md) {
+
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 23px;
+				font-family: 'Ubuntu';
+			}
+
 		}
 
-		> svg {
+		>.menu__link-expand-svg svg {
 			fill: $textMainColor;
 			margin-left: 8px;
 			transition: fill 0.3s ease, transform 0.3s ease;
+
+			@include max(md) {
+				margin-left: 13px;
+				margin-bottom: -3px;
+			}
 		}
 
 		&--expand {
 			margin-right: 36px;
+
+			@include max(md) {
+				margin-right: 0;
+			}
+			&--opened{
+				>a {
+					color: $green-lemon;
+
+					@include max(md) {}
+				}
+
+				>.menu__link-expand-svg svg {
+					fill: $green-lemon;
+					transform: rotate(-90deg);
+
+					@include max(md) {}
+				}
+
+				#{$parent} {
+					&__inner {
+						opacity: 1;
+						pointer-events: auto;
+
+						@include max(md) {}
+					}
+				}
+			}
 		}
 	}
 
@@ -60,17 +123,51 @@
 		opacity: 0;
 		pointer-events: none;
 		transition: opacity 0.3s ease;
+		z-index: 2;
+
+		@include max(md) {
+			display: none;
+			position: static;
+			width: 100%;
+			opacity: 1;
+			pointer-events: all;
+			padding: 0;
+
+			.container{
+				margin: 0;
+				padding: 0;
+				padding-left: 20px;
+				padding-top: 39px;
+			}
+		}
 
 		ul {
 			max-width: 710px;
 			margin-top: 0;
 
+			@include max(md) {
+				max-width: 100%;
+				display: block;
+				margin-bottom: 0;
+			}
+
 			li {
 				display: inline-block;
 				margin-bottom: 13px;
 
+				@include max(md) {
+					display: block;
+					width: 100%;
+					margin-bottom: 0;
+				}
+
 				&:not(:last-child) {
 					margin-right: 22px;
+
+					@include max(md) {
+						margin-right: 0;
+						margin-bottom: 37px;
+					}
 				}
 
 				a {
@@ -79,12 +176,45 @@
 					color: $white-op-0-64;
 					transition: color 0.3s ease;
 
+					@include max(md) {
+						font-family: 'Ubuntu';
+						font-style: normal;
+						font-weight: 400;
+						font-size: 16px;
+						line-height: 18px;
+					}
+
 					@include hover {
 						color: $orange;
 						text-decoration: underline;
+
+						@include max(md) {}
 					}
 				}
 			}
+		}
+	}
+
+	.menu__link-expand-svg{
+		@include max(md) {
+			position: relative;
+			&::before{
+				content: '';
+				display: block;
+				position: absolute;
+				left: 3px;
+				height: 30px;
+				width: 60px;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.color-theme-light{
+	@include max(md) {
+		.menu__inner ul li a {
+			color: var(--white);
 		}
 	}
 }

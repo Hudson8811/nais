@@ -3,7 +3,8 @@ nav.menu
 		if item.sub
 			li.menu__link.menu__link--expand
 				a(href=item.url)= item.text
-				+icon('chevron-down')(width='17', height='11')
+				.menu__link-expand-svg
+					+icon('chevron-down')(width='17', height='11')
 				.menu__inner
 					.container
 						ul
