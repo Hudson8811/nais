@@ -1076,7 +1076,7 @@ window.addEventListener('load', () => {
 	if ($('#map, #map-contacts').length === 0) {
 		return;
 	}
-	const locationsMain = [
+	/*const locationsMain = [
 		{ lat: 62.037112, lng: 129.729814 },
 		{ lat: 62.025972, lng: 129.709701 },
 		{ lat: 62.026514, lng: 129.741825 },
@@ -1092,7 +1092,7 @@ window.addEventListener('load', () => {
 	]
 	const locationsContacts = [
 		{ lat: 55.768976, lng: 37.670347 }
-	]
+	]*/
 
 	function initMap(el, lat, lng, zoom, newLocs) {
 
@@ -1131,7 +1131,7 @@ window.addEventListener('load', () => {
 		initMap(mapMain, 65.061313, 101.477485, 3, locationsMain);
 	}
 
-	if (mapContacts) {
-		initMap(mapContacts, 55.768741, 37.672267, 17, locationsContacts);
+    if (mapContacts) {
+		initMap(mapContacts, locationsContacts[0].lat, locationsContacts[0].lng, 17, locationsContacts);
 	}
 });

@@ -1,5 +1,6 @@
 $(function(){
-	$('.js-open-modal').on('click', function () {
+	$('.js-open-modal').on('click', function (e) {
+		e.preventDefault();
 		$.fancybox.open({
 			src: $(this).attr('href'),
 			type: 'inline',

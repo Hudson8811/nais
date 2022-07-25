@@ -1,7 +1,8 @@
 
 
-var globalTest = [];
 
+var globalTest = [];
+var refresh_pattern;
 var pattern_path_timers;
 $(document).ready(function () {
 	if (window.matchMedia('(min-width: 1080px)').matches) {
@@ -73,7 +74,7 @@ $(document).ready(function () {
 			}
 		}
 
-		function refresh_pattern() {
+		refresh_pattern = function() {
 			var pattern = $('.pattern'),
 				inner = pattern.find('.pattern__inner'),
 				svg = inner.find('svg:first');

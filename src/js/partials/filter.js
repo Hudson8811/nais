@@ -1,6 +1,6 @@
 $(function(){
 	var filterActiveClass = 'filter__button--active';
-
+/*
 	if($('.articles-page__articles').length>0){
 		var articlesFilter = $('.articles-page__articles').isotope({
 			itemSelector: '.articles-page__item',
@@ -10,6 +10,13 @@ $(function(){
 			},
 		});
 	}
+
+	$('.articles-page__filter .filter__button').on('click', function() {
+		var filterValue = $(this).attr('data-filter');
+		$(this).addClass(filterActiveClass).parent().siblings().find('.filter__button').removeClass(filterActiveClass);
+		articlesFilter.isotope({ filter: filterValue });
+	});
+
 
 	if($('.projects-page__projects').length>0){
 		var projectsFilter = $('.projects-page__projects').isotope({
@@ -22,19 +29,12 @@ $(function(){
 	}
 
 
-	$('.articles-page__filter .filter__button').on('click', function() {
-		var filterValue = $(this).attr('data-filter');
-		$(this).addClass(filterActiveClass).parent().siblings().find('.filter__button').removeClass(filterActiveClass);
-		articlesFilter.isotope({ filter: filterValue });
-	});
-
-
 	$('.projects-page__filter .filter__button').on('click', function() {
 		var filterValue = $(this).attr('data-filter');
 		$(this).addClass(filterActiveClass).parent().siblings().find('.filter__button').removeClass(filterActiveClass);
 		projectsFilter.isotope({ filter: filterValue });
 	});
-
+*/
 
 
 
