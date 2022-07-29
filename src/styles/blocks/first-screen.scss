@@ -18,12 +18,8 @@
 		@include max(md) {
 			padding-top: 0;
 			max-width: 86%;
-			margin-left: -15px;
-			position: relative;
-		}
-
-		@include max(xs) {
 			margin-left: -80px;
+			position: relative;
 		}
 
 		&-hov-area{
