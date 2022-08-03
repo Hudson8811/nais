@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 	var firstAnimation = $('.first-screen__dynamic');
 	var firstAnimationHovArea = $('.first-screen__dynamic-hov-area');
@@ -10,17 +9,35 @@ $(document).ready(function () {
 	/**
 	 * Прелоадер
 	 */
-	setTimeout(function () {
-		preloader.fadeOut(300);
-	}, 700);
+	/**
+	 * этот код сразу после preloader
+	 *
 
-	preloaderItems.each(function (index) {
-		var that = $(this);
+		if (!sessionStorage || !(!sessionStorage.getItem('load') || window.location.pathname === '/')) {
+			const preloaders = document.querySelectorAll('.preloader');
+
+			preloaders.forEach(preloader => {
+				preloader.remove();
+			});
+		}
+	 */
+
+
+	if (sessionStorage && (!sessionStorage.getItem('load') || window.location.pathname === '/')) {
+		sessionStorage.setItem('load', 'true');
 
 		setTimeout(function () {
-			that.fadeIn(100);
-		}, 100 * (index + 1));
-	});
+			preloader.fadeOut(300);
+		}, 700);
+
+		preloaderItems.each(function (index) {
+			var that = $(this);
+
+			setTimeout(function () {
+				that.fadeIn(100);
+			}, 100 * (index + 1));
+		});
+	}
 
 	/**
 	 * Появление первого блока после загрузки страницы
@@ -340,7 +357,7 @@ $(document).ready(function () {
 
 	$('.menu__link-expand-svg').click(function () {
 		if (window.matchMedia('(max-width: 1079px)').matches) {
-			var item=$(this).closest('.menu__link--expand')
+			var item = $(this).closest('.menu__link--expand')
 			if (item.hasClass('menu__link--expand--opened')) {
 				item.removeClass('menu__link--expand--opened').find('.menu__inner').slideUp(400);
 			}
