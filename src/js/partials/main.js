@@ -22,10 +22,26 @@ $(document).ready(function () {
 		}
 	 */
 
-
+/*
 	if (sessionStorage && (!sessionStorage.getItem('load') || window.location.pathname === '/')) {
 		sessionStorage.setItem('load', 'true');
 
+		setTimeout(function () {
+			preloader.fadeOut(300);
+		}, 700);
+
+		preloaderItems.each(function (index) {
+			var that = $(this);
+
+			setTimeout(function () {
+				that.fadeIn(100);
+			}, 100 * (index + 1));
+		});
+	}
+	*/
+
+	if (typeof(Cookies.get('load'))==='undefined' || window.location.pathname === '/') {
+		Cookies.set('load', 'true')
 		setTimeout(function () {
 			preloader.fadeOut(300);
 		}, 700);
