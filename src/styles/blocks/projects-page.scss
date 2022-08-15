@@ -39,6 +39,7 @@
 
 	&__item {
 		width: calc(50% - 8px);
+		margin-bottom: 16px;
 
 		@include max(sm) {
 			width: 100%;

@@ -1,4 +1,4 @@
-.compensate-for-scrollbar{
+.compensate-for-scrollbar {
 	overflow: hidden;
 }
 
@@ -204,9 +204,11 @@
 
 		&--50 {
 			width: calc(50% - 7.5px);
+
 			@media screen and (max-width: 600px) {
 				width: 100%;
-				&+.modal-form-row__col{
+
+				&+.modal-form-row__col {
 					margin-top: 8px;
 				}
 			}
@@ -240,14 +242,17 @@
 
 
 .privacy-modal-text {
-    margin-top: 32px;
+	margin-top: 32px;
 	font-weight: 300;
 	font-size: 18px;
 	line-height: 32px;
 	color: $textMainColor;
-	p{
-		&+p, &+*{
-		    margin-top: 32px;
+
+	p {
+
+		&+p,
+		&+* {
+			margin-top: 32px;
 
 			@media screen and (max-width: 900px) {
 				margin-top: 20px;
@@ -255,26 +260,32 @@
 
 		}
 	}
+
 	ul {
 		margin-top: 63px;
 		font-weight: 700;
 		font-size: 22px;
 		line-height: 27px;
+
 		@media screen and (max-width: 900px) {
 			margin-top: 51px;
 		}
+
 		@media screen and (max-width: 500px) {
 			font-size: 18px;
 			line-height: 1.22727272727;
 		}
+
 		li {
 			padding-left: 48px;
 			display: block;
 			position: relative;
+
 			@media screen and (max-width: 500px) {
 				padding-left: 40px;
 			}
-			&::before{
+
+			&::before {
 				content: '';
 				display: block;
 				position: absolute;
@@ -284,18 +295,23 @@
 				height: 32px;
 				background: url(../images/li-icon.svg) no-repeat center center;
 				background-size: contain;
+
 				@media screen and (max-width: 500px) {
 					top: -4px;
 					width: 28px;
 				}
 			}
+
 			b {}
-			&+li{
+
+			&+li {
 				margin-top: 21px;
 			}
 		}
-		&+*{
+
+		&+* {
 			margin-top: 67px;
+
 			@media screen and (max-width: 900px) {
 				margin-top: 55px;
 			}
@@ -305,41 +321,49 @@
 	ol {
 		counter-reset: ol-li-modal-text;
 		margin-top: 28px;
+
 		li {
 			counter-increment: ol-li-modal-text;
-			&::before{
+
+			&::before {
 				content: '';
 				content: counter(ol-li-modal-text) " ";
 				margin-right: 7px;
 			}
 		}
-		&+*{
+
+		&+* {
 			margin-top: 28px;
 		}
 	}
-	a{
+
+	a {
 		color: #A0AB7B;
 		text-decoration: underline;
 	}
 }
-.modal-form-row__col--btn-register-partners-left{
+
+.modal-form-row__col--btn-register-partners-left {
 	width: calc(100% - 169px - 47px);
+
 	@media screen and (max-width: 500px) {
 		width: calc(100% - 117px - 15px);
 	}
-	.button--modal{
+
+	.button--modal {
 		width: 100%;
 	}
 }
 
-.modal-form-row__col--btn-register-partners-right{
+.modal-form-row__col--btn-register-partners-right {
 	width: 169px;
+
 	@media screen and (max-width: 500px) {
 		width: 117px;
 	}
 }
 
-.simple-btn-with-arrow{
+.simple-btn-with-arrow {
 	width: 100%;
 	height: 89px;
 	display: flex;
@@ -349,14 +373,15 @@
 	font-size: 16px;
 	line-height: 22px;
 	color: $white;
-    padding: 10px 15px;
+	padding: 10px 15px;
 	cursor: pointer;
 	transition-duration: .3s;
-	&:hover{
+
+	&:hover {
 		opacity: .7;
 	}
 
-	&::after{
+	&::after {
 		content: '';
 		display: block;
 		width: 12px;
@@ -381,13 +406,15 @@
 		opacity: 1;
 	}
 }
+
 //.select2-container--custom-theme [data-select2-id="1"]
-.simple-select--placeholder-selected+.select2-container--custom-theme{
+.simple-select--placeholder-selected+.select2-container--custom-theme {
 
 	.select2-selection {
 		color: $white-op-0-64;
 	}
 }
+
 .select2-container--custom-theme {
 	display: block;
 	font-weight: 400;
@@ -417,6 +444,7 @@
 		font-weight: 300;
 		font-size: 16px;
 		line-height: 22px;
+
 		&__rendered {}
 
 		&--single {
@@ -440,7 +468,8 @@
 					transform: rotate(-180deg);
 
 				}
-				&:hover{
+
+				&:hover {
 					&::after {
 						border-color: $dunkl;
 						background-color: $dunkl-op-0-3;
@@ -469,20 +498,55 @@
 		line-height: 22px;
 		color: $white-op-0-6;
 		transition-duration: .3s;
-		&:hover{
+
+		&:hover {
 			color: $textMainColor;
 
 		}
-		&+.select2-results__option{
+
+		&+.select2-results__option {
 			margin-top: 17px;
 		}
 	}
 }
 
-.select2-container--open{
-	&.select2-container--custom-theme .select2-selection--single .select2-selection__rendered::after{
+.select2-container--open {
+	&.select2-container--custom-theme .select2-selection--single .select2-selection__rendered::after {
 		transform: rotate(0);
 	}
 }
 
 
+
+
+
+.modal--success{
+	width: 628px;
+}
+.modal-inner--success {
+	padding: 54px 33px 46px 35px ;
+	@media screen and (max-width: 500px) {
+		padding: 30px 10px;
+	}
+}
+
+.modal-success {
+	&__title {
+		font-weight: 700;
+		font-size: 54px;
+		line-height: 62px;
+		@media screen and (max-width: 680px) {
+			font-size: 35px;
+			line-height: 1.2;
+		}
+		@media screen and (max-width: 500px) {
+			font-size: 30px;
+		}
+	}
+
+	&__btn-wrap {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 40px;
+	}
+}
