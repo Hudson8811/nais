@@ -168,7 +168,7 @@ $(window).on('load', function () {
 	if (projectsSlider.length > 0) {
 		projectsSlider.forEach(elem => {
 			new Swiper(elem, {
-				slidesPerView: 2.3,
+				slidesPerView: 1,
 				spaceBetween: 16,
 				navigation: {
 					nextEl: '.weights-page__projects-nav .slider-nav__button--next',
@@ -178,6 +178,14 @@ $(window).on('load', function () {
 				pagination: {
 					...pagiOptions,
 					el: '.weights-page__projects-nav .slider-nav__pagi',
+				},
+				breakpoints: {
+					767: {
+						slidesPerView: 2
+					},
+					1080: {
+						slidesPerView: 2.3,
+					}
 				}
 			})
 		});
