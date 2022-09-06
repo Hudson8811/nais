@@ -416,6 +416,7 @@
 	margin-bottom: -32px;
 
 	&-item {
+		display: block;
 		width: 289px;
 		max-width: calc(50% - 10px);
 		margin-bottom: 32px;
@@ -480,11 +481,24 @@ a.standarts-item__title {
 	transition-duration: .3s;
 	&:hover{
 
-	text-decoration-line: underline;
-	color: $orange;
+		text-decoration-line: underline;
+		color: $orange;
 	}
 
 	&+.standarts-item__desc {
 		margin-top: 16px;
+	}
+}
+a.standarts-item {
+	.standarts-item__title {
+		transition-duration: .3s;
+		&+.standarts-item__desc {
+			margin-top: 16px;
+		}
+	}
+
+	&:hover .standarts-item__title {
+		text-decoration-line: underline;
+		color: $orange;
 	}
 }

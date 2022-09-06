@@ -24,9 +24,12 @@
 		svg {
 			fill: $green;
 			margin-right: 16px;
+			min-width: 32px;
+
 
 			@include max(sm) {
 				max-width: 20px;
+				min-width: 20px;
 				margin-right: 8px;
 			}
 		}

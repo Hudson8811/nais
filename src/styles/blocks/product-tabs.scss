@@ -96,6 +96,10 @@
 		}
 	}
 
+}
+
+.simple-text, .simple-text-like-lists, .article-single__content-text, .article-single__about-us, .quote {
+
 	ul {
 		font-weight: 300;
 		font-size: 18px;
@@ -121,12 +125,13 @@
 			}
 		}
 
-		&+* {
-			margin-top: 63px;
-		}
 	}
 }
-
+.simple-text ul{
+	&+* {
+		margin-top: 63px;
+	}
+}
 
 .table {
 	&--product-1 {
@@ -249,7 +254,7 @@
 
 		&--heading {}
 
-		&:not(:first-child) .table-models__col:last-child {
+		&:not(:first-child) .table-models__col:nth-child(6):not(.table-models__col--six-text) {
 			padding: 0;
 		}
 
@@ -323,7 +328,7 @@
 
 		}
 
-		&:nth-child(6):not(.table-models__col--heading) {
+		&:nth-child(6):not(.table-models__col--heading):not(.table-models__col--six-text) {
 			min-width: 281px;
 			width: auto;
 			padding: 5px 16px 5px 3px;
