@@ -1,0 +1,219 @@
+//
+	extends ../layouts/default
+
+	block vars
+		-
+			const page = {
+				title: 'Главная'
+			};
+
+	block main
+	//	.title-l2 Полный цикл
+.section-product-tabs
+	.container
+		h2.title-l2.title-l2--product-tabs Вагонные весы ВВТ
+		+filter([
+			{
+				text: 'Описание',
+				class: 'filter__button--active'
+			},
+			{text: 'Способы установки'},
+			{text: 'Характеристики'},
+			{text: 'Модели'},
+			{text: 'Сертификаты'},
+		], 'product__tabs')
+		.product__content
+			.product__content-item(style='display: block;')
+
+				.simple-text.simple-text--chyst
+					p Весы вагонные тензометрические ВВТ предназначены для статического взвешивания грузов, перевозимых железнодорожным транспортом. Устанавливаются на фундамент.
+				.chyst-cycle.chyst-cycle--product-tabs
+					.chyst-cycle-item
+						.chyst-cycle-item__icon
+							img(src="images/product/icons/tab1/1.svg", alt="")
+						.chyst-cycle-item__name Датчики HBM, Германия
+					.chyst-cycle-item
+						.chyst-cycle-item__icon
+							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 2.333c0 .6.572 1.167 1.166 1.167h11.667C20.432 3.5 21 2.93 21 2.333h2.333a3.5 3.5 0 01-3.5 3.5h-4.666V8.24a9.336 9.336 0 018.166 9.261v7a1.167 1.167 0 01-1.166 1.167H5.832A1.167 1.167 0 014.666 24.5v-7a9.334 9.334 0 018.167-9.26V5.832H8.166a3.495 3.495 0 01-3.5-3.5H7zm7 8.167c-3.778 0-7 3.22-7 7v5.834h14V17.5c0-3.777-3.223-7-7-7zm0 2.334c.866 0 1.675.235 2.37.646l-3.196 3.195a1.167 1.167 0 001.54 1.747l.11-.097 3.197-3.195A4.665 4.665 0 0114 22.166 4.665 4.665 0 019.333 17.5 4.665 4.665 0 0114 12.834z" fill="#467C3F"/></svg>
+						.chyst-cycle-item__name Возможность выгрузки сыпучих материалов на весах
+					.chyst-cycle-item
+						.chyst-cycle-item__icon
+							<svg xmlns="http://www.w3.org/2000/svg" width="38" height="24" viewBox="0 0 38 24" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M19.3036 8.39651H35.8504C37.1675 9.67193 37.9285 11.4356 37.9285 13.3034C37.9285 17.0713 34.8631 20.1366 31.0953 20.1366H0V0H15.7895V4.88234C15.7895 6.82003 17.3659 8.39651 19.3036 8.39651ZM4.14843 8.63586H11.6304V2.2166H4.14843V8.63586ZM18.1 13.0855H20.3224V10.8631H18.1V13.0855ZM22.2238 13.0855H24.4461V10.8631H22.2238V13.0855ZM26.3475 13.0855H28.5699V10.8631H26.3475V13.0855ZM6.37081 4.43865H9.40806V6.41315H6.37081V4.43865ZM26.0367 1.60133C24.4958 0.553773 22.6965 0.000105226 20.8333 0.000105226H18.0118V4.88237C18.0118 5.59464 18.5914 6.17416 19.3036 6.17416H32.7629L26.0367 1.60133ZM0 21.7776H31.4837V24H0V21.7776Z" fill="#467C3F"/>
+							</svg>
+						.chyst-cycle-item__name Взвешивание сочлененных вагонов
+					.chyst-cycle-item
+						.chyst-cycle-item__icon
+							img(src="images/product/icons/tab1/4.svg", alt="")
+						.chyst-cycle-item__name Автоматизация взвешивания
+					.chyst-cycle-item
+						.chyst-cycle-item__icon
+							img(src="images/product/icons/tab1/5.svg", alt="")
+						.chyst-cycle-item__name Система защиты от внешнего воздействия
+					.chyst-cycle-item
+						.chyst-cycle-item__icon
+							img(src="images/product/icons/tab1/6.svg", alt="")
+						.chyst-cycle-item__name Взрывозащищенное исполнение
+					.chyst-cycle-item
+						.chyst-cycle-item__icon
+							img(src="images/product/icons/tab1/7.svg", alt="")
+						.chyst-cycle-item__name Рельсовые противоугонные устройства
+					.chyst-cycle-item
+						.chyst-cycle-item__icon
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M25.333 2.667H6.667a4 4 0 00-4 4V20a4 4 0 004 4h3.52l-.774 1.334a2.666 2.666 0 002.334 4h8.613a2.667 2.667 0 002.307-4L21.88 24h3.453a4 4 0 004-4V6.667a4 4 0 00-4-4zm-13.64 24L13.333 24h5.334l1.6 2.667h-8.574zM26.667 20a1.333 1.333 0 01-1.334 1.334H6.667A1.333 1.333 0 015.333 20v-1.333h21.334V20zm0-4H5.333V6.667a1.333 1.333 0 011.334-1.333h18.666a1.333 1.333 0 011.334 1.333V16z" fill="#467C3F"/></svg>
+						.chyst-cycle-item__name Штатный терминал
+
+			.product__content-item
+				.simple-text.simple-text--product-tab-2
+					h3 Модель 1. Одна грузоприемная платформа
+					img(src="images/product/tab2/tab2Vagon__1.jpg", alt="")
+					p  Весы устанавливаются на предприятиях с ограниченной протяженностью прямолинейных и горизонтальных участков подъездных путей. При использовании таких весов взвешиваются отдельные участки вагона с последующим автоматическим суммированием результата. Применяются для взвешивания 4-х, 6-и, 8-осных вагонов с любым расстоянием между тележками.
+
+					h3 Модель 2. Две грузоприемные платформы
+					img(src="images/product/tab2/tab2Vagon__2.jpg", alt="")
+					p Данная модификация в большей степени подходит для решения задачи максимально достоверного определения массы. Помимо двух грузоприемных, весы включают промежуточную и две подъездные платформы. Данная конструкция обеспечивает стабильность метрологических и эксплуатационных характеристик.
+					h3 Модель 3. Три грузоприемные платформы
+					img(src="images/product/tab2/tab2Vagon__3.jpg", alt="")
+					p Данная модификация в большей степени подходит для решения задачи максимально достоверного определения массы. Помимо двух грузоприемных, весы включают промежуточную и две подъездные платформы. Данная конструкция обеспечивает стабильность метрологических и эксплуатационных характеристик.
+					
+					h3 Модель 4. Две грузоприемные платформы с возможностью разгрузки
+					img(src="images/product/tab2/tab2Vagon__4.jpg", alt="")
+					p Главное преимущество и уникальность весов ВВТ-Р в том, что благодаря уникальной конструкции, эти весы позволяют производить разгрузку и загрузку при однократной установке вагона на весы с оперативным контролем веса на весоизмерительном терминале – это очень сильно сокращает время обслуживания подвижного состава при погрузо-разгрузочных работах.
+
+			.product__content-item
+				table.table.table--product-1.table--product-1--x2
+					tbody
+						tr
+							td ГОСТ
+							td OIML R 76-1-2011
+						tr
+							td Свидетельство об утверждении типа средств измерений
+							td № 24768
+						tr
+							td Класс точности весов по ГОСТ OIML R 76-1-2011
+							td III
+						tr
+							td Класс точности датчиков по ГОСТ Р 8.726-2010 (МОЗМ Р 60)
+							td С3
+						tr
+							td Диапазон температур платформы, ̊C
+							td -30…+40
+						tr
+							td Диапазон температур датчиков, ̊C
+							td -50…+50
+						tr
+							td Электропитание от сети переменного тока, В
+							td 187…242
+						tr
+							td Электропитание от источника резервного питания, В
+							td 12
+						tr
+							td Потребляемая мощность (не более), Вт
+							td 15
+						tr
+							td Цена деления, кг
+							td 20/20/50
+						tr
+							td Сходимость, кг
+							td от 2
+						tr
+							td Средний срок службы по ГОСТ OIML R76-1-2011, не менее, лет
+							td 8
+						tr
+							td Гарантийный срок, месяцев
+							td до 36
+
+				.big-letters-list
+					.bl-list-item
+						.bl-list-item__number 01
+						.bl-list-item__content.simple-text
+							p Точные и надежные тензометрические датчики Hottinger Baldwin Messtechnik, Германия, гарантируют защиту от взлома и преднамеренного изменения данных.
+					.bl-list-item
+						.bl-list-item__number 02
+						.bl-list-item__content.simple-text
+							p Запатентованная конструкция платформы за счёт шарнирного соединения её модулей повышает точность взвешивания.
+					.bl-list-item
+						.bl-list-item__number 03
+						.bl-list-item__content.simple-text
+							p Штатный терминал с интуитивно понятным интерфейсом и широким набором функций:
+							ul
+								li сохранение истории калибровок
+								li режим просмотра покилограммного взвешивания
+								li оповещение о неработающем датчике
+								li измерение температуры окружающей среды
+								li стабилизация данных измерений при ветре
+					.bl-list-item
+						.bl-list-item__number 04
+						.bl-list-item__content.simple-text
+							p Автоматизация процесса взвешивания с использованием собственного программного обеспечения для получения корректных данных, особенно при работе весовой с интенсивным трафиком.
+
+					.bl-list-item
+						.bl-list-item__number 05
+						.bl-list-item__content.simple-text
+							p Система защиты элементов весового комплекса от внешнего воздействия:
+							ul
+								li чехлы для дополнительной грязезащиты датчиков
+								li бензомаслостойкое резиновое уплотнение с высоким содержанием каучука для предотвращения попадания грязи в подвесовое пространство
+								li металлорукава для защиты кабельных линий от механических повреждений
+					.bl-list-item
+						.bl-list-item__number 06
+						.bl-list-item__content.simple-text
+							p Максимально быстрая – до 8 дней, установка весов за счет возможности применения сборно-блочного фундамента, изготовленного на заводе
+					.bl-list-item
+						.bl-list-item__number 07
+						.bl-list-item__content.simple-text
+							p Возможность взрывозащищенного исполнения
+					.bl-list-item
+						.bl-list-item__number 08
+						.bl-list-item__content.simple-text
+							p Сертифицированное измерение нагрузки на ось с возможностью печати актов взвешивания
+
+			.product__content-item
+				.table-models-wrap.js-table-scrollbar
+					table.table-models.table-hover-x
+						colgroup
+						colgroup
+						colgroup
+						colgroup
+						colgroup
+						colgroup
+						<tbody>
+							<tr class="table-models__row table-models__row--heading">
+								<th class="table-models__col table-models__col--heading">Модель</th><th class="table-models__col table-models__col--heading">Нагрузка, тонн</th><th class="table-models__col table-models__col--heading">Количество платформ, шт</th><th class="table-models__col table-models__col--heading">Принцип взвешивания</th><th class="table-models__col table-models__col--heading">Длина грузоприемной платформы</th><th class="table-models__col table-models__col--heading">Длина весов</th>											</tr>
+							<tr class="table-models__row"><td class="table-models__col" aria-label="">ВВТ-60-1</td><td class="table-models__col" aria-label="">60</td><td class="table-models__col" aria-label="">1</td><td class="table-models__col" aria-label="">потележечный</td><td class="table-models__col" aria-label="">4,53</td><td class="table-models__col table-models__col--six-text" aria-label="">8,53</td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВВТ-100-2</td><td class="table-models__col" aria-label="">100</td><td class="table-models__col" aria-label="">2</td><td class="table-models__col" aria-label="">повагонный</td><td class="table-models__col" aria-label="">4,53</td><td class="table-models__col table-models__col--six-text" aria-label="">17,83</td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВВТ-150-2</td><td class="table-models__col" aria-label="">150</td><td class="table-models__col" aria-label="">2</td><td class="table-models__col" aria-label="">повагонный</td><td class="table-models__col" aria-label="">5,0</td><td class="table-models__col table-models__col--six-text" aria-label="">19</td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВВТ-100-2-Р</td><td class="table-models__col" aria-label="">100</td><td class="table-models__col" aria-label="">2</td><td class="table-models__col" aria-label="">повагонный с устройством погрузки/разгрузки</td><td class="table-models__col" aria-label="">3,33</td><td class="table-models__col table-models__col--six-text" aria-label="">17,8</td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВВТ-100-2-Р без боковых воронок</td><td class="table-models__col" aria-label="">100</td><td class="table-models__col" aria-label="">2</td><td class="table-models__col" aria-label="">повагонный с устройством погрузки/разгрузки</td><td class="table-models__col" aria-label="">3,33</td><td class="table-models__col table-models__col--six-text" aria-label="">17,8</td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВВТ-100-2-Р без разгрузочной платформы и боковых воронок</td><td class="table-models__col" aria-label="">100</td><td class="table-models__col" aria-label="">2</td><td class="table-models__col" aria-label="">повагонный с устройством погрузки/разгрузки</td><td class="table-models__col" aria-label="">3,33</td><td class="table-models__col table-models__col--six-text" aria-label="">17,8</td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВВТ-150-2-Р</td><td class="table-models__col" aria-label="">100</td><td class="table-models__col" aria-label="">2</td><td class="table-models__col" aria-label="">повагонный с устройством погрузки/разгрузки</td><td class="table-models__col" aria-label="">33,3</td><td class="table-models__col table-models__col--six-text" aria-label="">17,8</td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВВТ-150-2-Р без боковых воронок</td><td class="table-models__col" aria-label="">150</td><td class="table-models__col" aria-label="">2</td><td class="table-models__col" aria-label="">повагонный с устройством погрузки/разгрузки</td><td class="table-models__col" aria-label="">33,3</td><td class="table-models__col table-models__col--six-text" aria-label="">17,8</td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВВТ-150-2-Р без разгрузочной платформы и боковых воронок</td><td class="table-models__col" aria-label="">150</td><td class="table-models__col" aria-label="">2</td><td class="table-models__col" aria-label="">повагонный с устройством погрузки/разгрузки</td><td class="table-models__col" aria-label="">33,3</td><td class="table-models__col table-models__col--six-text" aria-label="">17,8</td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВВТ-200-2</td><td class="table-models__col" aria-label="">200</td><td class="table-models__col" aria-label="">2</td><td class="table-models__col" aria-label="">повагонный</td><td class="table-models__col" aria-label="">Под заказ</td><td class="table-models__col table-models__col--six-text" aria-label="">Под заказ</td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВВТ-200-3</td><td class="table-models__col" aria-label="">200</td><td class="table-models__col" aria-label="">3</td><td class="table-models__col" aria-label="">повагонный</td><td class="table-models__col" aria-label="">Под заказ</td><td class="table-models__col table-models__col--six-text" aria-label="">Под заказ</td></tr>
+						</tbody>
+						//- tbody
+						//- 	tr.table-models__row.table-models__row--heading
+						//- 		th.table-models__col.table-models__col--heading Модель
+						//- 		th.table-models__col.table-models__col--heading Нагрузка тонны
+						//- 		th.table-models__col.table-models__col--heading Размер
+						//- 		th.table-models__col.table-models__col--heading Кол-во платфор
+						//- 		th.table-models__col.table-models__col--heading Кол-во датчиков
+						//- 		th.table-models__col.table-models__col--heading Примеры авто
+							//- each val in [1,2,3,4,5,6]
+							//- 	tr.table-models__row
+							//- 		td.table-models__col ВАТ-30-6-3-1
+							//- 		td.table-models__col 30
+							//- 		td.table-models__col 100
+							//- 		td.table-models__col 24
+							//- 		td.table-models__col 4
+							//- 		td.table-models__col
+							//- 			.table-models-cars
+							//- 				.table-models-car
+							//- 					img(src="images/product/car.png", alt="")
+							//- 				.table-models-car
+							//- 					img(src="images/product/car.png", alt="")
+
+
+
+
+
+
+			.product__content-item
+				.cert-gallery
+					a.cert-gallery-item(href="images/certs/newTab__1.png" data-fancybox="cert-gallery")
+						img(src='images/certs/newTab__1.png', srcset='images/certs/newTab__1.png 2x', alt='')
+					a.cert-gallery-item(href="images/certs/newTab__2.png" data-fancybox="cert-gallery")
+						img(src='images/certs/newTab__2.png', srcset='images/certs/newTab__2.png 2x', alt='')
+					a.cert-gallery-item(href="images/certs/newTab__3.png" data-fancybox="cert-gallery")
+						img(src='images/certs/newTab__3.png', srcset='images/certs/newTab__3.png 2x', alt='')

@@ -1,0 +1,80 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Проект'
+		};
+
+block main
+	article.project-single
+		.pattern
+			.pattern__inner
+				include ../../images/pattern.svg
+				include ../../images/pattern.svg
+				include ../../images/pattern.svg
+
+		.container.container--border.project-single__container
+			+title-block('Строительство и установка <br> вагонных весов НАИС', 'project-single__title')
+			.project-single__row
+				.project-single__about
+					.project-single__about-item
+						p 2014-2016
+						p Год проекта
+					.project-single__about-item
+						p ООО РСК "Константа
+						p Заказчик
+					.project-single__about-item
+						p с.Белая глина, Краснодарский край
+						p Адрес объекта
+					+tags(['весы автомобильные', 'по'], 'project-single__tags')
+				.project-single__image
+					img(src='images/project/poster.jpg', srcset='images/project/poster@2x.jpg 2x', alt='')
+
+			+quote('Повседневная практика показывает, что новая модель организационной деятельности обеспечивает ' +
+			'широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. ' +
+			'Не следует, однако забывать, что консультация с широким активом позволяет оценить [значение] позиций, занимаемых ' +
+			'участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что укрепление и развитие ' +
+			'структуры в значительной степени обуславливает создание существенных финансовых и административных условий. ' +
+			'Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции способствует ' +
+			'подготовки и реализации соответствующий <a href="#" target="_blank">условий</a> активизации.', 'project-single__quote')
+			+tabs(
+				[
+					'Частных загородных домов.',
+					'Офисов крупных корпораций.',
+					'Различных банков.',
+					'Элитных отелей.'
+				],
+				'project-single__tabs'
+			)
+			.container.container--small
+				+slider-nav('Отзывы', 'project-single__nav')
+			.project-single__slider.swiper.__js_slider-reviews
+				.swiper-wrapper
+					.project-single__slide.swiper-slide
+						iframe(src="https://www.youtube.com/embed/tEPB7uzKuh4" frameborder="0" allowfullscreen)
+					.project-single__slide.swiper-slide
+						iframe(src="https://www.youtube.com/embed/tEPB7uzKuh4" frameborder="0" allowfullscreen)
+					.project-single__slide.swiper-slide
+						iframe(src="https://www.youtube.com/embed/tEPB7uzKuh4" frameborder="0" allowfullscreen)
+			.article-single__content
+				.article-single__content-title Строительство и установка вагонных весов НАИС
+				.article-single__content-text
+					p Повседневная практика показывает, что новая модель организационной деятельности обеспечивает широкому
+						|  кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных
+						|  задач. Не следует, однако забывать, что консультация с широким активом позволяет оценить значение позиций,
+						|  занимаемых участниками в отношении поставленных задач.
+					p Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени
+						|  обуславливает создание существенных финансовых и административных условий. Значимость этих проблем настолько
+						|  очевидна, что начало повседневной работы по формированию позиции способствует подготовки и реализации
+						|  соответствующий условий активизации.
+			.container.container--small
+				+slider-nav('Фото', 'project-single__pic-nav')
+			.project-single__pic-slider.swiper.__js_slider-photos
+				.swiper-wrapper
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/1.jpg', srcset='images/project/1@2x.jpg 2x', alt='')
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/2.jpg', srcset='images/project/2@2x.jpg 2x', alt='')
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/1.jpg', srcset='images/project/1@2x.jpg 2x', alt='')

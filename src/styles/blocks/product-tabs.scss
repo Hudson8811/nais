@@ -353,17 +353,27 @@
 }
 
 .table-models-car {
-	width: 126px;
+	width: auto;
+	display: flex;
+	align-items: flex-end;
+	// width: 126px;
 	height: 46px;
 	min-width: 126px;
 	position: relative;
+	&:first-child {
+		margin-left: 10px;
 
+	}
 	img {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
+		// position: absolute;
+		// left: 0;
+		// top: 0;
+		// width: 100%;
+		// height: 100%;
+    position: static;
+    display: block;
+    width: auto;
+    height: 100%;
 	}
 
 	&+.table-models-car {

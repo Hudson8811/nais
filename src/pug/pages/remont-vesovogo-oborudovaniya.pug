@@ -1,0 +1,46 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Услуги'
+		};
+
+block main
+	article.article-single
+		.pattern
+			.pattern__inner
+				include ../../images/pattern.svg
+				include ../../images/pattern.svg
+				include ../../images/pattern.svg
+
+		.container.container--border.article-single__container
+			+title-block('Ремонт весового оборудования', 'article-single__title')
+			.article-single__row
+				.article-single__image
+					img(src='images/article/posterNew__1.webp', srcset='images/article/posterNew__1.webp 2x', alt='')
+				.article-single__about-us
+					p Автомобильные и вагонные весы постоянно подвергаются внушительным статическим и динамическим нагрузкам, воздействию агрессивной внешней среды.
+			+quote('Соблюдение условий эксплуатации и регулярное техническое обслуживание весов является обязательным правилом для их бесперебойной, точной, долговременной работы. Если происходит сбой в работе оборудования, в т.ч. отклонение от заявленных метрологических характеристик, то главным моментом для минимизации простоев и потерь является оперативное восстановление его работоспособности.', 'article-single__quote')
+			.article-single__content
+				.article-single__content-text
+					h3 Гарантируем высокое качество работ:
+					ul 
+						li Грамотно диагностируем
+						li Восстанавливаем работоспособность весов в кратчайший срок
+						li Минимизируем ваши простои и потери
+					br
+					p Ремонт автомобильных и вагонных весов любого уровня сложности силами сервисной службы НАИС – это восстановление его работоспособности в кратчайший срок.
+					br
+				.article-single__content-text
+					h3 Перечень услуг ремонта весов: 
+					ul 
+						li выезд специалистов к месту установки весов
+						li диагностика оборудования: обследование весов, выявление неисправностей, подбор комплектующих, определение объема работ, необходимых для устранения неполадок
+						li организация и проведение работ по настройке и калибровке оборудования
+						li устранение неисправностей весового комплекса, замена комплектующих
+				.article-single__bottom-nav
+					+button('Получить консультацию', 'button--square article-single__consult-btn', '#', 'chevron-right', '13', '20')
+					a.article-single__back(href='#')
+						+icon('chevron-left')(width='13', height='20')
+						span назад

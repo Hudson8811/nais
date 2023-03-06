@@ -21,7 +21,6 @@
 			{text: 'Характеристики'},
 			{text: 'Модели'},
 			{text: 'Сертификаты'},
-			{text: 'Ещё что-то там'}
 		], 'product__tabs')
 		.product__content
 			.product__content-item(style='display: block;')
@@ -87,11 +86,44 @@
 				table.table.table--product-1.table--product-1--x2
 					tbody
 						tr
-							td Врезной
-							td Врезной
+							td ГОСТ
+							td OIML R 76-1-2011
 						tr
-							td Врезной
-							td Врезной
+							td Свидетельство об утверждении типа средств измерений
+							td № 43598/1
+						tr
+							td Класс точности весов по ГОСТ OIML R 76-1-2011
+							td III
+						tr
+							td Класс точности датчиков по ГОСТ Р 8.726-2010 (МОЗМ Р 60)
+							td С3
+						tr
+							td Диапазон температур платформы, ̊C
+							td -30…+40
+						tr
+							td Диапазон температур датчиков, ̊C
+							td -50…+50
+						tr
+							td Электропитание от сети переменного тока, В
+							td 187…242
+						tr
+							td Электропитание от источника резервного питания, В
+							td 12
+						tr
+							td Потребляемая мощность (не более), Вт
+							td 15
+						tr
+							td Цена деления, кг
+							td 10/20/50
+						tr
+							td Сходимость, кг
+							td от 2
+						tr
+							td Средний срок службы по ГОСТ OIML R76-1-2011, не менее, лет
+							td 8
+						tr
+							td Гарантийный срок, месяцев
+							td до 60
 
 				.big-letters-list
 					.bl-list-item
@@ -147,126 +179,61 @@
 						colgroup
 						colgroup
 						colgroup
-						tbody
-							tr.table-models__row.table-models__row--heading
-								th.table-models__col.table-models__col--heading Модель
-								th.table-models__col.table-models__col--heading Нагрузка тонны
-								th.table-models__col.table-models__col--heading Размер
-								th.table-models__col.table-models__col--heading Кол-во платфор
-								th.table-models__col.table-models__col--heading Кол-во датчиков
-								th.table-models__col.table-models__col--heading Примеры авто
-							each val in [1,2,3,4,5,6]
-								tr.table-models__row
-									td.table-models__col ВАТ-30-6-3-1
-									td.table-models__col 30
-									td.table-models__col 100
-									td.table-models__col 24
-									td.table-models__col 4
-									td.table-models__col
-										.table-models-cars
-											.table-models-car
-												img(src="images/product/car.png", alt="")
-											.table-models-car
-												img(src="images/product/car.png", alt="")
+						<tbody>
+							<tr class="table-models__row table-models__row--heading">
+								<th class="table-models__col table-models__col--heading">Модель</th><th class="table-models__col table-models__col--heading">Нагрузка тонн</th><th class="table-models__col table-models__col--heading">Размер</th><th class="table-models__col table-models__col--heading">Кол-во платформ</th><th class="table-models__col table-models__col--heading">Кол-во датчиков</th><th class="table-models__col table-models__col--heading">Примеры авто</th>											</tr>
+							<tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-30-6-3-1</td><td class="table-models__col" aria-label="">30</td><td class="table-models__col" aria-label="">6</td><td class="table-models__col" aria-label="">1</td><td class="table-models__col" aria-label="">4</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="160" alt="изотермическии фургон.png" src="images/model/086z921uwd6aidp29rn32v39hm7lbg72.png" height="84" title="изотермическии фургон.png"></div><div class="table-models-car"><img width="236" alt="грузовик с навесом.png" src="images/model/5wli8ky2sj4xjj9cn6xq12n0cv4lv3a4.png" height="96" title="грузовик с навесом.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-40-8-3-1</td><td class="table-models__col" aria-label="">40</td><td class="table-models__col" aria-label="">8</td><td class="table-models__col" aria-label="">1</td><td class="table-models__col" aria-label="">6</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="192" alt="самосвал.png" src="images/model/9du6940b0hgnrimhxco33aq9kh9xc5bw.png" height="84" title="самосвал.png"></div><div class="table-models-car"><img width="196" alt="бетоновоз.png" src="images/model/vhpktlnebefeqd2m3miqxvbjrx5x83kn.png" height="90" title="бетоновоз.png"></div><div class="table-models-car"><img width="234" alt="грузовик.png" src="images/model/k9u6lpwhtue1t11n2j1yhiwan1r99nb0.png" height="90" title="грузовик.png"></div><div class="table-models-car"><img width="204" alt="мусоровоз.png" src="images/model/xkzchjlsmjdgkn92epkeu59juwxha6oo.png" height="88" title="мусоровоз.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-60-12-3-2</td><td class="table-models__col" aria-label="">60</td><td class="table-models__col" aria-label="">12</td><td class="table-models__col" aria-label="">2</td><td class="table-models__col" aria-label="">6</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="232" alt="цементовоз.png" src="images/model/sd0k2l4hqsekcmi4mu4cwdzjewwgcss3.png" height="78" title="цементовоз.png"></div><div class="table-models-car"><img width="232" alt="самосвал Renault Kerax.png" src="images/model/vwty0adig919u09d1huyqehuyh62g1tt.png" height="82" title="самосвал Renault Kerax.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-60-16-3-3</td><td class="table-models__col" aria-label="">60</td><td class="table-models__col" aria-label="">16</td><td class="table-models__col" aria-label="">3</td><td class="table-models__col" aria-label="">8</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="226" alt="КАМАЗ сельхозник.png" src="images/model/di5whhvsg2t007xd2444gxawmpu5s88c.png" height="62" title="КАМАЗ сельхозник.png"></div><div class="table-models-car"><img width="252" alt="222222221.png" src="images/model/zyx3f3l9x3xkvmztw5wh1rruoq9fmtuf.png" height="58" title="222222221.png"></div><div class="table-models-car"><img width="232" alt="фура.png" src="images/model/rsi18d1mk1lwnv3a5im8yb7fvufgjw5o.png" height="74" title="фура.png"></div></div></td></tr><tr class="table-models__row hover"><td class="table-models__col" aria-label="">ВАТ-60-18-3-3</td><td class="table-models__col" aria-label="">60</td><td class="table-models__col" aria-label="">18</td><td class="table-models__col" aria-label="">3</td><td class="table-models__col" aria-label="">8</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="232" alt="КАМАЗ с 12м полуприцепом.png" src="images/model/0w1in9w9dvma0meuwkc4jx1ae95bsunu.png" height="48" title="КАМАЗ с 12м полуприцепом.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-60-18-3-4</td><td class="table-models__col" aria-label="">60</td><td class="table-models__col" aria-label="">20</td><td class="table-models__col" aria-label="">4</td><td class="table-models__col" aria-label="">8</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="234" alt="тонар.png" src="images/model/oriov8195xpsm7okh4gj7nyglcocg67d.png" height="54" title="тонар.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-60-22-3-4</td><td class="table-models__col" aria-label="">60</td><td class="table-models__col" aria-label="">22</td><td class="table-models__col" aria-label="">4</td><td class="table-models__col" aria-label="">8</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img alt="автопоезд3.png" src="images/model/g8rrunjmzoibwmbhmjkrj7epe73z9m1o.png" title="автопоезд3.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-80-16-3-3</td><td class="table-models__col" aria-label="">80</td><td class="table-models__col" aria-label="">16</td><td class="table-models__col" aria-label="">3</td><td class="table-models__col" aria-label="">8</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="226" alt="КАМАЗ сельхозник.png" src="images/model/di5whhvsg2t007xd2444gxawmpu5s88c.png" height="62" title="КАМАЗ сельхозник.png"></div><div class="table-models-car"><img width="252" alt="222222221.png" src="images/model/zyx3f3l9x3xkvmztw5wh1rruoq9fmtuf.png" height="58" title="222222221.png"></div><div class="table-models-car"><img width="232" alt="фура.png" src="images/model/rsi18d1mk1lwnv3a5im8yb7fvufgjw5o.png" height="74" title="фура.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-80-18-3-3</td><td class="table-models__col" aria-label="">80</td><td class="table-models__col" aria-label="">18</td><td class="table-models__col" aria-label="">3</td><td class="table-models__col" aria-label="">8</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="232" alt="КАМАЗ с 12м полуприцепом.png" src="images/model/0w1in9w9dvma0meuwkc4jx1ae95bsunu.png" height="48" title="КАМАЗ с 12м полуприцепом.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-80-20-3-4</td><td class="table-models__col" aria-label="">80</td><td class="table-models__col" aria-label="">20</td><td class="table-models__col" aria-label="">4</td><td class="table-models__col" aria-label="">10</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="234" alt="тонар.png" src="images/model/oriov8195xpsm7okh4gj7nyglcocg67d.png" height="54" title="тонар.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-80-22-3-4</td><td class="table-models__col" aria-label="">80</td><td class="table-models__col" aria-label="">22</td><td class="table-models__col" aria-label="">3</td><td class="table-models__col" aria-label="">10</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="234" alt="тонар.png" src="images/model/oriov8195xpsm7okh4gj7nyglcocg67d.png" height="54" title="тонар.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-80-24-3-4</td><td class="table-models__col" aria-label="">80</td><td class="table-models__col" aria-label="">24</td><td class="table-models__col" aria-label="">4</td><td class="table-models__col" aria-label="">10</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="345" alt="автопоезд3.png" src="images/model/g8rrunjmzoibwmbhmjkrj7epe73z9m1o.png" height="57" title="автопоезд3.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-100-18-3-3</td><td class="table-models__col" aria-label="">100</td><td class="table-models__col" aria-label="">18</td><td class="table-models__col" aria-label="">3</td><td class="table-models__col" aria-label="">8</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="252" alt="222222221.png" src="images/model/zyx3f3l9x3xkvmztw5wh1rruoq9fmtuf.png" height="58" title="222222221.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-100-20-3-4</td><td class="table-models__col" aria-label="">100</td><td class="table-models__col" aria-label="">20</td><td class="table-models__col" aria-label="">4</td><td class="table-models__col" aria-label="">10</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="234" alt="тонар.png" src="images/model/oriov8195xpsm7okh4gj7nyglcocg67d.png" height="54" title="тонар.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-100-22-3-4</td><td class="table-models__col" aria-label="">100</td><td class="table-models__col" aria-label="">22</td><td class="table-models__col" aria-label="">4</td><td class="table-models__col" aria-label="">10</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="234" alt="тонар.png" src="images/model/oriov8195xpsm7okh4gj7nyglcocg67d.png" height="54" title="тонар.png"></div></div></td></tr><tr class="table-models__row"><td class="table-models__col" aria-label="">ВАТ-100-24-3-4</td><td class="table-models__col" aria-label="">100</td><td class="table-models__col" aria-label="">24</td><td class="table-models__col" aria-label="">4</td><td class="table-models__col" aria-label="">10</td><td class="table-models__col" aria-label="">
+								<div class="table-models-cars"><div class="table-models-car"><img width="345" alt="автопоезд3.png" src="images/model/g8rrunjmzoibwmbhmjkrj7epe73z9m1o.png" height="57" title="автопоезд3.png"></div></div></td></tr>
+						</tbody>
+						//- tbody
+						//- 	tr.table-models__row.table-models__row--heading
+						//- 		th.table-models__col.table-models__col--heading Модель
+						//- 		th.table-models__col.table-models__col--heading Нагрузка тонны
+						//- 		th.table-models__col.table-models__col--heading Размер
+						//- 		th.table-models__col.table-models__col--heading Кол-во платфор
+						//- 		th.table-models__col.table-models__col--heading Кол-во датчиков
+						//- 		th.table-models__col.table-models__col--heading Примеры авто
+							//- each val in [1,2,3,4,5,6]
+							//- 	tr.table-models__row
+							//- 		td.table-models__col ВАТ-30-6-3-1
+							//- 		td.table-models__col 30
+							//- 		td.table-models__col 100
+							//- 		td.table-models__col 24
+							//- 		td.table-models__col 4
+							//- 		td.table-models__col
+							//- 			.table-models-cars
+							//- 				.table-models-car
+							//- 					img(src="images/product/car.png", alt="")
+							//- 				.table-models-car
+							//- 					img(src="images/product/car.png", alt="")
 
 
 
 
 
 
-				.table-models-wrap.js-table-scrollbar
-					table.table-models.table-hover-x
-						colgroup
-						colgroup
-						colgroup
-						colgroup
-						colgroup
-						colgroup
-						tbody
-							tr.table-models__row.table-models__row--heading
-								th.table-models__col.table-models__col--heading Модель
-								th.table-models__col.table-models__col--heading Нагрузка тонны
-								th.table-models__col.table-models__col--heading Размер
-								th.table-models__col.table-models__col--heading Кол-во платфор
-								th.table-models__col.table-models__col--heading Кол-во датчиков
-								th.table-models__col.table-models__col--heading Примеры авто
-							each val in [1,2,3]
-								tr.table-models__row
-									td.table-models__col ВАТ-30-6-3-1
-									td.table-models__col 30
-									td.table-models__col 100
-									td.table-models__col 24
-									td.table-models__col 4
-									td.table-models__col
-										.table-models-cars
-											.table-models-car
-												img(src="images/product/car.png", alt="")
-								tr.table-models__row
-									td.table-models__col ВАТ-30-6-3-1
-									td.table-models__col 30
-									td.table-models__col 100
-									td.table-models__col 24
-									td.table-models__col 4
-									td.table-models__col
-										.table-models-cars
-								tr.table-models__row
-									td.table-models__col ВАТ-30-6-3-1
-									td.table-models__col 30
-									td.table-models__col 100
-									td.table-models__col 24
-									td.table-models__col 4
-									td.table-models__col
-										.table-models-cars
-											.table-models-car
-												img(src="images/product/car.png", alt="")
-											.table-models-car
-												img(src="images/product/car.png", alt="")
-								tr.table-models__row
-									td.table-models__col ВАТ-30-6-3-1
-									td.table-models__col 30
-									td.table-models__col 100
-									td.table-models__col 24
-									td.table-models__col 4
-									td.table-models__col
-										.table-models-cars
-											.table-models-car
-												img(src="images/product/car.png", alt="")
-											.table-models-car
-												img(src="images/product/car.png", alt="")
-											.table-models-car
-												img(src="images/product/car.png", alt="")
-											.table-models-car
-												img(src="images/product/car.png", alt="")
 			.product__content-item
 				.cert-gallery
-					a.cert-gallery-item(href="images/certs/1@2x.jpg" data-fancybox="cert-gallery")
-						img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
-					a.cert-gallery-item(href="images/certs/2@2x.jpg" data-fancybox="cert-gallery")
-						img(src='images/certs/2.jpg', srcset='images/certs/2@2x.jpg 2x', alt='')
-					a.cert-gallery-item(href="images/certs/3@2x.jpg" data-fancybox="cert-gallery")
-						img(src='images/certs/3.jpg', srcset='images/certs/3@2x.jpg 2x', alt='')
-					a.cert-gallery-item(href="images/certs/4@2x.jpg" data-fancybox="cert-gallery")
-						img(src='images/certs/4.jpg', srcset='images/certs/4@2x.jpg 2x', alt='')
-					a.cert-gallery-item(href="images/certs/1@2x.jpg" data-fancybox="cert-gallery")
-						img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
-					a.cert-gallery-item(href="images/certs/2@2x.jpg" data-fancybox="cert-gallery")
-						img(src='images/certs/2.jpg', srcset='images/certs/2@2x.jpg 2x', alt='')
-					a.cert-gallery-item(href="images/certs/3@2x.jpg" data-fancybox="cert-gallery")
-						img(src='images/certs/3.jpg', srcset='images/certs/3@2x.jpg 2x', alt='')
-					a.cert-gallery-item(href="images/certs/4@2x.jpg" data-fancybox="cert-gallery")
-						img(src='images/certs/4.jpg', srcset='images/certs/4@2x.jpg 2x', alt='')
-					a.cert-gallery-item(href="images/certs/1@2x.jpg" data-fancybox="cert-gallery")
-						img(src='images/certs/1.jpg', srcset='images/certs/1@2x.jpg 2x', alt='')
-					a.cert-gallery-item(href="images/certs/2@2x.jpg" data-fancybox="cert-gallery")
-						img(src='images/certs/2.jpg', srcset='images/certs/2@2x.jpg 2x', alt='')
-					a.cert-gallery-item(href="images/certs/3@2x.jpg" data-fancybox="cert-gallery")
-						img(src='images/certs/3.jpg', srcset='images/certs/3@2x.jpg 2x', alt='')
-					a.cert-gallery-item(href="images/certs/4@2x.jpg" data-fancybox="cert-gallery")
-						img(src='images/certs/4.jpg', srcset='images/certs/4@2x.jpg 2x', alt='')
-
-			.product__content-item
-				.video-block.js-start-iframe(data-iframe-link="https://www.youtube.com/embed/kRD4UvIYVa8")
-					img(src='images/weights-page/rev.jpg', srcset='images/weights-page/rev.jpg 2x', alt='')
-					button.button.button--bordered.employees__play  <svg width="23" height="26"><use xlink:href="./images/sprite.svg#play"></use> </svg>
-				.product-custom-tab-buttons
-					+button('Смотреть презинтацю PDF', 'button button--square partners-banner__button', '#', 'file', '16', '21')
+					a.cert-gallery-item(href="images/certs/new__1.jpg" data-fancybox="cert-gallery")
+						img(src='images/certs/new__1.jpg', srcset='images/certs/new__1.jpg 2x', alt='')
+					a.cert-gallery-item(href="images/certs/new__2.jpg" data-fancybox="cert-gallery")
+						img(src='images/certs/new__2.jpg', srcset='images/certs/new__2.jpg 2x', alt='')
+					a.cert-gallery-item(href="images/certs/new__3.png" data-fancybox="cert-gallery")
+						img(src='images/certs/new__3.png', srcset='images/certs/new__3.png 2x', alt='')
+					a.cert-gallery-item(href="images/certs/new__4.png" data-fancybox="cert-gallery")
+						img(src='images/certs/new__4.png', srcset='images/certs/new__4.png 2x', alt='')

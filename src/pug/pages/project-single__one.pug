@@ -1,0 +1,68 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Весы для Эльдако Юг'
+		};
+
+block main
+	article.project-single
+		.pattern
+			.pattern__inner
+				include ../../images/pattern.svg
+				include ../../images/pattern.svg
+				include ../../images/pattern.svg
+
+		.container.container--border.project-single__container
+			+title-block('Весы для Эльдако Юг', 'project-single__title')
+			.project-single__row
+				.project-single__about
+					.project-single__about-item
+						p 2014-2016
+						p Год проекта
+					.project-single__about-item
+						p ООО РСК "Константа
+						p Заказчик
+					.project-single__about-item
+						p с.Белая глина, Краснодарский край
+						p Адрес объекта
+					+tags(['Автовесы', 'Модуль звук', 'Светофор', 'Считыватели'], 'project-single__tags')
+				.project-single__image
+					img(src='images/project/projectOne__1.jpg', srcset='images/project/projectOne__1.jpg 2x', alt='')
+
+			+quote('Руководством компании ТД Эльдако Юг была поставлена задача за месяц смонтировать и сдать в эксплуатацию две единицы весов. Компания НАИС справилась с поставленной задачей, и в течение месяца двое весов были запущены в эксплуатацию. Один из объектов обеспечен системой дополнительного оборудования, а именно установлены считыватели, светофоры и модуль звук для организации движения транспорта по весам. ', 'project-single__quote')
+			.container.container--small
+				+slider-nav('Отзывы', 'project-single__nav')
+			.project-single__slider.swiper.__js_slider-reviews
+				.swiper-wrapper
+					.project-single__slide.swiper-slide
+						iframe(src="https://www.youtube.com/embed/tEPB7uzKuh4" frameborder="0" allowfullscreen)
+					.project-single__slide.swiper-slide
+						iframe(src="https://www.youtube.com/embed/tEPB7uzKuh4" frameborder="0" allowfullscreen)
+					.project-single__slide.swiper-slide
+						iframe(src="https://www.youtube.com/embed/tEPB7uzKuh4" frameborder="0" allowfullscreen)
+			.article-single__content
+				.article-single__content-title Строительство и установка вагонных весов НАИС
+				.article-single__content-text
+					p Мы обеспечиваем полный цикл производства – от проекта до его реализации на вашем объекте. Все конструктивные детали весовых комплексов и программное обеспечение для автоматизации взвешивания мы производим самостоятельно.
+					p Это значит, что мы полностью управляем качеством продукта, сроками выполнения и несем ответственность за результат.
+			.container.container--small
+				+slider-nav('Фото', 'project-single__pic-nav')
+			.project-single__pic-slider.swiper.__js_slider-photos
+				.swiper-wrapper
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/projectOne__1.jpg', srcset='images/project/projectOne__1.jpg 2x', alt='')
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/projectOne__2.jpg', srcset='images/project/projectOne__2.jpg 2x', alt='')
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/projectOne__3.jpg', srcset='images/project/projectOne__3.jpg 2x', alt='')
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/projectOne__4.jpg', srcset='images/project/projectOne__4.jpg 2x', alt='')
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/projectOne__5.jpg', srcset='images/project/projectOne__5.jpg 2x', alt='')
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/projectOne__6.jpg', srcset='images/project/projectOne__6.jpg 2x', alt='')
+					.project-single__pic-slide.swiper-slide
+						img(src='images/project/projectOne__7.jpg', srcset='images/project/projectOne__7.jpg 2x', alt='')
+

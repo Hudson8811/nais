@@ -1,0 +1,305 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Вагонные весы ВВТ'
+		};
+
+block main
+	article.weights-page
+		.weights-page__first
+			.pattern
+				.pattern__inner
+					include ../../images/pattern.svg
+					include ../../images/pattern.svg
+					include ../../images/pattern.svg
+			//.pattern
+				.pattern__inner
+					include ../../images/pattern.svg
+					include ../../images/pattern.svg
+					include ../../images/pattern.svg
+			.container.container--border.weights-page__container.weights-page__container--1
+				+title-block('Вагонные весы ВВТ', 'weights-page__title')
+				ul.weights-page__list
+					li Нагрузка от 60 т до 200 т
+					li ГОСТ OIML R 76-1-2011
+					li Гарантия до 3 лет
+				+button('Получить консультацию', 'button--bordered weights-page__consult-btn', '#')
+				.products-item.weights-page__product
+					.products-item__bg-text.products-item__bg-text--2
+						span Вагонные весы ВВТ
+					.products-item__image
+						img(src='images/products/1.png', srcset='images/products/1@2x.png 2x', alt='')
+
+		.weights-page__about
+			//.container.weights-page__container.weights-page__container--2
+				.container.container--small
+					.weights-page__subtitle Весы автомобильные тензометрические ВАТ
+					//+filter([
+						{
+							text: 'Описание',
+							class: 'filter__button--active'
+						},
+						{
+							text: 'Способы установки'
+						},
+						{
+							text: 'Характеристики'
+						},
+						{
+							text: 'Модели'
+						},
+						{
+							text: 'Сертификаты'
+						}
+					], 'weights-page__tabs')
+
+			include ../blocks/vesy-vagonnye-tabs.pug
+					//.weights-page__about-wrapper
+						.weights-page__about-content(style='display: block')
+							.weights-page__text Весы автомобильные тензометрические ВАТ предназначены для статического <br> взвешивания
+								|  автомобильного транспорта. Устанавливаются на фундамент.
+							.weights-page__about-items
+								.weights-page__about-item
+									+icon('tab')(width='28', height='28')
+									p Датчики HBM, Германия
+								.weights-page__about-item
+									+icon('file')(width='21', height='27')
+									p Запатентованная конструкция платформы
+								.weights-page__about-item
+									+icon('screen')(width='28', height='28')
+									p Штатный терминал
+								.weights-page__about-item
+									+icon('refresh')(width='28', height='17')
+									p Автоматизация взвешивания
+								.weights-page__about-item
+									+icon('shield')(width='22', height='28')
+									p Система защиты от <br> внешнего воздействия
+								.weights-page__about-item
+									+icon('burn')(width='24', height='30')
+									p Взрывозащищенное исполнение
+								.weights-page__about-item
+									+icon('wheel')(width='27', height='27')
+									p Сертифицированное <br> измерение нагрузки на <br> ось
+								.weights-page__about-item
+									+icon('clock')(width='27', height='28')
+									p Оперативная установка
+
+						.weights-page__about-content
+							.weights-page__text Весы автомобильные тензометрические ВАТ предназначены для статического <br> взвешивания
+								|  автомобильного транспорта. Устанавливаются на фундамент.
+							.weights-page__about-items
+								.weights-page__about-item
+									+icon('tab')(width='28', height='28')
+									p Датчики HBM, Германия
+								.weights-page__about-item
+									+icon('file')(width='21', height='27')
+									p Запатентованная конструкция платформы
+								.weights-page__about-item
+									+icon('screen')(width='28', height='28')
+									p Штатный терминал
+								.weights-page__about-item
+									+icon('refresh')(width='28', height='17')
+									p Автоматизация взвешивания
+								.weights-page__about-item
+									+icon('shield')(width='22', height='28')
+									p Система защиты от <br> внешнего воздействия
+								.weights-page__about-item
+									+icon('burn')(width='24', height='30')
+									p Взрывозащищенное исполнение
+								.weights-page__about-item
+									+icon('wheel')(width='27', height='27')
+									p Сертифицированное <br> измерение нагрузки на <br> ось
+								.weights-page__about-item
+									+icon('clock')(width='27', height='28')
+									p Оперативная установка
+
+						.weights-page__about-content
+							.weights-page__text Весы автомобильные тензометрические ВАТ предназначены для статического <br> взвешивания
+								|  автомобильного транспорта. Устанавливаются на фундамент.
+							.weights-page__about-items
+								.weights-page__about-item
+									+icon('tab')(width='28', height='28')
+									p Датчики HBM, Германия
+								.weights-page__about-item
+									+icon('file')(width='21', height='27')
+									p Запатентованная конструкция платформы
+								.weights-page__about-item
+									+icon('screen')(width='28', height='28')
+									p Штатный терминал
+								.weights-page__about-item
+									+icon('refresh')(width='28', height='17')
+									p Автоматизация взвешивания
+								.weights-page__about-item
+									+icon('shield')(width='22', height='28')
+									p Система защиты от <br> внешнего воздействия
+								.weights-page__about-item
+									+icon('burn')(width='24', height='30')
+									p Взрывозащищенное исполнение
+								.weights-page__about-item
+									+icon('wheel')(width='27', height='27')
+									p Сертифицированное <br> измерение нагрузки на <br> ось
+								.weights-page__about-item
+									+icon('clock')(width='27', height='28')
+									p Оперативная установка
+
+						.weights-page__about-content
+							.weights-page__text Весы автомобильные тензометрические ВАТ предназначены для статического <br> взвешивания
+								|  автомобильного транспорта. Устанавливаются на фундамент.
+							.weights-page__about-items
+								.weights-page__about-item
+									+icon('tab')(width='28', height='28')
+									p Датчики HBM, Германия
+								.weights-page__about-item
+									+icon('file')(width='21', height='27')
+									p Запатентованная конструкция платформы
+								.weights-page__about-item
+									+icon('screen')(width='28', height='28')
+									p Штатный терминал
+								.weights-page__about-item
+									+icon('refresh')(width='28', height='17')
+									p Автоматизация взвешивания
+								.weights-page__about-item
+									+icon('shield')(width='22', height='28')
+									p Система защиты от <br> внешнего воздействия
+								.weights-page__about-item
+									+icon('burn')(width='24', height='30')
+									p Взрывозащищенное исполнение
+								.weights-page__about-item
+									+icon('wheel')(width='27', height='27')
+									p Сертифицированное <br> измерение нагрузки на <br> ось
+								.weights-page__about-item
+									+icon('clock')(width='27', height='28')
+									p Оперативная установка
+
+						.weights-page__about-content
+							.weights-page__text Весы автомобильные тензометрические ВАТ предназначены для статического <br> взвешивания
+								|  автомобильного транспорта. Устанавливаются на фундамент.
+							.weights-page__about-items
+								.weights-page__about-item
+									+icon('tab')(width='28', height='28')
+									p Датчики HBM, Германия
+								.weights-page__about-item
+									+icon('file')(width='21', height='27')
+									p Запатентованная конструкция платформы
+								.weights-page__about-item
+									+icon('screen')(width='28', height='28')
+									p Штатный терминал
+								.weights-page__about-item
+									+icon('refresh')(width='28', height='17')
+									p Автоматизация взвешивания
+								.weights-page__about-item
+									+icon('shield')(width='22', height='28')
+									p Система защиты от <br> внешнего воздействия
+								.weights-page__about-item
+									+icon('burn')(width='24', height='30')
+									p Взрывозащищенное исполнение
+								.weights-page__about-item
+									+icon('wheel')(width='27', height='27')
+									p Сертифицированное <br> измерение нагрузки на <br> ось
+								.weights-page__about-item
+									+icon('clock')(width='27', height='28')
+									p Оперативная установка
+
+		.container.container--border.weights-page__container.weights-page__container--3
+			.weights-page__subtitle Весы автомобильные тензометрические
+			+filter([
+				{
+					text: 'АПК',
+					class: 'filter__button--active'
+				},
+				{
+					text: 'Нефтегазовая'
+				},
+				{
+					text: 'Горнодобывающая'
+				}
+			], 'weights-page__tabs-dynamic')
+		.container
+
+
+			.products-item.weights-page__product.weights-page__product--truck
+				.products-item__truck-inner
+					.products-item__truck
+						img.js-img-move.active.visible(src='images/truckVag-2.png', srcset='images/truckVag-2.png 2x', alt='', style="width: 65.5%;")
+						img.js-img-move(src='images/truckVag-1.png', srcset='images/truckVag-1.png 2x', alt='', style="width: 65.5%;")
+						img.js-img-move(src='images/truckVag-3.png', srcset='images/truckVag-3.png 2x', alt='', style=" width: 65.5%; margin-bottom: -5px;")
+					.products-item__image
+						img(src='images/products/1.png', srcset='images/products/1@2x.png 2x', alt='' )
+			.weights-page__caption Взвешивание более 200 видов вагонов
+			+title-block('Полный цикл производства', 'weights-page__title')
+			.weights-page__text.weights-page__text--maxw
+				p Мы обеспечиваем полный цикл производства – от проекта до его реализации на вашем объекте. Все конструктивные детали весовых комплексов и программное обеспечение для автоматизации взвешивания мы производим самостоятельно.
+				p Это значит, что мы полностью управляем качеством продукта, сроками выполнения и несем ответственность за результат.
+			.weights-page__steps
+				.weights-page__steps-item
+					p 01
+					p Проектирование
+				.weights-page__steps-item
+					p 02
+					p Производство весов
+				.weights-page__steps-item
+					p 03
+					p Строительство фундамента
+				.weights-page__steps-item
+					p 04
+					p Монтаж и <br> пусконаладочные работы
+				.weights-page__steps-item
+					p 05
+					p Гарантийное обслуживание <br> и поддержка
+				.weights-page__steps-item
+					p 06
+					p Автоматизация взвешивания
+
+		+button('98% наших весов работают бесперебойно свыше 10 лет', 'button--square weights-page__other-btn', '#', 'elephant', '25', '17')
+		//a.button.button--square.weights-page__other-btn.hover-fw-btn__wrap.button--disable-hover(href='#')
+			span 98% наших весов работают бесперебойно свыше 10 лет
+			svg(width='25' height='17')
+				use(xlink:href='./images/sprite.svg#elephant')
+			.hover-fw-btn
+				span Задать вопрос
+
+
+		.weights-page__slider-wrapper
+			.pattern
+				.pattern__inner
+					include ../../images/pattern.svg
+					include ../../images/pattern.svg
+					include ../../images/pattern.svg
+			.container.weights-page__container.weights-page__container--4
+				//.pattern
+					.pattern__inner
+						include ../../images/pattern.svg
+						include ../../images/pattern.svg
+						include ../../images/pattern.svg
+				.container.container--small
+					+slider-nav('Отзывы', 'weights-page__nav')
+				.weights-page__slider.swiper.__js_slider-reviews-2
+					.swiper-wrapper
+						.weights-page__slide.swiper-slide.js-start-iframe(data-iframe-link="https://www.youtube.com/embed/kRD4UvIYVa8")
+							img(src='images/weights-page/new__1.jpg', srcset='images/weights-page/new__1.jpg 2x', alt='')
+							button.button.button--bordered.employees__play  <svg width="23" height="26"><use xlink:href="./images/sprite.svg#play"></use> </svg>
+						.weights-page__slide.swiper-slide.js-start-iframe(data-iframe-link="https://www.youtube.com/embed/kRD4UvIYVa8")
+							img(src='images/weights-page/new__2.jpg', srcset='images/weights-page/new__2.jpg 2x', alt='')
+							button.button.button--bordered.employees__play  <svg width="23" height="26"><use xlink:href="./images/sprite.svg#play"></use> </svg>
+						.weights-page__slide.swiper-slide.js-start-iframe(data-iframe-link="https://www.youtube.com/embed/kRD4UvIYVa8")
+							img(src='images/weights-page/new__3.jpg', srcset='images/weights-page/new__3.jpg 2x', alt='')
+							button.button.button--bordered.employees__play  <svg width="23" height="26"><use xlink:href="./images/sprite.svg#play"></use> </svg>
+
+				.container.container--small
+					+slider-nav('Проекты', 'weights-page__projects-nav')
+				.weights-page__projects-slider.swiper.__js_slider-projects
+					.swiper-wrapper
+						.weights-page__projects-slide.swiper-slide
+							.weights-page__projects-slide-img
+								img(src='images/weights-page/new--pro__1.jpg', srcset='images/weights-page/new--pro__1.jpg 2x', alt='')
+							p Весы для Эльдако Юг				
+						.weights-page__projects-slide.swiper-slide
+							.weights-page__projects-slide-img
+								img(src='images/weights-page/new--pro__2.jpg', srcset='images/weights-page/new--pro__2.jpg 2x', alt='')
+							p Зерноуборочные хозяйства - наши постоянные партнеры	
+						.weights-page__projects-slide.swiper-slide
+							.weights-page__projects-slide-img
+								img(src='images/weights-page/new--pro__3.jpg', srcset='images/weights-page/new--pro__3.jpg 2x', alt='')
+							p Строительство и установка вагонных весов НАИС1
