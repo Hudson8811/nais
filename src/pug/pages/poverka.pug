@@ -18,7 +18,7 @@ block main
 			+title-block('Поверка', 'article-single__title')
 			.article-single__row
 				.article-single__image
-					img(src='images/articles/new__1.jpg', srcset='images/article/poster@2x.jpg 2x', alt='')
+					img(src='images/articles/new__1.jpg', srcset='images/articles/new__1.jpg 2x', alt='')
 				.article-single__about-us
 					p Поверка весового оборудования – комплекс операций, выполняемых специалистами органов государственной метрологической службы или иных уполномоченных организаций и органов для определения и подтверждения соответствия измерительного прибора действующим ГОСТам и техническим требованиям.
 			+quote('Метрологическая служба НАИС с 2005 года аккредитована на право поверки автомобильных и вагонных весов. Каждые 2 года метрологическая служба проходит аттестацию для подтверждения своей компетенции и продления права на проведение поверки. <br><br> ' +
@@ -59,7 +59,37 @@ block main
 						.article-single__certs-slide.swiper-slide
 							img(src='images/certs/newAticl__1.jpg', srcset='images/certs/newAticl__1.jpg 2x', alt='')
 				.article-single__bottom-nav
-					+button('Получить консультацию', 'button--square article-single__consult-btn', '#', 'chevron-right', '13', '20')
+					+button('Получить консультацию', 'button--square article-single__consult-btn js-open-modal', '#modal-request-call', 'chevron-right', '13', '20')
 					a.article-single__back(href='#')
 						+icon('chevron-left')(width='13', height='20')
-						span Все статьи
+						span Назад
+
+	.modal#modal-request-call
+		button.custom-fancybox-close.custom-fancybox-close--inner(data-fancybox-close='' title='{{CLOSE}}')
+			svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M19.0623 7.06066C19.6481 6.47487 19.6481 5.52513 19.0623 4.93934C18.4765 4.35355 17.5268 4.35355 16.941 4.93934L12.0016 9.87868L7.31066 5.18771C6.72488 4.60192 5.77513 4.60192 5.18934 5.18771C4.60355 5.77349 4.60355 6.72324 5.18934 7.30903L9.88031 12L5.18934 16.691C4.60355 17.2768 4.60355 18.2265 5.18934 18.8123C5.77513 19.3981 6.72487 19.3981 7.31066 18.8123L12.0016 14.1213L16.941 19.0607C17.5268 19.6464 18.4765 19.6464 19.0623 19.0607C19.6481 18.4749 19.6481 17.5251 19.0623 16.9393L14.123 12L19.0623 7.06066Z' fill='#467C3F')
+
+		.modal-inner
+			.modal-title Заказать обратный звонок
+
+			form.modal-form(action="")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Имя")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Телефон")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="E-Mail")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Организация")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							button.button.button--square.button--modal Отправить

@@ -117,7 +117,7 @@
 </div>
 </li>
 <li class="menu__link"><a class="menu__link-a" href="projects-page.html">Проекты</a></li>
-<li class="menu__link"><a class="menu__link-a" href="#">Статьи</a></li>
+<li class="menu__link"><a class="menu__link-a" href="articles-page.html">Статьи</a></li>
 <li class="menu__link"><a class="menu__link-a" href="contacts.html">Контакты</a></li>
 </nav><a class="header__login" href="#">
           <svg width="13" height="20">
@@ -207,7 +207,7 @@
         <div class="container container--border article-single__container">
           <div class="title-block article-single__title">Поверка</div>
           <div class="article-single__row">
-            <div class="article-single__image"><img src="images/articles/new__1.jpg" srcset="images/article/poster@2x.jpg 2x" alt=""></div>
+            <div class="article-single__image"><img src="images/articles/new__1.jpg" srcset="images/articles/new__1.jpg 2x" alt=""></div>
             <div class="article-single__about-us">
               <p>Поверка весового оборудования – комплекс операций, выполняемых специалистами органов государственной метрологической службы или иных уполномоченных организаций и органов для определения и подтверждения соответствия измерительного прибора действующим ГОСТам и техническим требованиям.</p>
             </div>
@@ -274,17 +274,64 @@
                 <div class="article-single__certs-slide swiper-slide"><img src="images/certs/newAticl__1.jpg" srcset="images/certs/newAticl__1.jpg 2x" alt=""></div>
               </div>
             </div>
-            <div class="article-single__bottom-nav"><a class="button button--square article-single__consult-btn" href="#"><span>Получить консультацию</span>
+            <div class="article-single__bottom-nav"><a class="button button--square article-single__consult-btn js-open-modal" href="#modal-request-call"><span>Получить консультацию</span>
                 <svg width="13" height="20">
                   <use xlink:href="./images/sprite.svg#chevron-right"></use>
                 </svg></a><a class="article-single__back" href="#">
                 <svg width="13" height="20">
                   <use xlink:href="./images/sprite.svg#chevron-left"></use>
-                </svg><span>Все статьи</span></a>
+                </svg><span>Назад</span></a>
             </div>
           </div>
         </div>
       </article>
+      <div class="modal" id="modal-request-call">
+        <button class="custom-fancybox-close custom-fancybox-close--inner" data-fancybox-close="" title="{{CLOSE}}">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0623 7.06066C19.6481 6.47487 19.6481 5.52513 19.0623 4.93934C18.4765 4.35355 17.5268 4.35355 16.941 4.93934L12.0016 9.87868L7.31066 5.18771C6.72488 4.60192 5.77513 4.60192 5.18934 5.18771C4.60355 5.77349 4.60355 6.72324 5.18934 7.30903L9.88031 12L5.18934 16.691C4.60355 17.2768 4.60355 18.2265 5.18934 18.8123C5.77513 19.3981 6.72487 19.3981 7.31066 18.8123L12.0016 14.1213L16.941 19.0607C17.5268 19.6464 18.4765 19.6464 19.0623 19.0607C19.6481 18.4749 19.6481 17.5251 19.0623 16.9393L14.123 12L19.0623 7.06066Z" fill="#467C3F"></path>
+          </svg>
+        </button>
+        <div class="modal-inner">
+          <div class="modal-title">Заказать обратный звонок</div>
+          <form class="modal-form" action="">
+            <div class="modal-form-row">
+              <div class="modal-form-row__col">
+                <div class="call-you__input cutom-inp">
+                  <input class="cutom-inp__field" type="text" name="" placeholder="Имя">
+                </div>
+              </div>
+            </div>
+            <div class="modal-form-row">
+              <div class="modal-form-row__col">
+                <div class="call-you__input cutom-inp">
+                  <input class="cutom-inp__field" type="text" name="" placeholder="Телефон">
+                </div>
+              </div>
+            </div>
+            <div class="modal-form-row">
+              <div class="modal-form-row__col">
+                <div class="call-you__input cutom-inp">
+                  <input class="cutom-inp__field" type="text" name="" placeholder="E-Mail">
+                </div>
+              </div>
+            </div>
+            <div class="modal-form-row">
+              <div class="modal-form-row__col">
+                <div class="call-you__input cutom-inp">
+                  <input class="cutom-inp__field" type="text" name="" placeholder="Организация">
+                </div>
+              </div>
+            </div>
+            <div class="modal-form-row">
+              <div class="modal-form-row__col">
+                <div class="call-you__input cutom-inp">
+                  <button class="button button--square button--modal">Отправить</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__container">
