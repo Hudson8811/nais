@@ -1,0 +1,63 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Статья'
+		};
+
+block main
+	article.article-single
+		.pattern
+			.pattern__inner
+				include ../../images/pattern.svg
+				include ../../images/pattern.svg
+				include ../../images/pattern.svg
+
+		.container.container--border.article-single__container
+			+title-block('Шлагбаумы', 'article-single__title')
+			.article-single__row
+				.article-single__image
+					img(src='images/software/soft_pic_2-two.png', srcset='images/software/soft_pic_2-two.png 2x', alt='')
+				.article-single__about-us
+					p Добавляет возможность программного управления внешними светофорами (до 4 шт. на платформу). Позволяет автоматически управлять движением транспорта через весовую платформу.
+			+quote('Для автовесовой наиболее приемлемым вариантом размещения светофоров является следующий: <br><br>' +
+			'- 2 светофора — по краям весовой платформы (на въезде и выезде) для контроля выезжающего с платформы транспорта. <br><br>' +
+			'- 2 светофора — по одному с каждой стороны на подъезде к весовой платформе для контроля въезжающего на платформу транспорта.', 'article-single__quote')
+
+			.article-single__content
+				.article-single__bottom-nav
+					+button('Получить консультацию', 'button--square article-single__consult-btn js-open-modal', '#modal-request-call', 'chevron-right', '13', '20')
+					a.article-single__back(href='#')
+						+icon('chevron-left')(width='13', height='20')
+						span Назад
+
+	.modal#modal-request-call
+		button.custom-fancybox-close.custom-fancybox-close--inner(data-fancybox-close='' title='{{CLOSE}}')
+			svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M19.0623 7.06066C19.6481 6.47487 19.6481 5.52513 19.0623 4.93934C18.4765 4.35355 17.5268 4.35355 16.941 4.93934L12.0016 9.87868L7.31066 5.18771C6.72488 4.60192 5.77513 4.60192 5.18934 5.18771C4.60355 5.77349 4.60355 6.72324 5.18934 7.30903L9.88031 12L5.18934 16.691C4.60355 17.2768 4.60355 18.2265 5.18934 18.8123C5.77513 19.3981 6.72487 19.3981 7.31066 18.8123L12.0016 14.1213L16.941 19.0607C17.5268 19.6464 18.4765 19.6464 19.0623 19.0607C19.6481 18.4749 19.6481 17.5251 19.0623 16.9393L14.123 12L19.0623 7.06066Z' fill='#467C3F')
+
+		.modal-inner
+			.modal-title Заказать обратный звонок
+
+			form.modal-form(action="")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Имя")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Телефон")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="E-Mail")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							input.cutom-inp__field(type="text", name="" placeholder="Организация")
+				.modal-form-row
+					.modal-form-row__col
+						.call-you__input.cutom-inp
+							button.button.button--square.button--modal Отправить

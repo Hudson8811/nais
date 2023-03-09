@@ -29,7 +29,17 @@
 		+ #{$parent}__item {
 			margin-top: 80px;
 		}
+		&:hover {
+			.button--bordered {
+				border-color: transparent;
 
+				&::before {
+					width: 100%;
+					height: 100%;
+					background-color: $green-hover;
+				}
+			}
+		}
 		&--2 {
 			.products-item__image {
 				margin-top: 86px;
