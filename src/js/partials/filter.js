@@ -1,6 +1,6 @@
 $(function () {
 	var filterActiveClass = 'filter__button--active';
-	/*
+
 		if($('.articles-page__articles').length>0){
 			var articlesFilter = $('.articles-page__articles').isotope({
 				itemSelector: '.articles-page__item',
@@ -34,7 +34,7 @@ $(function () {
 			$(this).addClass(filterActiveClass).parent().siblings().find('.filter__button').removeClass(filterActiveClass);
 			projectsFilter.isotope({ filter: filterValue });
 		});
-	*/
+
 
 
 
@@ -87,7 +87,7 @@ $(function () {
 
 	});
 
-	/*ВЫНЕС в additional.js
+	// ВЫНЕС в additional.js
 	//вынести в header
 	var imagesPath='./images/';
 
@@ -215,7 +215,7 @@ $(function () {
 		});
 
 	});
-*/
+
 
 
 

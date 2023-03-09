@@ -46,8 +46,12 @@
 	@include max(md) {
 		display: none;
 	}
+	svg path {
+		fill: rgba(#fff, 0.32);
+	}
+	&__inner {
 
-	&__inner {}
+	}
 
 	svg {
 		width: 100%;

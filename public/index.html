@@ -375,7 +375,7 @@
                 <div class="first-screen__animate js-move-1"><img src="images/wagon-1.png" srcset="images/wagon-1@2x.png 2x" alt=""></div>
                 <div class="first-screen__rails"><img src="images/wagon-2.png" srcset="images/wagon-2@2x.png 2x" alt="">
                   <div class="first-screen__counter">
-                    <p><span><span class="js-digit">0,0000</span></span></p>
+                    <p><span><span class="js-digit">0,00</span></span></p>
                     <p>Тонн</p>
                   </div>
                 </div>
@@ -393,7 +393,7 @@
             </div>
             <div class="first-screen__col"><a class="first-screen__phone" href="tel:88045550128">8 (804) 555-01-28</a>
               <h1 class="first-screen__title">Надежные весы для точных измерений</h1>
-              <div class="first-screen__subtitle">Вы с нами, потому что согласны только на лучшее!</div>
+              <div class="first-screen__subtitle">Вы с нами, потому что согласны только на лучшее!</div><br>
               <div class="first-screen__type">
                 <div class="first-screen__type-item active">
                   <p>01</p>
@@ -407,7 +407,7 @@
               <div class="first-screen__connect"><a class="first-screen__digits anchor" href="#propertyes">Мы в цифрах
                   <svg width="17" height="11">
                     <use xlink:href="./images/sprite.svg#chevron-down"></use>
-                  </svg></a><a class="first-screen__call-me" href="#">
+                  </svg></a><a class="first-screen__call-me js-open-modal" href="#modal-call-you"> 
                   <svg width="27" height="27">
                     <use xlink:href="./images/sprite.svg#phone"></use>
                   </svg></a></div>
@@ -433,6 +433,26 @@
                 <p><span class="js-prop">98</span>%</p>
                 <p>весов работают бесперебойно свыше 10 лет</p>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-call-you">
+          <button class="custom-fancybox-close custom-fancybox-close--inner" data-fancybox-close="" title="{{CLOSE}}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0623 7.06066C19.6481 6.47487 19.6481 5.52513 19.0623 4.93934C18.4765 4.35355 17.5268 4.35355 16.941 4.93934L12.0016 9.87868L7.31066 5.18771C6.72488 4.60192 5.77513 4.60192 5.18934 5.18771C4.60355 5.77349 4.60355 6.72324 5.18934 7.30903L9.88031 12L5.18934 16.691C4.60355 17.2768 4.60355 18.2265 5.18934 18.8123C5.77513 19.3981 6.72487 19.3981 7.31066 18.8123L12.0016 14.1213L16.941 19.0607C17.5268 19.6464 18.4765 19.6464 19.0623 19.0607C19.6481 18.4749 19.6481 17.5251 19.0623 16.9393L14.123 12L19.0623 7.06066Z" fill="#467C3F"></path>
+            </svg>
+          </button>
+          <div class="modal-inner modal-inner--call-you">
+            <div class="call-you">
+              <div class="call-you__pic"><img src="images/phone-icon.svg" alt=""></div>
+              <div class="call-you__title">Давайте мы вам позвоним</div>
+              <div class="call-you__desc">Оставьте свой номер, и мы<br> перезвоним вам.</div>
+              <form class="call-you__inp-row" action="">
+                <div class="call-you__input cutom-inp">
+                  <input class="cutom-inp__field" type="text" name="" placeholder="Ваш номер телефона">
+                </div>
+                <button class="button button--square call-you__button" type="submit">Жду звонка</button>
+              </form>
             </div>
           </div>
         </div>
