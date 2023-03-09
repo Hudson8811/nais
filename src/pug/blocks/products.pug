@@ -1,24 +1,24 @@
 section.products
 	.container.products__container
 		+title-block('Продукты', 'products__title')
-		.products-item.products__item.js-products-item(data-idx="0")
+		a(href="vesy-vagonnye.html").products-item.products__item.js-products-item(data-idx="0")
 			.container.container--small
 				.products-item__top
 					.products-item__icon
 						+icon('train')(width='38', height='24')
-					+button('Подробнее', 'button--bordered button--white-on-light products-item__more', 'vesy-vagonnye.html')
+					button.button--bordered.button--white-on-light.products-item__more.products-item--button Подробнее
 				.products-item__wrapper
 					.products-item__title Вагонные <br> весы
 			.products-item__bg-text.products-item__bg-text--1
 				span Вагонные весы
 			.products-item__image
 				img(src='images/products/1.png', srcset='images/products/1@2x.png 2x', alt='')
-		.products-item.products__item.products__item--2.js-products-item(data-idx="1")
+		a(href="weights-page.html").products-item.products__item.products__item--2.js-products-item(data-idx="1")
 			.container.container--small
 				.products-item__top
 					.products-item__icon
 						+icon('truck')(width='42', height='29')
-					+button('Подробнее', 'button--bordered button--white-on-light  products-item__more', 'weights-page.html')
+					button.button--bordered.button--white-on-light.products-item__more.products-item--button Подробнее
 				.products-item__wrapper
 					.products-item__title Автомобильные <br> весы
 			.products-item__bg-text.products-item__bg-text--2
